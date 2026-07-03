@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load sale_filters %}
 {% block title %}Panel principal | Sadama{% endblock %}
 {% block page_title %}Panel principal{% endblock %}
 {% block page_subtitle %}<p>Resumen del día {{ "now"|date:"d/m/Y" }}</p>{% endblock %}
@@ -17,7 +18,7 @@
     </div>
     <div class="stat-card stat-warning">
         <div class="stat-icon"><i class="bi bi-cash-stack"></i></div>
-        <div class="stat-value">${{ revenue_today|floatformat:0 }}</div>
+        <div class="stat-value">{{ revenue_today|cop }}</div>
         <div class="stat-label">Ingreso hoy</div>
     </div>
     <div class="stat-card stat-info">
@@ -63,7 +64,7 @@
                 {% for r in revenue_by_owner_today %}
                     <div style="display:flex;justify-content:space-between;padding:.35rem 0;border-bottom:1px solid var(--border)">
                         <span style="font-size:.85rem">{{ r.product__owner__first_name|default:r.product__owner__username }}</span>
-                        <span style="font-weight:600;color:var(--gold)">${{ r.total|floatformat:2 }}</span>
+                        <span style="font-weight:600;color:var(--gold)">{{ r.total|cop }}</span>
                     </div>
                 {% endfor %}
             {% else %}

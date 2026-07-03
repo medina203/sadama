@@ -1,6 +1,8 @@
 import csv
+from datetime import datetime
 
 from django.contrib.auth.decorators import login_required
+from django.core.exceptions import ValidationError
 from django.db.models import Count, Sum
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -10,16 +12,36 @@ from apps.sales.models import Sale, SaleItem
 from apps.users.models import User
 
 
+def _parse_date(value, default):
+    try:
+        return datetime.strptime(value, "%Y-%m-%d").date()
+    except (ValueError, TypeError):
+        if value:
+            raise ValidationError(f"Formato de fecha inválido: '{value}'. Use AAAA-MM-DD.")
+        return default
+
+
 @login_required
 def daily_report(request):
     today = timezone.localdate()
-    date_from = request.GET.get("from", today.strftime("%Y-%m-%d"))
-    date_to = request.GET.get("to", today.strftime("%Y-%m-%d"))
+    u = request.user
+    try:
+        date_from = _parse_date(request.GET.get("from"), today)
+        date_to = _parse_date(request.GET.get("to"), today)
+    except ValidationError as e:
+        from django.contrib import messages
+        messages.error(request, str(e))
+        date_from = date_to = today
+
     owner_filter = request.GET.get("owner", "")
 
     sales = Sale.objects.filter(date__date__gte=date_from, date__date__lte=date_to, cancelled=False)
+    if u.role == "seller":
+        sales = sales.filter(seller=u)
+    elif u.role == "owner":
+        sales = sales.filter(items__product__owner=u).distinct()
 
-    if owner_filter:
+    if owner_filter and u.role == "admin":
         sales = sales.filter(items__product__owner_id=owner_filter).distinct()
 
     total_revenue = sales.aggregate(total=Sum("total"))["total"] or 0
@@ -59,12 +81,18 @@ def daily_report(request):
 @login_required
 def export_csv(request):
     today = timezone.localdate()
+    u = request.user
     date_from = request.GET.get("from", today.strftime("%Y-%m-%d"))
     date_to = request.GET.get("to", today.strftime("%Y-%m-%d"))
     owner_filter = request.GET.get("owner", "")
 
     sales = Sale.objects.filter(date__date__gte=date_from, date__date__lte=date_to, cancelled=False).select_related("seller")
-    if owner_filter:
+    if u.role == "seller":
+        sales = sales.filter(seller=u)
+    elif u.role == "owner":
+        sales = sales.filter(items__product__owner=u).distinct()
+
+    if owner_filter and u.role == "admin":
         sales = sales.filter(items__product__owner_id=owner_filter).distinct()
 
     response = HttpResponse(content_type="text/csv; charset=utf-8")

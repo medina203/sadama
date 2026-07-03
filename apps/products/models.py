@@ -1,4 +1,5 @@
 from django.db import models
+from django.db import transaction as db_transaction
 
 from apps.users.models import User
 from .qr_utils import generate_qr
@@ -41,12 +42,13 @@ class Product(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.qr_code:
-            if self.pk is None:
+            with db_transaction.atomic():
+                if self.pk is None:
+                    super().save(*args, **kwargs)
+                self.qr_code = generate_qr(self.pk)
+                if "update_fields" in kwargs:
+                    kwargs["update_fields"] = list(set(kwargs["update_fields"]) | {"qr_code"})
                 super().save(*args, **kwargs)
-            self.qr_code = generate_qr(self.pk)
-            if "update_fields" in kwargs:
-                kwargs["update_fields"] = list(set(kwargs["update_fields"]) | {"qr_code"})
-            super().save(*args, **kwargs)
         else:
             super().save(*args, **kwargs)
 

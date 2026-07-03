@@ -1,6 +1,7 @@
 from datetime import timedelta
 
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.exceptions import ValidationError
 from django.db import IntegrityError, transaction
 from django.db.models import Sum
@@ -15,22 +16,34 @@ from .forms import SaleForm, SaleItemFormSet
 from .models import Sale, SaleItem
 
 
-class SaleListView(ListView):
+class SaleListView(LoginRequiredMixin, ListView):
     model = Sale
     template_name = "sales/sale_list.html"
     context_object_name = "sales"
     ordering = ["-date"]
-    queryset = Sale.objects.select_related("seller")
+
+    def get_queryset(self):
+        qs = Sale.objects.select_related("seller")
+        u = self.request.user
+        if u.role == "seller":
+            qs = qs.filter(seller=u)
+        return qs
 
 
-class SaleDetailView(DetailView):
+class SaleDetailView(LoginRequiredMixin, DetailView):
     model = Sale
     template_name = "sales/sale_detail.html"
     context_object_name = "sale"
-    queryset = Sale.objects.select_related("seller").prefetch_related("items__product__owner")
+
+    def get_queryset(self):
+        qs = Sale.objects.select_related("seller").prefetch_related("items__product__owner")
+        u = self.request.user
+        if u.role == "seller":
+            qs = qs.filter(seller=u)
+        return qs
 
 
-class SaleCreateView(CreateView):
+class SaleCreateView(LoginRequiredMixin, CreateView):
     model = Sale
     form_class = SaleForm
     template_name = "sales/sale_form.html"
@@ -46,7 +59,17 @@ class SaleCreateView(CreateView):
             data["items"] = SaleItemFormSet()
         return data
 
+    def get_form(self, form_class=None):
+        form = super().get_form(form_class)
+        if self.request.user.role == "seller":
+            form.fields["seller"].queryset = User.objects.filter(pk=self.request.user.pk)
+            form.fields["seller"].initial = self.request.user
+            form.fields["seller"].empty_label = None
+        return form
+
     def form_valid(self, form):
+        if self.request.user.role == "seller":
+            form.instance.seller = self.request.user
         context = self.get_context_data()
         items = context["items"]
         if items.is_valid():
@@ -68,10 +91,11 @@ class SaleCreateView(CreateView):
 
 @login_required
 def sale_ticket(request, pk):
-    sale = get_object_or_404(
-        Sale.objects.select_related("seller").prefetch_related("items__product__owner"),
-        pk=pk,
-    )
+    qs = Sale.objects.select_related("seller").prefetch_related("items__product__owner")
+    u = request.user
+    if u.role == "seller":
+        qs = qs.filter(seller=u)
+    sale = get_object_or_404(qs, pk=pk)
     return render(request, "sales/sale_ticket.html", {"sale": sale})
 
 
@@ -79,6 +103,8 @@ def sale_ticket(request, pk):
 @login_required
 def sale_cancel(request, pk):
     sale = get_object_or_404(Sale, pk=pk)
+    if request.user.role not in ("admin",) and sale.seller != request.user:
+        return redirect("sales:sale_detail", pk=pk)
     if not sale.cancelled:
         sale.cancel()
     return redirect("sales:sale_detail", pk=pk)
@@ -88,13 +114,17 @@ def sale_cancel(request, pk):
 def sales_chart_data(request):
     days = int(request.GET.get("days", 7))
     today = timezone.localdate()
+    qs = Sale.objects.filter(date__date__gte=today - timedelta(days=days - 1), cancelled=False)
+    if request.user.role == "seller":
+        qs = qs.filter(seller=request.user)
+    daily_totals = {}
+    for sale in qs.only("date", "total"):
+        day = sale.date.date()
+        daily_totals[day] = daily_totals.get(day, 0) + float(sale.total)
     labels = []
     data = []
     for i in range(days - 1, -1, -1):
         day = today - timedelta(days=i)
-        total = Sale.objects.filter(date__date=day, cancelled=False).aggregate(
-            s=Sum("total")
-        )["s"] or 0
         labels.append(day.strftime("%d/%m"))
-        data.append(float(total))
+        data.append(daily_totals.get(day, 0))
     return JsonResponse({"labels": labels, "data": data})

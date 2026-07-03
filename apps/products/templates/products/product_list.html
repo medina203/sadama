@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load sale_filters %}
 {% block title %}Productos | Sadama{% endblock %}
 {% block page_title %}Productos{% endblock %}
 {% block page_subtitle %}<p>{{ page_obj.paginator.count|default:products|length }} artesanías en catálogo</p>{% endblock %}
@@ -56,7 +57,7 @@
             {% if product.description %}
                 <div class="meta" style="margin-top:.3rem;font-size:.78rem">{{ product.description|truncatewords:12 }}</div>
             {% endif %}
-            <div class="price" style="margin-top:.5rem">${{ product.price|floatformat:0 }}</div>
+            <div class="price" style="margin-top:.5rem">{{ product.price|cop }}</div>
         </div>
         <div class="item-card-footer">
             <a href="{% url 'products:product_update' product.pk %}" class="btn-custom btn-warning-custom btn-sm-custom">

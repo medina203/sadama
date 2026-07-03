@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load sale_filters %}
 {% block title %}Ticket #{{ sale.id }} | Sadama{% endblock %}
 {% block page_title %}Comprobante de venta #{{ sale.id }}{% endblock %}
 {% block page_subtitle %}<p>Ticket para imprimir o guardar</p>{% endblock %}
@@ -47,8 +48,8 @@
             <tr>
                 <td style="padding:.2rem 0">{{ item.product.name }}</td>
                 <td style="text-align:center;padding:.2rem 0">{{ item.quantity }}</td>
-                <td style="text-align:center;padding:.2rem 0">{% if item.discount %}${{ item.discount|floatformat:0 }}{% else %}—{% endif %}</td>
-                <td style="text-align:right;padding:.2rem 0">${{ item.subtotal|floatformat:0 }}</td>
+                <td style="text-align:center;padding:.2rem 0">{% if item.discount %}{{ item.discount|cop }}{% else %}—{% endif %}</td>
+                <td style="text-align:right;padding:.2rem 0">{{ item.subtotal|cop }}</td>
             </tr>
             {% endfor %}
         </tbody>
@@ -58,7 +59,7 @@
 
     <div style="display:flex;justify-content:space-between;font-size:1rem;font-weight:700;color:var(--gold)">
         <span>TOTAL</span>
-        <span>${{ sale.total|floatformat:0 }}</span>
+        <span>{{ sale.total|cop }}</span>
     </div>
 
     <div style="border-top:1px dashed var(--border);margin:.75rem 0"></div>

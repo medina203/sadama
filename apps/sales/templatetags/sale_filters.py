@@ -1,5 +1,4 @@
 from django import template
-from django.contrib.humanize.templatetags.humanize import intcomma
 
 register = template.Library()
 
@@ -8,6 +7,8 @@ register = template.Library()
 def cop(value):
     try:
         val = float(value)
-        return f"$ {intcomma(f'{val:,.0f}')}"
+        integer = int(val)
+        integer_str = f"{integer:,}".replace(",", ".")
+        return f"$ {integer_str}"
     except (ValueError, TypeError):
         return "$ 0"

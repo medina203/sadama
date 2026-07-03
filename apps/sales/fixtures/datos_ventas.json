@@ -1,0 +1,8714 @@
+[
+  {
+    "model": "sales.sale",
+    "pk": 1,
+    "fields": {
+      "date": "2026-01-04T10:41:00Z",
+      "total": "384050.00",
+      "client_name": "Jorge Castillo",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 1,
+    "fields": {
+      "sale": 1,
+      "product": 21,
+      "quantity": 2,
+      "unit_price": "25300.00",
+      "discount": "0.00",
+      "subtotal": "50600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 2,
+    "fields": {
+      "sale": 1,
+      "product": 4,
+      "quantity": 1,
+      "unit_price": "172500.00",
+      "discount": "50.00",
+      "subtotal": "172450.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 3,
+    "fields": {
+      "sale": 1,
+      "product": 25,
+      "quantity": 2,
+      "unit_price": "80500.00",
+      "discount": "0.00",
+      "subtotal": "161000.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 2,
+    "fields": {
+      "date": "2026-01-04T11:23:00Z",
+      "total": "342690.00",
+      "client_name": "Josafat Godínez",
+      "seller": 1,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 4,
+    "fields": {
+      "sale": 2,
+      "product": 12,
+      "quantity": 1,
+      "unit_price": "29900.00",
+      "discount": "10.00",
+      "subtotal": "29890.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 5,
+    "fields": {
+      "sale": 2,
+      "product": 16,
+      "quantity": 2,
+      "unit_price": "156400.00",
+      "discount": "0.00",
+      "subtotal": "312800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 3,
+    "fields": {
+      "date": "2026-01-04T12:12:00Z",
+      "total": "137970.00",
+      "client_name": "Francisco Trejo",
+      "seller": 3,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 6,
+    "fields": {
+      "sale": 3,
+      "product": 21,
+      "quantity": 2,
+      "unit_price": "25300.00",
+      "discount": "20.00",
+      "subtotal": "50580.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 7,
+    "fields": {
+      "sale": 3,
+      "product": 27,
+      "quantity": 1,
+      "unit_price": "43700.00",
+      "discount": "10.00",
+      "subtotal": "43690.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 8,
+    "fields": {
+      "sale": 3,
+      "product": 23,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 9,
+    "fields": {
+      "sale": 3,
+      "product": 13,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 4,
+    "fields": {
+      "date": "2026-01-04T12:56:00Z",
+      "total": "128800.00",
+      "client_name": "Adriana Mora",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 10,
+    "fields": {
+      "sale": 4,
+      "product": 28,
+      "quantity": 2,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "128800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 5,
+    "fields": {
+      "date": "2026-01-04T14:19:00Z",
+      "total": "356500.00",
+      "client_name": "Carlos Ruiz",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 11,
+    "fields": {
+      "sale": 5,
+      "product": 7,
+      "quantity": 1,
+      "unit_price": "50600.00",
+      "discount": "0.00",
+      "subtotal": "50600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 12,
+    "fields": {
+      "sale": 5,
+      "product": 14,
+      "quantity": 2,
+      "unit_price": "103500.00",
+      "discount": "0.00",
+      "subtotal": "207000.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 13,
+    "fields": {
+      "sale": 5,
+      "product": 20,
+      "quantity": 1,
+      "unit_price": "98900.00",
+      "discount": "0.00",
+      "subtotal": "98900.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 6,
+    "fields": {
+      "date": "2026-01-04T15:17:00Z",
+      "total": "118450.00",
+      "client_name": "Guadalupe Rico",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 14,
+    "fields": {
+      "sale": 6,
+      "product": 29,
+      "quantity": 1,
+      "unit_price": "52900.00",
+      "discount": "0.00",
+      "subtotal": "52900.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 15,
+    "fields": {
+      "sale": 6,
+      "product": 23,
+      "quantity": 3,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "65550.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 7,
+    "fields": {
+      "date": "2026-01-04T15:31:00Z",
+      "total": "330050.00",
+      "client_name": "Mónica Vargas",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 16,
+    "fields": {
+      "sale": 7,
+      "product": 15,
+      "quantity": 2,
+      "unit_price": "73600.00",
+      "discount": "0.00",
+      "subtotal": "147200.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 17,
+    "fields": {
+      "sale": 7,
+      "product": 25,
+      "quantity": 2,
+      "unit_price": "80500.00",
+      "discount": "0.00",
+      "subtotal": "161000.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 18,
+    "fields": {
+      "sale": 7,
+      "product": 23,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 8,
+    "fields": {
+      "date": "2026-01-04T16:08:00Z",
+      "total": "264500.00",
+      "client_name": "Sofía Ramírez",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 19,
+    "fields": {
+      "sale": 8,
+      "product": 19,
+      "quantity": 1,
+      "unit_price": "57500.00",
+      "discount": "0.00",
+      "subtotal": "57500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 20,
+    "fields": {
+      "sale": 8,
+      "product": 14,
+      "quantity": 2,
+      "unit_price": "103500.00",
+      "discount": "0.00",
+      "subtotal": "207000.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 9,
+    "fields": {
+      "date": "2026-01-04T18:20:00Z",
+      "total": "391000.00",
+      "client_name": "Gael Cervantes",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 21,
+    "fields": {
+      "sale": 9,
+      "product": 9,
+      "quantity": 1,
+      "unit_price": "276000.00",
+      "discount": "0.00",
+      "subtotal": "276000.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 22,
+    "fields": {
+      "sale": 9,
+      "product": 7,
+      "quantity": 1,
+      "unit_price": "50600.00",
+      "discount": "0.00",
+      "subtotal": "50600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 23,
+    "fields": {
+      "sale": 9,
+      "product": 5,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "64400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 10,
+    "fields": {
+      "date": "2026-01-04T18:43:00Z",
+      "total": "40250.00",
+      "client_name": "Rafael Cuevas",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 24,
+    "fields": {
+      "sale": 10,
+      "product": 23,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 25,
+    "fields": {
+      "sale": 10,
+      "product": 32,
+      "quantity": 1,
+      "unit_price": "18400.00",
+      "discount": "0.00",
+      "subtotal": "18400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 11,
+    "fields": {
+      "date": "2026-01-05T11:32:00Z",
+      "total": "41400.00",
+      "client_name": "Eduardo Razo",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 26,
+    "fields": {
+      "sale": 11,
+      "product": 6,
+      "quantity": 1,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "41400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 12,
+    "fields": {
+      "date": "2026-01-07T17:49:00Z",
+      "total": "18400.00",
+      "client_name": "Eligio Alanís",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 27,
+    "fields": {
+      "sale": 12,
+      "product": 32,
+      "quantity": 1,
+      "unit_price": "18400.00",
+      "discount": "0.00",
+      "subtotal": "18400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 13,
+    "fields": {
+      "date": "2026-01-07T18:12:00Z",
+      "total": "52890.00",
+      "client_name": "Roberto Díaz",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 28,
+    "fields": {
+      "sale": 13,
+      "product": 29,
+      "quantity": 1,
+      "unit_price": "52900.00",
+      "discount": "10.00",
+      "subtotal": "52890.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 14,
+    "fields": {
+      "date": "2026-01-08T13:49:00Z",
+      "total": "169050.00",
+      "client_name": "Tania Aguilar",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 29,
+    "fields": {
+      "sale": 14,
+      "product": 14,
+      "quantity": 1,
+      "unit_price": "103500.00",
+      "discount": "0.00",
+      "subtotal": "103500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 30,
+    "fields": {
+      "sale": 14,
+      "product": 13,
+      "quantity": 3,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "65550.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 15,
+    "fields": {
+      "date": "2026-01-10T11:42:00Z",
+      "total": "202400.00",
+      "client_name": "Gabriela Luna",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 31,
+    "fields": {
+      "sale": 15,
+      "product": 12,
+      "quantity": 1,
+      "unit_price": "29900.00",
+      "discount": "0.00",
+      "subtotal": "29900.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 32,
+    "fields": {
+      "sale": 15,
+      "product": 3,
+      "quantity": 1,
+      "unit_price": "96600.00",
+      "discount": "0.00",
+      "subtotal": "96600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 33,
+    "fields": {
+      "sale": 15,
+      "product": 21,
+      "quantity": 3,
+      "unit_price": "25300.00",
+      "discount": "0.00",
+      "subtotal": "75900.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 16,
+    "fields": {
+      "date": "2026-01-11T10:08:00Z",
+      "total": "446190.00",
+      "client_name": "Laura Mendoza",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 34,
+    "fields": {
+      "sale": 16,
+      "product": 20,
+      "quantity": 1,
+      "unit_price": "98900.00",
+      "discount": "0.00",
+      "subtotal": "98900.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 35,
+    "fields": {
+      "sale": 16,
+      "product": 26,
+      "quantity": 1,
+      "unit_price": "195500.00",
+      "discount": "10.00",
+      "subtotal": "195490.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 36,
+    "fields": {
+      "sale": 16,
+      "product": 7,
+      "quantity": 3,
+      "unit_price": "50600.00",
+      "discount": "0.00",
+      "subtotal": "151800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 17,
+    "fields": {
+      "date": "2026-01-11T13:53:00Z",
+      "total": "356500.00",
+      "client_name": "Bernardo Maya",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 37,
+    "fields": {
+      "sale": 17,
+      "product": 20,
+      "quantity": 3,
+      "unit_price": "98900.00",
+      "discount": "0.00",
+      "subtotal": "296700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 38,
+    "fields": {
+      "sale": 17,
+      "product": 24,
+      "quantity": 1,
+      "unit_price": "59800.00",
+      "discount": "0.00",
+      "subtotal": "59800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 18,
+    "fields": {
+      "date": "2026-01-12T17:38:00Z",
+      "total": "41400.00",
+      "client_name": "Benjamín Orozco",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 39,
+    "fields": {
+      "sale": 18,
+      "product": 6,
+      "quantity": 1,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "41400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 19,
+    "fields": {
+      "date": "2026-01-13T09:07:00Z",
+      "total": "200100.00",
+      "client_name": "July Valencia",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 40,
+    "fields": {
+      "sale": 19,
+      "product": 19,
+      "quantity": 1,
+      "unit_price": "57500.00",
+      "discount": "0.00",
+      "subtotal": "57500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 41,
+    "fields": {
+      "sale": 19,
+      "product": 10,
+      "quantity": 2,
+      "unit_price": "71300.00",
+      "discount": "0.00",
+      "subtotal": "142600.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 20,
+    "fields": {
+      "date": "2026-01-14T13:49:00Z",
+      "total": "266760.00",
+      "client_name": "Pedro Hernández",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 42,
+    "fields": {
+      "sale": 20,
+      "product": 30,
+      "quantity": 2,
+      "unit_price": "10350.00",
+      "discount": "20.00",
+      "subtotal": "20680.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 43,
+    "fields": {
+      "sale": 20,
+      "product": 26,
+      "quantity": 1,
+      "unit_price": "195500.00",
+      "discount": "0.00",
+      "subtotal": "195500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 44,
+    "fields": {
+      "sale": 20,
+      "product": 21,
+      "quantity": 2,
+      "unit_price": "25300.00",
+      "discount": "20.00",
+      "subtotal": "50580.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 21,
+    "fields": {
+      "date": "2026-01-14T14:29:00Z",
+      "total": "377200.00",
+      "client_name": "Ana Torres",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 45,
+    "fields": {
+      "sale": 21,
+      "product": 3,
+      "quantity": 2,
+      "unit_price": "96600.00",
+      "discount": "0.00",
+      "subtotal": "193200.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 46,
+    "fields": {
+      "sale": 21,
+      "product": 6,
+      "quantity": 1,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "41400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 47,
+    "fields": {
+      "sale": 21,
+      "product": 10,
+      "quantity": 2,
+      "unit_price": "71300.00",
+      "discount": "0.00",
+      "subtotal": "142600.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 22,
+    "fields": {
+      "date": "2026-01-16T17:55:00Z",
+      "total": "411690.00",
+      "client_name": "Alejandra Villa",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 48,
+    "fields": {
+      "sale": 22,
+      "product": 15,
+      "quantity": 1,
+      "unit_price": "73600.00",
+      "discount": "0.00",
+      "subtotal": "73600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 49,
+    "fields": {
+      "sale": 22,
+      "product": 3,
+      "quantity": 1,
+      "unit_price": "96600.00",
+      "discount": "0.00",
+      "subtotal": "96600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 50,
+    "fields": {
+      "sale": 22,
+      "product": 1,
+      "quantity": 3,
+      "unit_price": "80500.00",
+      "discount": "10.00",
+      "subtotal": "241490.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 23,
+    "fields": {
+      "date": "2026-01-18T11:34:00Z",
+      "total": "101200.00",
+      "client_name": "Adolfo Bautista",
+      "seller": 3,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 51,
+    "fields": {
+      "sale": 23,
+      "product": 31,
+      "quantity": 2,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "82800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 52,
+    "fields": {
+      "sale": 23,
+      "product": 32,
+      "quantity": 1,
+      "unit_price": "18400.00",
+      "discount": "0.00",
+      "subtotal": "18400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 24,
+    "fields": {
+      "date": "2026-01-18T12:24:00Z",
+      "total": "46000.00",
+      "client_name": "Laura Mendoza",
+      "seller": 3,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 53,
+    "fields": {
+      "sale": 24,
+      "product": 21,
+      "quantity": 1,
+      "unit_price": "25300.00",
+      "discount": "0.00",
+      "subtotal": "25300.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 54,
+    "fields": {
+      "sale": 24,
+      "product": 30,
+      "quantity": 2,
+      "unit_price": "10350.00",
+      "discount": "0.00",
+      "subtotal": "20700.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 25,
+    "fields": {
+      "date": "2026-01-19T10:55:00Z",
+      "total": "34500.00",
+      "client_name": "Reynaldo Bernal",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 55,
+    "fields": {
+      "sale": 25,
+      "product": 11,
+      "quantity": 1,
+      "unit_price": "34500.00",
+      "discount": "0.00",
+      "subtotal": "34500.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 26,
+    "fields": {
+      "date": "2026-01-20T12:14:00Z",
+      "total": "196640.00",
+      "client_name": "Maricela Ledezma",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 56,
+    "fields": {
+      "sale": 26,
+      "product": 11,
+      "quantity": 3,
+      "unit_price": "34500.00",
+      "discount": "10.00",
+      "subtotal": "103490.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 57,
+    "fields": {
+      "sale": 26,
+      "product": 23,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 58,
+    "fields": {
+      "sale": 26,
+      "product": 10,
+      "quantity": 1,
+      "unit_price": "71300.00",
+      "discount": "0.00",
+      "subtotal": "71300.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 27,
+    "fields": {
+      "date": "2026-01-20T14:01:00Z",
+      "total": "265650.00",
+      "client_name": "Jimena Arriaga",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 59,
+    "fields": {
+      "sale": 27,
+      "product": 13,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 60,
+    "fields": {
+      "sale": 27,
+      "product": 16,
+      "quantity": 1,
+      "unit_price": "156400.00",
+      "discount": "0.00",
+      "subtotal": "156400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 61,
+    "fields": {
+      "sale": 27,
+      "product": 32,
+      "quantity": 2,
+      "unit_price": "18400.00",
+      "discount": "0.00",
+      "subtotal": "36800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 62,
+    "fields": {
+      "sale": 27,
+      "product": 21,
+      "quantity": 2,
+      "unit_price": "25300.00",
+      "discount": "0.00",
+      "subtotal": "50600.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 28,
+    "fields": {
+      "date": "2026-01-21T10:05:00Z",
+      "total": "86250.00",
+      "client_name": "Homero Valdés",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 63,
+    "fields": {
+      "sale": 28,
+      "product": 30,
+      "quantity": 2,
+      "unit_price": "10350.00",
+      "discount": "0.00",
+      "subtotal": "20700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 64,
+    "fields": {
+      "sale": 28,
+      "product": 13,
+      "quantity": 3,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "65550.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 29,
+    "fields": {
+      "date": "2026-01-22T15:42:00Z",
+      "total": "64400.00",
+      "client_name": "Diana Paredes",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 65,
+    "fields": {
+      "sale": 29,
+      "product": 5,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "64400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 30,
+    "fields": {
+      "date": "2026-01-22T17:10:00Z",
+      "total": "55200.00",
+      "client_name": "Eliseo Padilla",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 66,
+    "fields": {
+      "sale": 30,
+      "product": 32,
+      "quantity": 3,
+      "unit_price": "18400.00",
+      "discount": "0.00",
+      "subtotal": "55200.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 31,
+    "fields": {
+      "date": "2026-01-23T09:14:00Z",
+      "total": "64400.00",
+      "client_name": "Julián Espinoza",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 67,
+    "fields": {
+      "sale": 31,
+      "product": 28,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "64400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 32,
+    "fields": {
+      "date": "2026-01-24T15:21:00Z",
+      "total": "892400.00",
+      "client_name": "Mónica Vargas",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 68,
+    "fields": {
+      "sale": 32,
+      "product": 9,
+      "quantity": 3,
+      "unit_price": "276000.00",
+      "discount": "0.00",
+      "subtotal": "828000.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 69,
+    "fields": {
+      "sale": 32,
+      "product": 28,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "64400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 33,
+    "fields": {
+      "date": "2026-01-25T09:55:00Z",
+      "total": "1023500.00",
+      "client_name": "Damián Quintana",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 70,
+    "fields": {
+      "sale": 33,
+      "product": 16,
+      "quantity": 2,
+      "unit_price": "156400.00",
+      "discount": "0.00",
+      "subtotal": "312800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 71,
+    "fields": {
+      "sale": 33,
+      "product": 29,
+      "quantity": 3,
+      "unit_price": "52900.00",
+      "discount": "0.00",
+      "subtotal": "158700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 72,
+    "fields": {
+      "sale": 33,
+      "product": 9,
+      "quantity": 2,
+      "unit_price": "276000.00",
+      "discount": "0.00",
+      "subtotal": "552000.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 34,
+    "fields": {
+      "date": "2026-01-26T13:15:00Z",
+      "total": "172500.00",
+      "client_name": "Azucena Samano",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 73,
+    "fields": {
+      "sale": 34,
+      "product": 19,
+      "quantity": 3,
+      "unit_price": "57500.00",
+      "discount": "0.00",
+      "subtotal": "172500.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 35,
+    "fields": {
+      "date": "2026-01-26T16:43:00Z",
+      "total": "19550.00",
+      "client_name": "Ana Torres",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 74,
+    "fields": {
+      "sale": 35,
+      "product": 17,
+      "quantity": 1,
+      "unit_price": "19550.00",
+      "discount": "0.00",
+      "subtotal": "19550.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 36,
+    "fields": {
+      "date": "2026-01-26T17:58:00Z",
+      "total": "56350.00",
+      "client_name": "Magdalena Rentería",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 75,
+    "fields": {
+      "sale": 36,
+      "product": 13,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 76,
+    "fields": {
+      "sale": 36,
+      "product": 11,
+      "quantity": 1,
+      "unit_price": "34500.00",
+      "discount": "0.00",
+      "subtotal": "34500.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 37,
+    "fields": {
+      "date": "2026-01-27T16:52:00Z",
+      "total": "346140.00",
+      "client_name": "Leonor Pastrana",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 77,
+    "fields": {
+      "sale": 37,
+      "product": 1,
+      "quantity": 2,
+      "unit_price": "80500.00",
+      "discount": "0.00",
+      "subtotal": "161000.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 78,
+    "fields": {
+      "sale": 37,
+      "product": 24,
+      "quantity": 2,
+      "unit_price": "59800.00",
+      "discount": "10.00",
+      "subtotal": "119590.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 79,
+    "fields": {
+      "sale": 37,
+      "product": 23,
+      "quantity": 3,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "65550.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 38,
+    "fields": {
+      "date": "2026-01-28T14:56:00Z",
+      "total": "73590.00",
+      "client_name": "Ezequiel Escamilla",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 80,
+    "fields": {
+      "sale": 38,
+      "product": 15,
+      "quantity": 1,
+      "unit_price": "73600.00",
+      "discount": "10.00",
+      "subtotal": "73590.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 39,
+    "fields": {
+      "date": "2026-01-29T15:13:00Z",
+      "total": "186280.00",
+      "client_name": "Aurora Santillán",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 81,
+    "fields": {
+      "sale": 39,
+      "product": 13,
+      "quantity": 2,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 82,
+    "fields": {
+      "sale": 39,
+      "product": 17,
+      "quantity": 2,
+      "unit_price": "19550.00",
+      "discount": "0.00",
+      "subtotal": "39100.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 83,
+    "fields": {
+      "sale": 39,
+      "product": 14,
+      "quantity": 1,
+      "unit_price": "103500.00",
+      "discount": "20.00",
+      "subtotal": "103480.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 40,
+    "fields": {
+      "date": "2026-01-30T17:35:00Z",
+      "total": "94290.00",
+      "client_name": "Sofía Ramírez",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 84,
+    "fields": {
+      "sale": 40,
+      "product": 23,
+      "quantity": 2,
+      "unit_price": "21850.00",
+      "discount": "10.00",
+      "subtotal": "43690.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 85,
+    "fields": {
+      "sale": 40,
+      "product": 21,
+      "quantity": 2,
+      "unit_price": "25300.00",
+      "discount": "0.00",
+      "subtotal": "50600.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 41,
+    "fields": {
+      "date": "2026-01-31T16:25:00Z",
+      "total": "124200.00",
+      "client_name": "Roberto Díaz",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 86,
+    "fields": {
+      "sale": 41,
+      "product": 23,
+      "quantity": 2,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 87,
+    "fields": {
+      "sale": 41,
+      "product": 25,
+      "quantity": 1,
+      "unit_price": "80500.00",
+      "discount": "0.00",
+      "subtotal": "80500.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 42,
+    "fields": {
+      "date": "2026-01-31T18:36:00Z",
+      "total": "507140.00",
+      "client_name": "Gloria Escalante",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 88,
+    "fields": {
+      "sale": 42,
+      "product": 32,
+      "quantity": 2,
+      "unit_price": "18400.00",
+      "discount": "10.00",
+      "subtotal": "36790.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 89,
+    "fields": {
+      "sale": 42,
+      "product": 24,
+      "quantity": 1,
+      "unit_price": "59800.00",
+      "discount": "0.00",
+      "subtotal": "59800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 90,
+    "fields": {
+      "sale": 42,
+      "product": 13,
+      "quantity": 3,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "65550.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 91,
+    "fields": {
+      "sale": 42,
+      "product": 4,
+      "quantity": 2,
+      "unit_price": "172500.00",
+      "discount": "0.00",
+      "subtotal": "345000.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 43,
+    "fields": {
+      "date": "2026-02-01T13:42:00Z",
+      "total": "83950.00",
+      "client_name": "Hugo Rivas",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 92,
+    "fields": {
+      "sale": 43,
+      "product": 5,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "64400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 93,
+    "fields": {
+      "sale": 43,
+      "product": 17,
+      "quantity": 1,
+      "unit_price": "19550.00",
+      "discount": "0.00",
+      "subtotal": "19550.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 44,
+    "fields": {
+      "date": "2026-02-03T10:32:00Z",
+      "total": "159840.00",
+      "client_name": "Margarita Villalobos",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 94,
+    "fields": {
+      "sale": 44,
+      "product": 20,
+      "quantity": 1,
+      "unit_price": "98900.00",
+      "discount": "0.00",
+      "subtotal": "98900.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 95,
+    "fields": {
+      "sale": 44,
+      "product": 7,
+      "quantity": 1,
+      "unit_price": "50600.00",
+      "discount": "0.00",
+      "subtotal": "50600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 96,
+    "fields": {
+      "sale": 44,
+      "product": 30,
+      "quantity": 1,
+      "unit_price": "10350.00",
+      "discount": "10.00",
+      "subtotal": "10340.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 45,
+    "fields": {
+      "date": "2026-02-03T10:42:00Z",
+      "total": "262200.00",
+      "client_name": "Claudia Serra",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 97,
+    "fields": {
+      "sale": 45,
+      "product": 22,
+      "quantity": 1,
+      "unit_price": "119600.00",
+      "discount": "0.00",
+      "subtotal": "119600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 98,
+    "fields": {
+      "sale": 45,
+      "product": 5,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "64400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 99,
+    "fields": {
+      "sale": 45,
+      "product": 13,
+      "quantity": 2,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 100,
+    "fields": {
+      "sale": 45,
+      "product": 11,
+      "quantity": 1,
+      "unit_price": "34500.00",
+      "discount": "0.00",
+      "subtotal": "34500.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 46,
+    "fields": {
+      "date": "2026-02-03T14:28:00Z",
+      "total": "57450.00",
+      "client_name": "Sara Godínez",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 101,
+    "fields": {
+      "sale": 46,
+      "product": 19,
+      "quantity": 1,
+      "unit_price": "57500.00",
+      "discount": "50.00",
+      "subtotal": "57450.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 47,
+    "fields": {
+      "date": "2026-02-04T12:45:00Z",
+      "total": "36800.00",
+      "client_name": "Uriel Cardona",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 102,
+    "fields": {
+      "sale": 47,
+      "product": 32,
+      "quantity": 2,
+      "unit_price": "18400.00",
+      "discount": "0.00",
+      "subtotal": "36800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 48,
+    "fields": {
+      "date": "2026-02-05T17:30:00Z",
+      "total": "179380.00",
+      "client_name": "Ana Torres",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 103,
+    "fields": {
+      "sale": 48,
+      "product": 22,
+      "quantity": 1,
+      "unit_price": "119600.00",
+      "discount": "0.00",
+      "subtotal": "119600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 104,
+    "fields": {
+      "sale": 48,
+      "product": 24,
+      "quantity": 1,
+      "unit_price": "59800.00",
+      "discount": "20.00",
+      "subtotal": "59780.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 49,
+    "fields": {
+      "date": "2026-02-06T13:53:00Z",
+      "total": "87400.00",
+      "client_name": "Guadalupe Rico",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 105,
+    "fields": {
+      "sale": 49,
+      "product": 27,
+      "quantity": 2,
+      "unit_price": "43700.00",
+      "discount": "0.00",
+      "subtotal": "87400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 50,
+    "fields": {
+      "date": "2026-02-06T17:14:00Z",
+      "total": "289800.00",
+      "client_name": "Jimena Esquivel",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 106,
+    "fields": {
+      "sale": 50,
+      "product": 21,
+      "quantity": 2,
+      "unit_price": "25300.00",
+      "discount": "0.00",
+      "subtotal": "50600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 107,
+    "fields": {
+      "sale": 50,
+      "product": 22,
+      "quantity": 2,
+      "unit_price": "119600.00",
+      "discount": "0.00",
+      "subtotal": "239200.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 51,
+    "fields": {
+      "date": "2026-02-07T12:00:00Z",
+      "total": "201200.00",
+      "client_name": "Agustina Gaytán",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 108,
+    "fields": {
+      "sale": 51,
+      "product": 21,
+      "quantity": 2,
+      "unit_price": "25300.00",
+      "discount": "0.00",
+      "subtotal": "50600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 109,
+    "fields": {
+      "sale": 51,
+      "product": 10,
+      "quantity": 1,
+      "unit_price": "71300.00",
+      "discount": "0.00",
+      "subtotal": "71300.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 110,
+    "fields": {
+      "sale": 51,
+      "product": 13,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 111,
+    "fields": {
+      "sale": 51,
+      "product": 19,
+      "quantity": 1,
+      "unit_price": "57500.00",
+      "discount": "50.00",
+      "subtotal": "57450.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 52,
+    "fields": {
+      "date": "2026-02-07T12:04:00Z",
+      "total": "74730.00",
+      "client_name": "Laura Mendoza",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 112,
+    "fields": {
+      "sale": 52,
+      "product": 30,
+      "quantity": 1,
+      "unit_price": "10350.00",
+      "discount": "10.00",
+      "subtotal": "10340.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 113,
+    "fields": {
+      "sale": 52,
+      "product": 28,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "10.00",
+      "subtotal": "64390.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 53,
+    "fields": {
+      "date": "2026-02-08T18:09:00Z",
+      "total": "287460.00",
+      "client_name": "Francisco Trejo",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 114,
+    "fields": {
+      "sale": 53,
+      "product": 11,
+      "quantity": 1,
+      "unit_price": "34500.00",
+      "discount": "20.00",
+      "subtotal": "34480.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 115,
+    "fields": {
+      "sale": 53,
+      "product": 5,
+      "quantity": 2,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "128800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 116,
+    "fields": {
+      "sale": 53,
+      "product": 31,
+      "quantity": 3,
+      "unit_price": "41400.00",
+      "discount": "20.00",
+      "subtotal": "124180.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 54,
+    "fields": {
+      "date": "2026-02-09T17:48:00Z",
+      "total": "501390.00",
+      "client_name": "Beatriz Nava",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 117,
+    "fields": {
+      "sale": 54,
+      "product": 12,
+      "quantity": 1,
+      "unit_price": "29900.00",
+      "discount": "0.00",
+      "subtotal": "29900.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 118,
+    "fields": {
+      "sale": 54,
+      "product": 26,
+      "quantity": 2,
+      "unit_price": "195500.00",
+      "discount": "0.00",
+      "subtotal": "391000.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 119,
+    "fields": {
+      "sale": 54,
+      "product": 1,
+      "quantity": 1,
+      "unit_price": "80500.00",
+      "discount": "10.00",
+      "subtotal": "80490.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 55,
+    "fields": {
+      "date": "2026-02-10T11:38:00Z",
+      "total": "436960.00",
+      "client_name": "Tania Aguilar",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 120,
+    "fields": {
+      "sale": 55,
+      "product": 4,
+      "quantity": 1,
+      "unit_price": "172500.00",
+      "discount": "20.00",
+      "subtotal": "172480.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 121,
+    "fields": {
+      "sale": 55,
+      "product": 7,
+      "quantity": 1,
+      "unit_price": "50600.00",
+      "discount": "0.00",
+      "subtotal": "50600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 122,
+    "fields": {
+      "sale": 55,
+      "product": 1,
+      "quantity": 2,
+      "unit_price": "80500.00",
+      "discount": "20.00",
+      "subtotal": "160980.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 123,
+    "fields": {
+      "sale": 55,
+      "product": 29,
+      "quantity": 1,
+      "unit_price": "52900.00",
+      "discount": "0.00",
+      "subtotal": "52900.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 56,
+    "fields": {
+      "date": "2026-02-10T12:34:00Z",
+      "total": "41400.00",
+      "client_name": "Moisés Rendón",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 124,
+    "fields": {
+      "sale": 56,
+      "product": 31,
+      "quantity": 1,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "41400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 57,
+    "fields": {
+      "date": "2026-02-12T11:55:00Z",
+      "total": "52900.00",
+      "client_name": "Jorge Castillo",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 125,
+    "fields": {
+      "sale": 57,
+      "product": 29,
+      "quantity": 1,
+      "unit_price": "52900.00",
+      "discount": "0.00",
+      "subtotal": "52900.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 58,
+    "fields": {
+      "date": "2026-02-12T12:50:00Z",
+      "total": "182850.00",
+      "client_name": "Celia Rentería",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 126,
+    "fields": {
+      "sale": 58,
+      "product": 24,
+      "quantity": 2,
+      "unit_price": "59800.00",
+      "discount": "0.00",
+      "subtotal": "119600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 127,
+    "fields": {
+      "sale": 58,
+      "product": 31,
+      "quantity": 1,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "41400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 128,
+    "fields": {
+      "sale": 58,
+      "product": 13,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 59,
+    "fields": {
+      "date": "2026-02-13T17:28:00Z",
+      "total": "327750.00",
+      "client_name": "Fabiola Cisneros",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 129,
+    "fields": {
+      "sale": 59,
+      "product": 1,
+      "quantity": 2,
+      "unit_price": "80500.00",
+      "discount": "0.00",
+      "subtotal": "161000.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 130,
+    "fields": {
+      "sale": 59,
+      "product": 12,
+      "quantity": 2,
+      "unit_price": "29900.00",
+      "discount": "0.00",
+      "subtotal": "59800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 131,
+    "fields": {
+      "sale": 59,
+      "product": 13,
+      "quantity": 3,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "65550.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 132,
+    "fields": {
+      "sale": 59,
+      "product": 31,
+      "quantity": 1,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "41400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 60,
+    "fields": {
+      "date": "2026-02-14T12:34:00Z",
+      "total": "64400.00",
+      "client_name": "Griselda Arce",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 133,
+    "fields": {
+      "sale": 60,
+      "product": 28,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "64400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 61,
+    "fields": {
+      "date": "2026-02-14T14:27:00Z",
+      "total": "195500.00",
+      "client_name": "Josué Hernández",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 134,
+    "fields": {
+      "sale": 61,
+      "product": 19,
+      "quantity": 2,
+      "unit_price": "57500.00",
+      "discount": "0.00",
+      "subtotal": "115000.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 135,
+    "fields": {
+      "sale": 61,
+      "product": 1,
+      "quantity": 1,
+      "unit_price": "80500.00",
+      "discount": "0.00",
+      "subtotal": "80500.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 62,
+    "fields": {
+      "date": "2026-02-14T15:12:00Z",
+      "total": "80500.00",
+      "client_name": "Yesenia Rosas",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 136,
+    "fields": {
+      "sale": 62,
+      "product": 25,
+      "quantity": 1,
+      "unit_price": "80500.00",
+      "discount": "0.00",
+      "subtotal": "80500.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 63,
+    "fields": {
+      "date": "2026-02-15T10:59:00Z",
+      "total": "109240.00",
+      "client_name": "Araceli Preciado",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 137,
+    "fields": {
+      "sale": 63,
+      "product": 11,
+      "quantity": 1,
+      "unit_price": "34500.00",
+      "discount": "10.00",
+      "subtotal": "34490.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 138,
+    "fields": {
+      "sale": 63,
+      "product": 5,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "64400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 139,
+    "fields": {
+      "sale": 63,
+      "product": 30,
+      "quantity": 1,
+      "unit_price": "10350.00",
+      "discount": "0.00",
+      "subtotal": "10350.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 64,
+    "fields": {
+      "date": "2026-02-15T13:29:00Z",
+      "total": "276000.00",
+      "client_name": "Gilberto Enríquez",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 140,
+    "fields": {
+      "sale": 64,
+      "product": 1,
+      "quantity": 1,
+      "unit_price": "80500.00",
+      "discount": "0.00",
+      "subtotal": "80500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 141,
+    "fields": {
+      "sale": 64,
+      "product": 26,
+      "quantity": 1,
+      "unit_price": "195500.00",
+      "discount": "0.00",
+      "subtotal": "195500.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 65,
+    "fields": {
+      "date": "2026-02-15T16:40:00Z",
+      "total": "409400.00",
+      "client_name": "Pedro Hernández",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 142,
+    "fields": {
+      "sale": 65,
+      "product": 17,
+      "quantity": 2,
+      "unit_price": "19550.00",
+      "discount": "0.00",
+      "subtotal": "39100.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 143,
+    "fields": {
+      "sale": 65,
+      "product": 24,
+      "quantity": 1,
+      "unit_price": "59800.00",
+      "discount": "0.00",
+      "subtotal": "59800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 144,
+    "fields": {
+      "sale": 65,
+      "product": 14,
+      "quantity": 3,
+      "unit_price": "103500.00",
+      "discount": "0.00",
+      "subtotal": "310500.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 66,
+    "fields": {
+      "date": "2026-02-15T16:55:00Z",
+      "total": "522100.00",
+      "client_name": "Anselmo Partida",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 145,
+    "fields": {
+      "sale": 66,
+      "product": 29,
+      "quantity": 3,
+      "unit_price": "52900.00",
+      "discount": "0.00",
+      "subtotal": "158700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 146,
+    "fields": {
+      "sale": 66,
+      "product": 16,
+      "quantity": 1,
+      "unit_price": "156400.00",
+      "discount": "0.00",
+      "subtotal": "156400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 147,
+    "fields": {
+      "sale": 66,
+      "product": 14,
+      "quantity": 2,
+      "unit_price": "103500.00",
+      "discount": "0.00",
+      "subtotal": "207000.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 67,
+    "fields": {
+      "date": "2026-02-15T17:53:00Z",
+      "total": "595700.00",
+      "client_name": "Rocío Ornelas",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 148,
+    "fields": {
+      "sale": 67,
+      "product": 3,
+      "quantity": 1,
+      "unit_price": "96600.00",
+      "discount": "0.00",
+      "subtotal": "96600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 149,
+    "fields": {
+      "sale": 67,
+      "product": 20,
+      "quantity": 1,
+      "unit_price": "98900.00",
+      "discount": "0.00",
+      "subtotal": "98900.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 150,
+    "fields": {
+      "sale": 67,
+      "product": 2,
+      "quantity": 3,
+      "unit_price": "133400.00",
+      "discount": "0.00",
+      "subtotal": "400200.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 68,
+    "fields": {
+      "date": "2026-02-18T14:51:00Z",
+      "total": "542790.00",
+      "client_name": "Ofelia Anguiano",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 151,
+    "fields": {
+      "sale": 68,
+      "product": 20,
+      "quantity": 2,
+      "unit_price": "98900.00",
+      "discount": "10.00",
+      "subtotal": "197790.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 152,
+    "fields": {
+      "sale": 68,
+      "product": 4,
+      "quantity": 2,
+      "unit_price": "172500.00",
+      "discount": "0.00",
+      "subtotal": "345000.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 69,
+    "fields": {
+      "date": "2026-02-19T10:28:00Z",
+      "total": "72450.00",
+      "client_name": "Cristina Ledezma",
+      "seller": 3,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 153,
+    "fields": {
+      "sale": 69,
+      "product": 7,
+      "quantity": 1,
+      "unit_price": "50600.00",
+      "discount": "0.00",
+      "subtotal": "50600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 154,
+    "fields": {
+      "sale": 69,
+      "product": 13,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 70,
+    "fields": {
+      "date": "2026-02-20T15:34:00Z",
+      "total": "55170.00",
+      "client_name": "Carlos Ruiz",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 155,
+    "fields": {
+      "sale": 70,
+      "product": 21,
+      "quantity": 1,
+      "unit_price": "25300.00",
+      "discount": "20.00",
+      "subtotal": "25280.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 156,
+    "fields": {
+      "sale": 70,
+      "product": 12,
+      "quantity": 1,
+      "unit_price": "29900.00",
+      "discount": "10.00",
+      "subtotal": "29890.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 71,
+    "fields": {
+      "date": "2026-02-21T11:24:00Z",
+      "total": "344990.00",
+      "client_name": "Celso Zúñiga",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 157,
+    "fields": {
+      "sale": 71,
+      "product": 4,
+      "quantity": 2,
+      "unit_price": "172500.00",
+      "discount": "10.00",
+      "subtotal": "344990.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 72,
+    "fields": {
+      "date": "2026-02-21T11:41:00Z",
+      "total": "77050.00",
+      "client_name": "Roberto Díaz",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 158,
+    "fields": {
+      "sale": 72,
+      "product": 19,
+      "quantity": 1,
+      "unit_price": "57500.00",
+      "discount": "0.00",
+      "subtotal": "57500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 159,
+    "fields": {
+      "sale": 72,
+      "product": 17,
+      "quantity": 1,
+      "unit_price": "19550.00",
+      "discount": "0.00",
+      "subtotal": "19550.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 73,
+    "fields": {
+      "date": "2026-02-21T15:16:00Z",
+      "total": "210450.00",
+      "client_name": "Ruth Zúñiga",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 160,
+    "fields": {
+      "sale": 73,
+      "product": 29,
+      "quantity": 2,
+      "unit_price": "52900.00",
+      "discount": "0.00",
+      "subtotal": "105800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 161,
+    "fields": {
+      "sale": 73,
+      "product": 23,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 162,
+    "fields": {
+      "sale": 73,
+      "product": 31,
+      "quantity": 2,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "82800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 74,
+    "fields": {
+      "date": "2026-02-22T10:18:00Z",
+      "total": "64400.00",
+      "client_name": "Ana Torres",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 163,
+    "fields": {
+      "sale": 74,
+      "product": 28,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "64400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 75,
+    "fields": {
+      "date": "2026-02-23T11:27:00Z",
+      "total": "259890.00",
+      "client_name": "Angélica Ocampo",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 164,
+    "fields": {
+      "sale": 75,
+      "product": 27,
+      "quantity": 3,
+      "unit_price": "43700.00",
+      "discount": "10.00",
+      "subtotal": "131090.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 165,
+    "fields": {
+      "sale": 75,
+      "product": 28,
+      "quantity": 2,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "128800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 76,
+    "fields": {
+      "date": "2026-02-25T10:03:00Z",
+      "total": "20700.00",
+      "client_name": "Adrián Villanueva",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 166,
+    "fields": {
+      "sale": 76,
+      "product": 30,
+      "quantity": 2,
+      "unit_price": "10350.00",
+      "discount": "0.00",
+      "subtotal": "20700.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 77,
+    "fields": {
+      "date": "2026-02-25T15:57:00Z",
+      "total": "21850.00",
+      "client_name": "Katia Alanís",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 167,
+    "fields": {
+      "sale": 77,
+      "product": 23,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 78,
+    "fields": {
+      "date": "2026-02-25T16:01:00Z",
+      "total": "52900.00",
+      "client_name": "Guadalupe Rico",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 168,
+    "fields": {
+      "sale": 78,
+      "product": 29,
+      "quantity": 1,
+      "unit_price": "52900.00",
+      "discount": "0.00",
+      "subtotal": "52900.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 79,
+    "fields": {
+      "date": "2026-02-26T09:43:00Z",
+      "total": "25300.00",
+      "client_name": "Lupita Alarcón",
+      "seller": 5,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 169,
+    "fields": {
+      "sale": 79,
+      "product": 21,
+      "quantity": 1,
+      "unit_price": "25300.00",
+      "discount": "0.00",
+      "subtotal": "25300.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 80,
+    "fields": {
+      "date": "2026-02-27T14:48:00Z",
+      "total": "21850.00",
+      "client_name": "Sofía Ramírez",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 170,
+    "fields": {
+      "sale": 80,
+      "product": 13,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 81,
+    "fields": {
+      "date": "2026-03-02T16:30:00Z",
+      "total": "232300.00",
+      "client_name": "Iván Duarte",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 171,
+    "fields": {
+      "sale": 81,
+      "product": 25,
+      "quantity": 1,
+      "unit_price": "80500.00",
+      "discount": "0.00",
+      "subtotal": "80500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 172,
+    "fields": {
+      "sale": 81,
+      "product": 18,
+      "quantity": 2,
+      "unit_price": "27600.00",
+      "discount": "0.00",
+      "subtotal": "55200.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 173,
+    "fields": {
+      "sale": 81,
+      "product": 3,
+      "quantity": 1,
+      "unit_price": "96600.00",
+      "discount": "0.00",
+      "subtotal": "96600.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 82,
+    "fields": {
+      "date": "2026-03-03T18:30:00Z",
+      "total": "319700.00",
+      "client_name": "Felipe Cruz",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 174,
+    "fields": {
+      "sale": 82,
+      "product": 13,
+      "quantity": 2,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 175,
+    "fields": {
+      "sale": 82,
+      "product": 9,
+      "quantity": 1,
+      "unit_price": "276000.00",
+      "discount": "0.00",
+      "subtotal": "276000.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 83,
+    "fields": {
+      "date": "2026-03-04T13:13:00Z",
+      "total": "232300.00",
+      "client_name": "Maribel Tovar",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 176,
+    "fields": {
+      "sale": 83,
+      "product": 15,
+      "quantity": 1,
+      "unit_price": "73600.00",
+      "discount": "0.00",
+      "subtotal": "73600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 177,
+    "fields": {
+      "sale": 83,
+      "product": 21,
+      "quantity": 1,
+      "unit_price": "25300.00",
+      "discount": "0.00",
+      "subtotal": "25300.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 178,
+    "fields": {
+      "sale": 83,
+      "product": 2,
+      "quantity": 1,
+      "unit_price": "133400.00",
+      "discount": "0.00",
+      "subtotal": "133400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 84,
+    "fields": {
+      "date": "2026-03-06T10:15:00Z",
+      "total": "34500.00",
+      "client_name": "Hilda Manríquez",
+      "seller": 3,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 179,
+    "fields": {
+      "sale": 84,
+      "product": 11,
+      "quantity": 1,
+      "unit_price": "34500.00",
+      "discount": "0.00",
+      "subtotal": "34500.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 85,
+    "fields": {
+      "date": "2026-03-06T17:05:00Z",
+      "total": "59800.00",
+      "client_name": "Martina Candelaria",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 180,
+    "fields": {
+      "sale": 85,
+      "product": 12,
+      "quantity": 2,
+      "unit_price": "29900.00",
+      "discount": "0.00",
+      "subtotal": "59800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 86,
+    "fields": {
+      "date": "2026-03-07T11:53:00Z",
+      "total": "386390.00",
+      "client_name": "Mónica Vargas",
+      "seller": 3,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 181,
+    "fields": {
+      "sale": 86,
+      "product": 27,
+      "quantity": 1,
+      "unit_price": "43700.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 182,
+    "fields": {
+      "sale": 86,
+      "product": 3,
+      "quantity": 3,
+      "unit_price": "96600.00",
+      "discount": "10.00",
+      "subtotal": "289790.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 183,
+    "fields": {
+      "sale": 86,
+      "product": 29,
+      "quantity": 1,
+      "unit_price": "52900.00",
+      "discount": "0.00",
+      "subtotal": "52900.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 87,
+    "fields": {
+      "date": "2026-03-07T15:45:00Z",
+      "total": "392130.00",
+      "client_name": "Rafael Cuevas",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 184,
+    "fields": {
+      "sale": 87,
+      "product": 13,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "10.00",
+      "subtotal": "21840.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 185,
+    "fields": {
+      "sale": 87,
+      "product": 5,
+      "quantity": 2,
+      "unit_price": "64400.00",
+      "discount": "10.00",
+      "subtotal": "128790.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 186,
+    "fields": {
+      "sale": 87,
+      "product": 1,
+      "quantity": 3,
+      "unit_price": "80500.00",
+      "discount": "0.00",
+      "subtotal": "241500.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 88,
+    "fields": {
+      "date": "2026-03-08T15:21:00Z",
+      "total": "127650.00",
+      "client_name": "Laura Mendoza",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 187,
+    "fields": {
+      "sale": 88,
+      "product": 7,
+      "quantity": 1,
+      "unit_price": "50600.00",
+      "discount": "0.00",
+      "subtotal": "50600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 188,
+    "fields": {
+      "sale": 88,
+      "product": 19,
+      "quantity": 1,
+      "unit_price": "57500.00",
+      "discount": "0.00",
+      "subtotal": "57500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 189,
+    "fields": {
+      "sale": 88,
+      "product": 17,
+      "quantity": 1,
+      "unit_price": "19550.00",
+      "discount": "0.00",
+      "subtotal": "19550.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 89,
+    "fields": {
+      "date": "2026-03-08T17:42:00Z",
+      "total": "469200.00",
+      "client_name": "César Godínez",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 190,
+    "fields": {
+      "sale": 89,
+      "product": 16,
+      "quantity": 3,
+      "unit_price": "156400.00",
+      "discount": "0.00",
+      "subtotal": "469200.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 90,
+    "fields": {
+      "date": "2026-03-10T17:06:00Z",
+      "total": "144900.00",
+      "client_name": "Liliana Ríos",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 191,
+    "fields": {
+      "sale": 90,
+      "product": 27,
+      "quantity": 1,
+      "unit_price": "43700.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 192,
+    "fields": {
+      "sale": 90,
+      "product": 7,
+      "quantity": 2,
+      "unit_price": "50600.00",
+      "discount": "0.00",
+      "subtotal": "101200.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 91,
+    "fields": {
+      "date": "2026-03-12T10:49:00Z",
+      "total": "236880.00",
+      "client_name": "Roberto Díaz",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 193,
+    "fields": {
+      "sale": 91,
+      "product": 6,
+      "quantity": 2,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "82800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 194,
+    "fields": {
+      "sale": 91,
+      "product": 25,
+      "quantity": 1,
+      "unit_price": "80500.00",
+      "discount": "20.00",
+      "subtotal": "80480.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 195,
+    "fields": {
+      "sale": 91,
+      "product": 15,
+      "quantity": 1,
+      "unit_price": "73600.00",
+      "discount": "0.00",
+      "subtotal": "73600.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 92,
+    "fields": {
+      "date": "2026-03-12T12:10:00Z",
+      "total": "78200.00",
+      "client_name": "Noé Valenzuela",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 196,
+    "fields": {
+      "sale": 92,
+      "product": 29,
+      "quantity": 1,
+      "unit_price": "52900.00",
+      "discount": "0.00",
+      "subtotal": "52900.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 197,
+    "fields": {
+      "sale": 92,
+      "product": 21,
+      "quantity": 1,
+      "unit_price": "25300.00",
+      "discount": "0.00",
+      "subtotal": "25300.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 93,
+    "fields": {
+      "date": "2026-03-12T18:15:00Z",
+      "total": "133400.00",
+      "client_name": "Edgar Montero",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 198,
+    "fields": {
+      "sale": 93,
+      "product": 2,
+      "quantity": 1,
+      "unit_price": "133400.00",
+      "discount": "0.00",
+      "subtotal": "133400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 94,
+    "fields": {
+      "date": "2026-03-14T13:28:00Z",
+      "total": "262190.00",
+      "client_name": "Pedro Hernández",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 199,
+    "fields": {
+      "sale": 94,
+      "product": 2,
+      "quantity": 1,
+      "unit_price": "133400.00",
+      "discount": "10.00",
+      "subtotal": "133390.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 200,
+    "fields": {
+      "sale": 94,
+      "product": 28,
+      "quantity": 2,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "128800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 95,
+    "fields": {
+      "date": "2026-03-16T18:52:00Z",
+      "total": "226530.00",
+      "client_name": "Sofía Ramírez",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 201,
+    "fields": {
+      "sale": 95,
+      "product": 14,
+      "quantity": 2,
+      "unit_price": "103500.00",
+      "discount": "10.00",
+      "subtotal": "206990.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 202,
+    "fields": {
+      "sale": 95,
+      "product": 17,
+      "quantity": 1,
+      "unit_price": "19550.00",
+      "discount": "10.00",
+      "subtotal": "19540.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 96,
+    "fields": {
+      "date": "2026-03-18T16:09:00Z",
+      "total": "370300.00",
+      "client_name": "Pilar Casillas",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 203,
+    "fields": {
+      "sale": 96,
+      "product": 11,
+      "quantity": 1,
+      "unit_price": "34500.00",
+      "discount": "0.00",
+      "subtotal": "34500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 204,
+    "fields": {
+      "sale": 96,
+      "product": 14,
+      "quantity": 2,
+      "unit_price": "103500.00",
+      "discount": "0.00",
+      "subtotal": "207000.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 205,
+    "fields": {
+      "sale": 96,
+      "product": 5,
+      "quantity": 2,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "128800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 97,
+    "fields": {
+      "date": "2026-03-20T17:10:00Z",
+      "total": "50600.00",
+      "client_name": "Mauro Pineda",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 206,
+    "fields": {
+      "sale": 97,
+      "product": 7,
+      "quantity": 1,
+      "unit_price": "50600.00",
+      "discount": "0.00",
+      "subtotal": "50600.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 98,
+    "fields": {
+      "date": "2026-03-21T11:03:00Z",
+      "total": "94300.00",
+      "client_name": "Jorge Castillo",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 207,
+    "fields": {
+      "sale": 98,
+      "product": 5,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "64400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 208,
+    "fields": {
+      "sale": 98,
+      "product": 12,
+      "quantity": 1,
+      "unit_price": "29900.00",
+      "discount": "0.00",
+      "subtotal": "29900.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 99,
+    "fields": {
+      "date": "2026-03-23T12:42:00Z",
+      "total": "834890.00",
+      "client_name": "Valente Carvajal",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 209,
+    "fields": {
+      "sale": 99,
+      "product": 21,
+      "quantity": 2,
+      "unit_price": "25300.00",
+      "discount": "0.00",
+      "subtotal": "50600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 210,
+    "fields": {
+      "sale": 99,
+      "product": 2,
+      "quantity": 2,
+      "unit_price": "133400.00",
+      "discount": "0.00",
+      "subtotal": "266800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 211,
+    "fields": {
+      "sale": 99,
+      "product": 4,
+      "quantity": 3,
+      "unit_price": "172500.00",
+      "discount": "10.00",
+      "subtotal": "517490.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 100,
+    "fields": {
+      "date": "2026-03-23T16:18:00Z",
+      "total": "186280.00",
+      "client_name": "Timoteo Mena",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 212,
+    "fields": {
+      "sale": 100,
+      "product": 19,
+      "quantity": 1,
+      "unit_price": "57500.00",
+      "discount": "20.00",
+      "subtotal": "57480.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 213,
+    "fields": {
+      "sale": 100,
+      "product": 5,
+      "quantity": 2,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "128800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 101,
+    "fields": {
+      "date": "2026-03-23T17:03:00Z",
+      "total": "152950.00",
+      "client_name": "Tadeo Treviño",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 214,
+    "fields": {
+      "sale": 101,
+      "product": 30,
+      "quantity": 1,
+      "unit_price": "10350.00",
+      "discount": "0.00",
+      "subtotal": "10350.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 215,
+    "fields": {
+      "sale": 101,
+      "product": 10,
+      "quantity": 2,
+      "unit_price": "71300.00",
+      "discount": "0.00",
+      "subtotal": "142600.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 102,
+    "fields": {
+      "date": "2026-03-23T18:21:00Z",
+      "total": "258750.00",
+      "client_name": "Ana Torres",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 216,
+    "fields": {
+      "sale": 102,
+      "product": 24,
+      "quantity": 2,
+      "unit_price": "59800.00",
+      "discount": "0.00",
+      "subtotal": "119600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 217,
+    "fields": {
+      "sale": 102,
+      "product": 22,
+      "quantity": 1,
+      "unit_price": "119600.00",
+      "discount": "0.00",
+      "subtotal": "119600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 218,
+    "fields": {
+      "sale": 102,
+      "product": 17,
+      "quantity": 1,
+      "unit_price": "19550.00",
+      "discount": "0.00",
+      "subtotal": "19550.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 103,
+    "fields": {
+      "date": "2026-03-24T14:03:00Z",
+      "total": "473790.00",
+      "client_name": "Neftalí Rangel",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 219,
+    "fields": {
+      "sale": 103,
+      "product": 15,
+      "quantity": 2,
+      "unit_price": "73600.00",
+      "discount": "0.00",
+      "subtotal": "147200.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 220,
+    "fields": {
+      "sale": 103,
+      "product": 7,
+      "quantity": 2,
+      "unit_price": "50600.00",
+      "discount": "10.00",
+      "subtotal": "101190.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 221,
+    "fields": {
+      "sale": 103,
+      "product": 5,
+      "quantity": 2,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "128800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 222,
+    "fields": {
+      "sale": 103,
+      "product": 3,
+      "quantity": 1,
+      "unit_price": "96600.00",
+      "discount": "0.00",
+      "subtotal": "96600.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 104,
+    "fields": {
+      "date": "2026-03-25T10:34:00Z",
+      "total": "29890.00",
+      "client_name": "Yolanda Quintana",
+      "seller": 3,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 223,
+    "fields": {
+      "sale": 104,
+      "product": 12,
+      "quantity": 1,
+      "unit_price": "29900.00",
+      "discount": "10.00",
+      "subtotal": "29890.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 105,
+    "fields": {
+      "date": "2026-03-26T10:43:00Z",
+      "total": "106950.00",
+      "client_name": "Flavio Rascón",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 224,
+    "fields": {
+      "sale": 105,
+      "product": 27,
+      "quantity": 1,
+      "unit_price": "43700.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 225,
+    "fields": {
+      "sale": 105,
+      "product": 6,
+      "quantity": 1,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "41400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 226,
+    "fields": {
+      "sale": 105,
+      "product": 13,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 106,
+    "fields": {
+      "date": "2026-03-26T10:49:00Z",
+      "total": "181700.00",
+      "client_name": "Tania Aguilar",
+      "seller": 3,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 227,
+    "fields": {
+      "sale": 106,
+      "product": 17,
+      "quantity": 2,
+      "unit_price": "19550.00",
+      "discount": "0.00",
+      "subtotal": "39100.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 228,
+    "fields": {
+      "sale": 106,
+      "product": 10,
+      "quantity": 2,
+      "unit_price": "71300.00",
+      "discount": "0.00",
+      "subtotal": "142600.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 107,
+    "fields": {
+      "date": "2026-03-26T15:08:00Z",
+      "total": "356460.00",
+      "client_name": "Irene Santoyo",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 229,
+    "fields": {
+      "sale": 107,
+      "product": 32,
+      "quantity": 1,
+      "unit_price": "18400.00",
+      "discount": "20.00",
+      "subtotal": "18380.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 230,
+    "fields": {
+      "sale": 107,
+      "product": 14,
+      "quantity": 2,
+      "unit_price": "103500.00",
+      "discount": "10.00",
+      "subtotal": "206990.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 231,
+    "fields": {
+      "sale": 107,
+      "product": 10,
+      "quantity": 1,
+      "unit_price": "71300.00",
+      "discount": "0.00",
+      "subtotal": "71300.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 232,
+    "fields": {
+      "sale": 107,
+      "product": 12,
+      "quantity": 2,
+      "unit_price": "29900.00",
+      "discount": "10.00",
+      "subtotal": "59790.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 108,
+    "fields": {
+      "date": "2026-03-27T12:43:00Z",
+      "total": "473800.00",
+      "client_name": "Ana Torres",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 233,
+    "fields": {
+      "sale": 108,
+      "product": 4,
+      "quantity": 2,
+      "unit_price": "172500.00",
+      "discount": "0.00",
+      "subtotal": "345000.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 234,
+    "fields": {
+      "sale": 108,
+      "product": 28,
+      "quantity": 2,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "128800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 109,
+    "fields": {
+      "date": "2026-03-28T12:23:00Z",
+      "total": "279450.00",
+      "client_name": "Efraín Galindo",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 235,
+    "fields": {
+      "sale": 109,
+      "product": 5,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "64400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 236,
+    "fields": {
+      "sale": 109,
+      "product": 13,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 237,
+    "fields": {
+      "sale": 109,
+      "product": 31,
+      "quantity": 1,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "41400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 238,
+    "fields": {
+      "sale": 109,
+      "product": 7,
+      "quantity": 3,
+      "unit_price": "50600.00",
+      "discount": "0.00",
+      "subtotal": "151800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 110,
+    "fields": {
+      "date": "2026-03-29T09:37:00Z",
+      "total": "20700.00",
+      "client_name": "Paola Gaytán",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 239,
+    "fields": {
+      "sale": 110,
+      "product": 30,
+      "quantity": 2,
+      "unit_price": "10350.00",
+      "discount": "0.00",
+      "subtotal": "20700.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 111,
+    "fields": {
+      "date": "2026-03-29T14:56:00Z",
+      "total": "335800.00",
+      "client_name": "Renato Viera",
+      "seller": 3,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 240,
+    "fields": {
+      "sale": 111,
+      "product": 5,
+      "quantity": 2,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "128800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 241,
+    "fields": {
+      "sale": 111,
+      "product": 10,
+      "quantity": 2,
+      "unit_price": "71300.00",
+      "discount": "0.00",
+      "subtotal": "142600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 242,
+    "fields": {
+      "sale": 111,
+      "product": 28,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "64400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 112,
+    "fields": {
+      "date": "2026-03-29T18:02:00Z",
+      "total": "64400.00",
+      "client_name": "Maximiliano Ríos",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 243,
+    "fields": {
+      "sale": 112,
+      "product": 28,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "64400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 113,
+    "fields": {
+      "date": "2026-03-30T10:00:00Z",
+      "total": "135700.00",
+      "client_name": "Lucio Márquez",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 244,
+    "fields": {
+      "sale": 113,
+      "product": 5,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "64400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 245,
+    "fields": {
+      "sale": 113,
+      "product": 10,
+      "quantity": 1,
+      "unit_price": "71300.00",
+      "discount": "0.00",
+      "subtotal": "71300.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 114,
+    "fields": {
+      "date": "2026-03-30T14:59:00Z",
+      "total": "74750.00",
+      "client_name": "Reyna Ortega",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 246,
+    "fields": {
+      "sale": 114,
+      "product": 5,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "64400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 247,
+    "fields": {
+      "sale": 114,
+      "product": 30,
+      "quantity": 1,
+      "unit_price": "10350.00",
+      "discount": "0.00",
+      "subtotal": "10350.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 115,
+    "fields": {
+      "date": "2026-03-30T17:16:00Z",
+      "total": "43700.00",
+      "client_name": "Cristóbal Limón",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 248,
+    "fields": {
+      "sale": 115,
+      "product": 13,
+      "quantity": 2,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 116,
+    "fields": {
+      "date": "2026-03-31T10:26:00Z",
+      "total": "172500.00",
+      "client_name": "Arnulfo Pedroza",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 249,
+    "fields": {
+      "sale": 116,
+      "product": 21,
+      "quantity": 3,
+      "unit_price": "25300.00",
+      "discount": "0.00",
+      "subtotal": "75900.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 250,
+    "fields": {
+      "sale": 116,
+      "product": 3,
+      "quantity": 1,
+      "unit_price": "96600.00",
+      "discount": "0.00",
+      "subtotal": "96600.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 117,
+    "fields": {
+      "date": "2026-04-01T11:30:00Z",
+      "total": "242650.00",
+      "client_name": "Francisco Trejo",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 251,
+    "fields": {
+      "sale": 117,
+      "product": 17,
+      "quantity": 3,
+      "unit_price": "19550.00",
+      "discount": "0.00",
+      "subtotal": "58650.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 252,
+    "fields": {
+      "sale": 117,
+      "product": 12,
+      "quantity": 1,
+      "unit_price": "29900.00",
+      "discount": "0.00",
+      "subtotal": "29900.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 253,
+    "fields": {
+      "sale": 117,
+      "product": 14,
+      "quantity": 1,
+      "unit_price": "103500.00",
+      "discount": "0.00",
+      "subtotal": "103500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 254,
+    "fields": {
+      "sale": 117,
+      "product": 21,
+      "quantity": 2,
+      "unit_price": "25300.00",
+      "discount": "0.00",
+      "subtotal": "50600.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 118,
+    "fields": {
+      "date": "2026-04-01T16:26:00Z",
+      "total": "374900.00",
+      "client_name": "Laura Mendoza",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 255,
+    "fields": {
+      "sale": 118,
+      "product": 11,
+      "quantity": 2,
+      "unit_price": "34500.00",
+      "discount": "0.00",
+      "subtotal": "69000.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 256,
+    "fields": {
+      "sale": 118,
+      "product": 2,
+      "quantity": 2,
+      "unit_price": "133400.00",
+      "discount": "0.00",
+      "subtotal": "266800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 257,
+    "fields": {
+      "sale": 118,
+      "product": 17,
+      "quantity": 2,
+      "unit_price": "19550.00",
+      "discount": "0.00",
+      "subtotal": "39100.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 119,
+    "fields": {
+      "date": "2026-04-02T11:04:00Z",
+      "total": "524400.00",
+      "client_name": "Patricia Vega",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 258,
+    "fields": {
+      "sale": 119,
+      "product": 2,
+      "quantity": 1,
+      "unit_price": "133400.00",
+      "discount": "0.00",
+      "subtotal": "133400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 259,
+    "fields": {
+      "sale": 119,
+      "product": 25,
+      "quantity": 1,
+      "unit_price": "80500.00",
+      "discount": "0.00",
+      "subtotal": "80500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 260,
+    "fields": {
+      "sale": 119,
+      "product": 14,
+      "quantity": 3,
+      "unit_price": "103500.00",
+      "discount": "0.00",
+      "subtotal": "310500.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 120,
+    "fields": {
+      "date": "2026-04-03T18:36:00Z",
+      "total": "592250.00",
+      "client_name": "Alma Delia Rea",
+      "seller": 5,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 261,
+    "fields": {
+      "sale": 120,
+      "product": 17,
+      "quantity": 1,
+      "unit_price": "19550.00",
+      "discount": "0.00",
+      "subtotal": "19550.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 262,
+    "fields": {
+      "sale": 120,
+      "product": 8,
+      "quantity": 2,
+      "unit_price": "204700.00",
+      "discount": "0.00",
+      "subtotal": "409400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 263,
+    "fields": {
+      "sale": 120,
+      "product": 25,
+      "quantity": 1,
+      "unit_price": "80500.00",
+      "discount": "0.00",
+      "subtotal": "80500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 264,
+    "fields": {
+      "sale": 120,
+      "product": 6,
+      "quantity": 2,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "82800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 121,
+    "fields": {
+      "date": "2026-04-04T12:25:00Z",
+      "total": "195470.00",
+      "client_name": "Clara Manzo",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 265,
+    "fields": {
+      "sale": 121,
+      "product": 12,
+      "quantity": 1,
+      "unit_price": "29900.00",
+      "discount": "20.00",
+      "subtotal": "29880.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 266,
+    "fields": {
+      "sale": 121,
+      "product": 32,
+      "quantity": 1,
+      "unit_price": "18400.00",
+      "discount": "10.00",
+      "subtotal": "18390.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 267,
+    "fields": {
+      "sale": 121,
+      "product": 15,
+      "quantity": 2,
+      "unit_price": "73600.00",
+      "discount": "0.00",
+      "subtotal": "147200.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 122,
+    "fields": {
+      "date": "2026-04-04T18:36:00Z",
+      "total": "82800.00",
+      "client_name": "Ignacio Flores",
+      "seller": 1,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 268,
+    "fields": {
+      "sale": 122,
+      "product": 27,
+      "quantity": 1,
+      "unit_price": "43700.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 269,
+    "fields": {
+      "sale": 122,
+      "product": 17,
+      "quantity": 2,
+      "unit_price": "19550.00",
+      "discount": "0.00",
+      "subtotal": "39100.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 123,
+    "fields": {
+      "date": "2026-04-05T11:28:00Z",
+      "total": "65550.00",
+      "client_name": "Brenda Ayala",
+      "seller": 3,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 270,
+    "fields": {
+      "sale": 123,
+      "product": 13,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 271,
+    "fields": {
+      "sale": 123,
+      "product": 23,
+      "quantity": 2,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 124,
+    "fields": {
+      "date": "2026-04-05T12:53:00Z",
+      "total": "906200.00",
+      "client_name": "Laura Mendoza",
+      "seller": 3,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 272,
+    "fields": {
+      "sale": 124,
+      "product": 9,
+      "quantity": 2,
+      "unit_price": "276000.00",
+      "discount": "0.00",
+      "subtotal": "552000.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 273,
+    "fields": {
+      "sale": 124,
+      "product": 32,
+      "quantity": 2,
+      "unit_price": "18400.00",
+      "discount": "0.00",
+      "subtotal": "36800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 274,
+    "fields": {
+      "sale": 124,
+      "product": 31,
+      "quantity": 3,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "124200.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 275,
+    "fields": {
+      "sale": 124,
+      "product": 3,
+      "quantity": 2,
+      "unit_price": "96600.00",
+      "discount": "0.00",
+      "subtotal": "193200.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 125,
+    "fields": {
+      "date": "2026-04-07T13:07:00Z",
+      "total": "193200.00",
+      "client_name": "Amalia Rivas",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 276,
+    "fields": {
+      "sale": 125,
+      "product": 3,
+      "quantity": 2,
+      "unit_price": "96600.00",
+      "discount": "0.00",
+      "subtotal": "193200.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 126,
+    "fields": {
+      "date": "2026-04-07T14:15:00Z",
+      "total": "154080.00",
+      "client_name": "Ramiro Pacheco",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 277,
+    "fields": {
+      "sale": 126,
+      "product": 18,
+      "quantity": 2,
+      "unit_price": "27600.00",
+      "discount": "20.00",
+      "subtotal": "55180.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 278,
+    "fields": {
+      "sale": 126,
+      "product": 20,
+      "quantity": 1,
+      "unit_price": "98900.00",
+      "discount": "0.00",
+      "subtotal": "98900.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 127,
+    "fields": {
+      "date": "2026-04-07T18:51:00Z",
+      "total": "69000.00",
+      "client_name": "Aarón Gaytán",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 279,
+    "fields": {
+      "sale": 127,
+      "product": 17,
+      "quantity": 2,
+      "unit_price": "19550.00",
+      "discount": "0.00",
+      "subtotal": "39100.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 280,
+    "fields": {
+      "sale": 127,
+      "product": 12,
+      "quantity": 1,
+      "unit_price": "29900.00",
+      "discount": "0.00",
+      "subtotal": "29900.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 128,
+    "fields": {
+      "date": "2026-04-08T11:39:00Z",
+      "total": "49400.00",
+      "client_name": "Mónica Vargas",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 281,
+    "fields": {
+      "sale": 128,
+      "product": 12,
+      "quantity": 1,
+      "unit_price": "29900.00",
+      "discount": "0.00",
+      "subtotal": "29900.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 282,
+    "fields": {
+      "sale": 128,
+      "product": 17,
+      "quantity": 1,
+      "unit_price": "19550.00",
+      "discount": "50.00",
+      "subtotal": "19500.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 129,
+    "fields": {
+      "date": "2026-04-09T13:29:00Z",
+      "total": "10350.00",
+      "client_name": "Saúl Cuevas",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 283,
+    "fields": {
+      "sale": 129,
+      "product": 30,
+      "quantity": 1,
+      "unit_price": "10350.00",
+      "discount": "0.00",
+      "subtotal": "10350.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 130,
+    "fields": {
+      "date": "2026-04-10T15:53:00Z",
+      "total": "42550.00",
+      "client_name": "Sofía Ramírez",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 284,
+    "fields": {
+      "sale": 130,
+      "product": 13,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 285,
+    "fields": {
+      "sale": 130,
+      "product": 30,
+      "quantity": 2,
+      "unit_price": "10350.00",
+      "discount": "0.00",
+      "subtotal": "20700.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 131,
+    "fields": {
+      "date": "2026-04-11T09:22:00Z",
+      "total": "305870.00",
+      "client_name": "Guadalupe Rico",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 286,
+    "fields": {
+      "sale": 131,
+      "product": 2,
+      "quantity": 2,
+      "unit_price": "133400.00",
+      "discount": "10.00",
+      "subtotal": "266790.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 287,
+    "fields": {
+      "sale": 131,
+      "product": 17,
+      "quantity": 2,
+      "unit_price": "19550.00",
+      "discount": "20.00",
+      "subtotal": "39080.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 132,
+    "fields": {
+      "date": "2026-04-11T18:57:00Z",
+      "total": "351900.00",
+      "client_name": "Carlos Ruiz",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 288,
+    "fields": {
+      "sale": 132,
+      "product": 26,
+      "quantity": 1,
+      "unit_price": "195500.00",
+      "discount": "0.00",
+      "subtotal": "195500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 289,
+    "fields": {
+      "sale": 132,
+      "product": 16,
+      "quantity": 1,
+      "unit_price": "156400.00",
+      "discount": "0.00",
+      "subtotal": "156400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 133,
+    "fields": {
+      "date": "2026-04-14T13:15:00Z",
+      "total": "19540.00",
+      "client_name": "Pedro Hernández",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 290,
+    "fields": {
+      "sale": 133,
+      "product": 17,
+      "quantity": 1,
+      "unit_price": "19550.00",
+      "discount": "10.00",
+      "subtotal": "19540.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 134,
+    "fields": {
+      "date": "2026-04-16T18:13:00Z",
+      "total": "292050.00",
+      "client_name": "Lizbeth Godínez",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 291,
+    "fields": {
+      "sale": 134,
+      "product": 20,
+      "quantity": 1,
+      "unit_price": "98900.00",
+      "discount": "50.00",
+      "subtotal": "98850.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 292,
+    "fields": {
+      "sale": 134,
+      "product": 3,
+      "quantity": 2,
+      "unit_price": "96600.00",
+      "discount": "0.00",
+      "subtotal": "193200.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 135,
+    "fields": {
+      "date": "2026-04-17T13:06:00Z",
+      "total": "363400.00",
+      "client_name": "Tania Aguilar",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 293,
+    "fields": {
+      "sale": 135,
+      "product": 27,
+      "quantity": 2,
+      "unit_price": "43700.00",
+      "discount": "0.00",
+      "subtotal": "87400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 294,
+    "fields": {
+      "sale": 135,
+      "product": 3,
+      "quantity": 2,
+      "unit_price": "96600.00",
+      "discount": "0.00",
+      "subtotal": "193200.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 295,
+    "fields": {
+      "sale": 135,
+      "product": 31,
+      "quantity": 2,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "82800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 136,
+    "fields": {
+      "date": "2026-04-20T12:11:00Z",
+      "total": "82780.00",
+      "client_name": "Roberto Díaz",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 296,
+    "fields": {
+      "sale": 136,
+      "product": 6,
+      "quantity": 1,
+      "unit_price": "41400.00",
+      "discount": "20.00",
+      "subtotal": "41380.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 297,
+    "fields": {
+      "sale": 136,
+      "product": 31,
+      "quantity": 1,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "41400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 137,
+    "fields": {
+      "date": "2026-04-20T15:20:00Z",
+      "total": "41400.00",
+      "client_name": "Jorge Castillo",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 298,
+    "fields": {
+      "sale": 137,
+      "product": 6,
+      "quantity": 1,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "41400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 138,
+    "fields": {
+      "date": "2026-04-20T17:00:00Z",
+      "total": "188600.00",
+      "client_name": "Job Partida",
+      "seller": 1,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 299,
+    "fields": {
+      "sale": 138,
+      "product": 31,
+      "quantity": 2,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "82800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 300,
+    "fields": {
+      "sale": 138,
+      "product": 29,
+      "quantity": 2,
+      "unit_price": "52900.00",
+      "discount": "0.00",
+      "subtotal": "105800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 139,
+    "fields": {
+      "date": "2026-04-21T12:51:00Z",
+      "total": "71300.00",
+      "client_name": "Ana Torres",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 301,
+    "fields": {
+      "sale": 139,
+      "product": 10,
+      "quantity": 1,
+      "unit_price": "71300.00",
+      "discount": "0.00",
+      "subtotal": "71300.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 140,
+    "fields": {
+      "date": "2026-04-22T09:00:00Z",
+      "total": "41400.00",
+      "client_name": "Ximena Peña",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 302,
+    "fields": {
+      "sale": 140,
+      "product": 31,
+      "quantity": 1,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "41400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 141,
+    "fields": {
+      "date": "2026-04-22T11:17:00Z",
+      "total": "281750.00",
+      "client_name": "Arturo Cisneros",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 303,
+    "fields": {
+      "sale": 141,
+      "product": 20,
+      "quantity": 2,
+      "unit_price": "98900.00",
+      "discount": "0.00",
+      "subtotal": "197800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 304,
+    "fields": {
+      "sale": 141,
+      "product": 28,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "64400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 305,
+    "fields": {
+      "sale": 141,
+      "product": 17,
+      "quantity": 1,
+      "unit_price": "19550.00",
+      "discount": "0.00",
+      "subtotal": "19550.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 142,
+    "fields": {
+      "date": "2026-04-22T17:19:00Z",
+      "total": "266800.00",
+      "client_name": "Coral Betancourt",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 306,
+    "fields": {
+      "sale": 142,
+      "product": 13,
+      "quantity": 2,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 307,
+    "fields": {
+      "sale": 142,
+      "product": 21,
+      "quantity": 3,
+      "unit_price": "25300.00",
+      "discount": "0.00",
+      "subtotal": "75900.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 308,
+    "fields": {
+      "sale": 142,
+      "product": 15,
+      "quantity": 2,
+      "unit_price": "73600.00",
+      "discount": "0.00",
+      "subtotal": "147200.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 143,
+    "fields": {
+      "date": "2026-04-23T10:56:00Z",
+      "total": "96600.00",
+      "client_name": "Salvador Cárdenas",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 309,
+    "fields": {
+      "sale": 143,
+      "product": 3,
+      "quantity": 1,
+      "unit_price": "96600.00",
+      "discount": "0.00",
+      "subtotal": "96600.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 144,
+    "fields": {
+      "date": "2026-04-23T14:37:00Z",
+      "total": "239190.00",
+      "client_name": "Rosa Mejía",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 310,
+    "fields": {
+      "sale": 144,
+      "product": 6,
+      "quantity": 1,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "41400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 311,
+    "fields": {
+      "sale": 144,
+      "product": 20,
+      "quantity": 2,
+      "unit_price": "98900.00",
+      "discount": "10.00",
+      "subtotal": "197790.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 145,
+    "fields": {
+      "date": "2026-04-23T17:45:00Z",
+      "total": "182850.00",
+      "client_name": "Soledad Córdova",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 312,
+    "fields": {
+      "sale": 145,
+      "product": 5,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "64400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 313,
+    "fields": {
+      "sale": 145,
+      "product": 12,
+      "quantity": 1,
+      "unit_price": "29900.00",
+      "discount": "0.00",
+      "subtotal": "29900.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 314,
+    "fields": {
+      "sale": 145,
+      "product": 17,
+      "quantity": 1,
+      "unit_price": "19550.00",
+      "discount": "0.00",
+      "subtotal": "19550.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 315,
+    "fields": {
+      "sale": 145,
+      "product": 11,
+      "quantity": 2,
+      "unit_price": "34500.00",
+      "discount": "0.00",
+      "subtotal": "69000.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 146,
+    "fields": {
+      "date": "2026-04-24T11:47:00Z",
+      "total": "133400.00",
+      "client_name": "Renata Suárez",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 316,
+    "fields": {
+      "sale": 146,
+      "product": 6,
+      "quantity": 1,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "41400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 317,
+    "fields": {
+      "sale": 146,
+      "product": 11,
+      "quantity": 1,
+      "unit_price": "34500.00",
+      "discount": "0.00",
+      "subtotal": "34500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 318,
+    "fields": {
+      "sale": 146,
+      "product": 19,
+      "quantity": 1,
+      "unit_price": "57500.00",
+      "discount": "0.00",
+      "subtotal": "57500.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 147,
+    "fields": {
+      "date": "2026-04-25T11:40:00Z",
+      "total": "41380.00",
+      "client_name": "Adán Villarreal",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 319,
+    "fields": {
+      "sale": 147,
+      "product": 31,
+      "quantity": 1,
+      "unit_price": "41400.00",
+      "discount": "20.00",
+      "subtotal": "41380.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 148,
+    "fields": {
+      "date": "2026-04-25T13:57:00Z",
+      "total": "34500.00",
+      "client_name": "Isidro Orellana",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 320,
+    "fields": {
+      "sale": 148,
+      "product": 11,
+      "quantity": 1,
+      "unit_price": "34500.00",
+      "discount": "0.00",
+      "subtotal": "34500.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 149,
+    "fields": {
+      "date": "2026-04-28T09:19:00Z",
+      "total": "296700.00",
+      "client_name": "Marco Galván",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 321,
+    "fields": {
+      "sale": 149,
+      "product": 21,
+      "quantity": 2,
+      "unit_price": "25300.00",
+      "discount": "0.00",
+      "subtotal": "50600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 322,
+    "fields": {
+      "sale": 149,
+      "product": 14,
+      "quantity": 2,
+      "unit_price": "103500.00",
+      "discount": "0.00",
+      "subtotal": "207000.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 323,
+    "fields": {
+      "sale": 149,
+      "product": 17,
+      "quantity": 2,
+      "unit_price": "19550.00",
+      "discount": "0.00",
+      "subtotal": "39100.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 150,
+    "fields": {
+      "date": "2026-04-30T10:37:00Z",
+      "total": "69000.00",
+      "client_name": "Rafael Cuevas",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 324,
+    "fields": {
+      "sale": 150,
+      "product": 18,
+      "quantity": 1,
+      "unit_price": "27600.00",
+      "discount": "0.00",
+      "subtotal": "27600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 325,
+    "fields": {
+      "sale": 150,
+      "product": 6,
+      "quantity": 1,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "41400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 151,
+    "fields": {
+      "date": "2026-04-30T13:32:00Z",
+      "total": "36800.00",
+      "client_name": "Lorena Banderas",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 326,
+    "fields": {
+      "sale": 151,
+      "product": 32,
+      "quantity": 2,
+      "unit_price": "18400.00",
+      "discount": "0.00",
+      "subtotal": "36800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 152,
+    "fields": {
+      "date": "2026-04-30T14:13:00Z",
+      "total": "300150.00",
+      "client_name": "Esteban Correa",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 327,
+    "fields": {
+      "sale": 152,
+      "product": 12,
+      "quantity": 2,
+      "unit_price": "29900.00",
+      "discount": "0.00",
+      "subtotal": "59800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 328,
+    "fields": {
+      "sale": 152,
+      "product": 26,
+      "quantity": 1,
+      "unit_price": "195500.00",
+      "discount": "0.00",
+      "subtotal": "195500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 329,
+    "fields": {
+      "sale": 152,
+      "product": 11,
+      "quantity": 1,
+      "unit_price": "34500.00",
+      "discount": "0.00",
+      "subtotal": "34500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 330,
+    "fields": {
+      "sale": 152,
+      "product": 30,
+      "quantity": 1,
+      "unit_price": "10350.00",
+      "discount": "0.00",
+      "subtotal": "10350.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 153,
+    "fields": {
+      "date": "2026-05-01T10:49:00Z",
+      "total": "255250.00",
+      "client_name": "Guadalupe Rico",
+      "seller": 1,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 331,
+    "fields": {
+      "sale": 153,
+      "product": 20,
+      "quantity": 1,
+      "unit_price": "98900.00",
+      "discount": "0.00",
+      "subtotal": "98900.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 332,
+    "fields": {
+      "sale": 153,
+      "product": 16,
+      "quantity": 1,
+      "unit_price": "156400.00",
+      "discount": "50.00",
+      "subtotal": "156350.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 154,
+    "fields": {
+      "date": "2026-05-01T10:56:00Z",
+      "total": "149490.00",
+      "client_name": "Eva Manríquez",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 333,
+    "fields": {
+      "sale": 154,
+      "product": 10,
+      "quantity": 1,
+      "unit_price": "71300.00",
+      "discount": "0.00",
+      "subtotal": "71300.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 334,
+    "fields": {
+      "sale": 154,
+      "product": 11,
+      "quantity": 1,
+      "unit_price": "34500.00",
+      "discount": "10.00",
+      "subtotal": "34490.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 335,
+    "fields": {
+      "sale": 154,
+      "product": 27,
+      "quantity": 1,
+      "unit_price": "43700.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 155,
+    "fields": {
+      "date": "2026-05-01T17:00:00Z",
+      "total": "351900.00",
+      "client_name": "Esmeralda Tostado",
+      "seller": 5,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 336,
+    "fields": {
+      "sale": 155,
+      "product": 19,
+      "quantity": 1,
+      "unit_price": "57500.00",
+      "discount": "0.00",
+      "subtotal": "57500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 337,
+    "fields": {
+      "sale": 155,
+      "product": 27,
+      "quantity": 3,
+      "unit_price": "43700.00",
+      "discount": "0.00",
+      "subtotal": "131100.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 338,
+    "fields": {
+      "sale": 155,
+      "product": 24,
+      "quantity": 2,
+      "unit_price": "59800.00",
+      "discount": "0.00",
+      "subtotal": "119600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 339,
+    "fields": {
+      "sale": 155,
+      "product": 23,
+      "quantity": 2,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 156,
+    "fields": {
+      "date": "2026-05-01T17:45:00Z",
+      "total": "50590.00",
+      "client_name": "Ambrosio Curiel",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 340,
+    "fields": {
+      "sale": 156,
+      "product": 21,
+      "quantity": 2,
+      "unit_price": "25300.00",
+      "discount": "10.00",
+      "subtotal": "50590.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 157,
+    "fields": {
+      "date": "2026-05-02T10:47:00Z",
+      "total": "119580.00",
+      "client_name": "Erika Corral",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 341,
+    "fields": {
+      "sale": 157,
+      "product": 22,
+      "quantity": 1,
+      "unit_price": "119600.00",
+      "discount": "20.00",
+      "subtotal": "119580.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 158,
+    "fields": {
+      "date": "2026-05-03T15:53:00Z",
+      "total": "80500.00",
+      "client_name": "Nayeli Cornejo",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 342,
+    "fields": {
+      "sale": 158,
+      "product": 1,
+      "quantity": 1,
+      "unit_price": "80500.00",
+      "discount": "0.00",
+      "subtotal": "80500.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 159,
+    "fields": {
+      "date": "2026-05-04T16:57:00Z",
+      "total": "134550.00",
+      "client_name": "Sofía Ramírez",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 343,
+    "fields": {
+      "sale": 159,
+      "product": 13,
+      "quantity": 2,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 344,
+    "fields": {
+      "sale": 159,
+      "product": 25,
+      "quantity": 1,
+      "unit_price": "80500.00",
+      "discount": "0.00",
+      "subtotal": "80500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 345,
+    "fields": {
+      "sale": 159,
+      "product": 30,
+      "quantity": 1,
+      "unit_price": "10350.00",
+      "discount": "0.00",
+      "subtotal": "10350.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 160,
+    "fields": {
+      "date": "2026-05-05T10:22:00Z",
+      "total": "175950.00",
+      "client_name": "Lázaro Camarillo",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 346,
+    "fields": {
+      "sale": 160,
+      "product": 17,
+      "quantity": 3,
+      "unit_price": "19550.00",
+      "discount": "0.00",
+      "subtotal": "58650.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 347,
+    "fields": {
+      "sale": 160,
+      "product": 11,
+      "quantity": 1,
+      "unit_price": "34500.00",
+      "discount": "0.00",
+      "subtotal": "34500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 348,
+    "fields": {
+      "sale": 160,
+      "product": 6,
+      "quantity": 2,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "82800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 161,
+    "fields": {
+      "date": "2026-05-06T09:57:00Z",
+      "total": "273700.00",
+      "client_name": "Dulce Cepeda",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 349,
+    "fields": {
+      "sale": 161,
+      "product": 20,
+      "quantity": 1,
+      "unit_price": "98900.00",
+      "discount": "0.00",
+      "subtotal": "98900.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 350,
+    "fields": {
+      "sale": 161,
+      "product": 6,
+      "quantity": 3,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "124200.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 351,
+    "fields": {
+      "sale": 161,
+      "product": 7,
+      "quantity": 1,
+      "unit_price": "50600.00",
+      "discount": "0.00",
+      "subtotal": "50600.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 162,
+    "fields": {
+      "date": "2026-05-06T11:01:00Z",
+      "total": "79350.00",
+      "client_name": "Ana Torres",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 352,
+    "fields": {
+      "sale": 162,
+      "product": 11,
+      "quantity": 2,
+      "unit_price": "34500.00",
+      "discount": "0.00",
+      "subtotal": "69000.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 353,
+    "fields": {
+      "sale": 162,
+      "product": 30,
+      "quantity": 1,
+      "unit_price": "10350.00",
+      "discount": "0.00",
+      "subtotal": "10350.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 163,
+    "fields": {
+      "date": "2026-05-07T15:57:00Z",
+      "total": "98890.00",
+      "client_name": "Laura Mendoza",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 354,
+    "fields": {
+      "sale": 163,
+      "product": 32,
+      "quantity": 3,
+      "unit_price": "18400.00",
+      "discount": "10.00",
+      "subtotal": "55190.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 355,
+    "fields": {
+      "sale": 163,
+      "product": 27,
+      "quantity": 1,
+      "unit_price": "43700.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 164,
+    "fields": {
+      "date": "2026-05-08T12:43:00Z",
+      "total": "465730.00",
+      "client_name": "Luz María Haro",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 356,
+    "fields": {
+      "sale": 164,
+      "product": 11,
+      "quantity": 1,
+      "unit_price": "34500.00",
+      "discount": "0.00",
+      "subtotal": "34500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 357,
+    "fields": {
+      "sale": 164,
+      "product": 13,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "20.00",
+      "subtotal": "21830.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 358,
+    "fields": {
+      "sale": 164,
+      "product": 8,
+      "quantity": 2,
+      "unit_price": "204700.00",
+      "discount": "0.00",
+      "subtotal": "409400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 165,
+    "fields": {
+      "date": "2026-05-09T11:56:00Z",
+      "total": "216200.00",
+      "client_name": "Teresa Lozano",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 359,
+    "fields": {
+      "sale": 165,
+      "product": 19,
+      "quantity": 2,
+      "unit_price": "57500.00",
+      "discount": "0.00",
+      "subtotal": "115000.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 360,
+    "fields": {
+      "sale": 165,
+      "product": 7,
+      "quantity": 2,
+      "unit_price": "50600.00",
+      "discount": "0.00",
+      "subtotal": "101200.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 166,
+    "fields": {
+      "date": "2026-05-10T09:05:00Z",
+      "total": "216180.00",
+      "client_name": "Iker Viera",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 361,
+    "fields": {
+      "sale": 166,
+      "product": 23,
+      "quantity": 2,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 362,
+    "fields": {
+      "sale": 166,
+      "product": 4,
+      "quantity": 1,
+      "unit_price": "172500.00",
+      "discount": "20.00",
+      "subtotal": "172480.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 167,
+    "fields": {
+      "date": "2026-05-10T11:27:00Z",
+      "total": "169050.00",
+      "client_name": "Pablo Nájera",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 363,
+    "fields": {
+      "sale": 167,
+      "product": 30,
+      "quantity": 1,
+      "unit_price": "10350.00",
+      "discount": "0.00",
+      "subtotal": "10350.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 364,
+    "fields": {
+      "sale": 167,
+      "product": 29,
+      "quantity": 3,
+      "unit_price": "52900.00",
+      "discount": "0.00",
+      "subtotal": "158700.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 168,
+    "fields": {
+      "date": "2026-05-11T09:58:00Z",
+      "total": "203530.00",
+      "client_name": "Mónica Vargas",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 365,
+    "fields": {
+      "sale": 168,
+      "product": 30,
+      "quantity": 1,
+      "unit_price": "10350.00",
+      "discount": "0.00",
+      "subtotal": "10350.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 366,
+    "fields": {
+      "sale": 168,
+      "product": 3,
+      "quantity": 2,
+      "unit_price": "96600.00",
+      "discount": "20.00",
+      "subtotal": "193180.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 169,
+    "fields": {
+      "date": "2026-05-12T18:13:00Z",
+      "total": "208110.00",
+      "client_name": "Francisco Trejo",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 367,
+    "fields": {
+      "sale": 169,
+      "product": 6,
+      "quantity": 3,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "124200.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 368,
+    "fields": {
+      "sale": 169,
+      "product": 29,
+      "quantity": 1,
+      "unit_price": "52900.00",
+      "discount": "20.00",
+      "subtotal": "52880.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 369,
+    "fields": {
+      "sale": 169,
+      "product": 30,
+      "quantity": 3,
+      "unit_price": "10350.00",
+      "discount": "20.00",
+      "subtotal": "31030.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 170,
+    "fields": {
+      "date": "2026-05-13T11:34:00Z",
+      "total": "496780.00",
+      "client_name": "Erick Pantoja",
+      "seller": 1,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 370,
+    "fields": {
+      "sale": 170,
+      "product": 1,
+      "quantity": 3,
+      "unit_price": "80500.00",
+      "discount": "0.00",
+      "subtotal": "241500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 371,
+    "fields": {
+      "sale": 170,
+      "product": 18,
+      "quantity": 3,
+      "unit_price": "27600.00",
+      "discount": "0.00",
+      "subtotal": "82800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 372,
+    "fields": {
+      "sale": 170,
+      "product": 4,
+      "quantity": 1,
+      "unit_price": "172500.00",
+      "discount": "20.00",
+      "subtotal": "172480.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 171,
+    "fields": {
+      "date": "2026-05-14T16:28:00Z",
+      "total": "273700.00",
+      "client_name": "Sofía Ramírez",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 373,
+    "fields": {
+      "sale": 171,
+      "product": 14,
+      "quantity": 1,
+      "unit_price": "103500.00",
+      "discount": "0.00",
+      "subtotal": "103500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 374,
+    "fields": {
+      "sale": 171,
+      "product": 6,
+      "quantity": 1,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "41400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 375,
+    "fields": {
+      "sale": 171,
+      "product": 5,
+      "quantity": 2,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "128800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 172,
+    "fields": {
+      "date": "2026-05-15T10:24:00Z",
+      "total": "243790.00",
+      "client_name": "Daniel Ponce",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 376,
+    "fields": {
+      "sale": 172,
+      "product": 25,
+      "quantity": 2,
+      "unit_price": "80500.00",
+      "discount": "10.00",
+      "subtotal": "160990.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 377,
+    "fields": {
+      "sale": 172,
+      "product": 6,
+      "quantity": 2,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "82800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 173,
+    "fields": {
+      "date": "2026-05-15T12:25:00Z",
+      "total": "25300.00",
+      "client_name": "Alan Trejo",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 378,
+    "fields": {
+      "sale": 173,
+      "product": 21,
+      "quantity": 1,
+      "unit_price": "25300.00",
+      "discount": "0.00",
+      "subtotal": "25300.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 174,
+    "fields": {
+      "date": "2026-05-16T16:14:00Z",
+      "total": "664700.00",
+      "client_name": "Carlos Ruiz",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 379,
+    "fields": {
+      "sale": 174,
+      "product": 7,
+      "quantity": 1,
+      "unit_price": "50600.00",
+      "discount": "0.00",
+      "subtotal": "50600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 380,
+    "fields": {
+      "sale": 174,
+      "product": 8,
+      "quantity": 3,
+      "unit_price": "204700.00",
+      "discount": "0.00",
+      "subtotal": "614100.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 175,
+    "fields": {
+      "date": "2026-05-18T09:11:00Z",
+      "total": "127640.00",
+      "client_name": "Estela Noriega",
+      "seller": 3,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 381,
+    "fields": {
+      "sale": 175,
+      "product": 1,
+      "quantity": 1,
+      "unit_price": "80500.00",
+      "discount": "0.00",
+      "subtotal": "80500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 382,
+    "fields": {
+      "sale": 175,
+      "product": 21,
+      "quantity": 1,
+      "unit_price": "25300.00",
+      "discount": "0.00",
+      "subtotal": "25300.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 383,
+    "fields": {
+      "sale": 175,
+      "product": 23,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "10.00",
+      "subtotal": "21840.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 176,
+    "fields": {
+      "date": "2026-05-19T12:30:00Z",
+      "total": "146050.00",
+      "client_name": "Ana Torres",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 384,
+    "fields": {
+      "sale": 176,
+      "product": 10,
+      "quantity": 1,
+      "unit_price": "71300.00",
+      "discount": "0.00",
+      "subtotal": "71300.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 385,
+    "fields": {
+      "sale": 176,
+      "product": 5,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "64400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 386,
+    "fields": {
+      "sale": 176,
+      "product": 30,
+      "quantity": 1,
+      "unit_price": "10350.00",
+      "discount": "0.00",
+      "subtotal": "10350.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 177,
+    "fields": {
+      "date": "2026-05-19T16:03:00Z",
+      "total": "60950.00",
+      "client_name": "Roberto Díaz",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 387,
+    "fields": {
+      "sale": 177,
+      "product": 13,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 388,
+    "fields": {
+      "sale": 177,
+      "product": 17,
+      "quantity": 2,
+      "unit_price": "19550.00",
+      "discount": "0.00",
+      "subtotal": "39100.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 178,
+    "fields": {
+      "date": "2026-05-20T13:22:00Z",
+      "total": "161000.00",
+      "client_name": "Itzel Lomelí",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 389,
+    "fields": {
+      "sale": 178,
+      "product": 25,
+      "quantity": 2,
+      "unit_price": "80500.00",
+      "discount": "0.00",
+      "subtotal": "161000.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 179,
+    "fields": {
+      "date": "2026-05-23T12:14:00Z",
+      "total": "118450.00",
+      "client_name": "Manuela Zamora",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 390,
+    "fields": {
+      "sale": 179,
+      "product": 23,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 391,
+    "fields": {
+      "sale": 179,
+      "product": 3,
+      "quantity": 1,
+      "unit_price": "96600.00",
+      "discount": "0.00",
+      "subtotal": "96600.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 180,
+    "fields": {
+      "date": "2026-05-23T17:56:00Z",
+      "total": "98900.00",
+      "client_name": "Alberto Campos",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 392,
+    "fields": {
+      "sale": 180,
+      "product": 5,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "64400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 393,
+    "fields": {
+      "sale": 180,
+      "product": 11,
+      "quantity": 1,
+      "unit_price": "34500.00",
+      "discount": "0.00",
+      "subtotal": "34500.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 181,
+    "fields": {
+      "date": "2026-05-24T11:59:00Z",
+      "total": "312800.00",
+      "client_name": "Vicente Zavala",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 394,
+    "fields": {
+      "sale": 181,
+      "product": 16,
+      "quantity": 2,
+      "unit_price": "156400.00",
+      "discount": "0.00",
+      "subtotal": "312800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 182,
+    "fields": {
+      "date": "2026-05-24T16:20:00Z",
+      "total": "370290.00",
+      "client_name": "Jorge Castillo",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 395,
+    "fields": {
+      "sale": 182,
+      "product": 14,
+      "quantity": 1,
+      "unit_price": "103500.00",
+      "discount": "10.00",
+      "subtotal": "103490.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 396,
+    "fields": {
+      "sale": 182,
+      "product": 2,
+      "quantity": 2,
+      "unit_price": "133400.00",
+      "discount": "0.00",
+      "subtotal": "266800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 183,
+    "fields": {
+      "date": "2026-05-26T14:20:00Z",
+      "total": "365660.00",
+      "client_name": "Pedro Hernández",
+      "seller": 1,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 397,
+    "fields": {
+      "sale": 183,
+      "product": 24,
+      "quantity": 1,
+      "unit_price": "59800.00",
+      "discount": "0.00",
+      "subtotal": "59800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 398,
+    "fields": {
+      "sale": 183,
+      "product": 19,
+      "quantity": 3,
+      "unit_price": "57500.00",
+      "discount": "20.00",
+      "subtotal": "172480.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 399,
+    "fields": {
+      "sale": 183,
+      "product": 2,
+      "quantity": 1,
+      "unit_price": "133400.00",
+      "discount": "20.00",
+      "subtotal": "133380.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 184,
+    "fields": {
+      "date": "2026-05-27T12:12:00Z",
+      "total": "43700.00",
+      "client_name": "Rogelio Cuevas",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 400,
+    "fields": {
+      "sale": 184,
+      "product": 13,
+      "quantity": 2,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 185,
+    "fields": {
+      "date": "2026-05-27T13:55:00Z",
+      "total": "169030.00",
+      "client_name": "Tomás Ibarra",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 401,
+    "fields": {
+      "sale": 185,
+      "product": 21,
+      "quantity": 2,
+      "unit_price": "25300.00",
+      "discount": "20.00",
+      "subtotal": "50580.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 402,
+    "fields": {
+      "sale": 185,
+      "product": 13,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 403,
+    "fields": {
+      "sale": 185,
+      "product": 32,
+      "quantity": 2,
+      "unit_price": "18400.00",
+      "discount": "0.00",
+      "subtotal": "36800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 404,
+    "fields": {
+      "sale": 185,
+      "product": 12,
+      "quantity": 2,
+      "unit_price": "29900.00",
+      "discount": "0.00",
+      "subtotal": "59800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 186,
+    "fields": {
+      "date": "2026-05-27T15:39:00Z",
+      "total": "19550.00",
+      "client_name": "Feliciano Bretón",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 405,
+    "fields": {
+      "sale": 186,
+      "product": 17,
+      "quantity": 1,
+      "unit_price": "19550.00",
+      "discount": "0.00",
+      "subtotal": "19550.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 187,
+    "fields": {
+      "date": "2026-05-28T18:27:00Z",
+      "total": "80500.00",
+      "client_name": "Karen Curiel",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 406,
+    "fields": {
+      "sale": 187,
+      "product": 1,
+      "quantity": 1,
+      "unit_price": "80500.00",
+      "discount": "0.00",
+      "subtotal": "80500.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 188,
+    "fields": {
+      "date": "2026-05-29T12:17:00Z",
+      "total": "63230.00",
+      "client_name": "Conchita Vela",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 407,
+    "fields": {
+      "sale": 188,
+      "product": 17,
+      "quantity": 1,
+      "unit_price": "19550.00",
+      "discount": "0.00",
+      "subtotal": "19550.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 408,
+    "fields": {
+      "sale": 188,
+      "product": 27,
+      "quantity": 1,
+      "unit_price": "43700.00",
+      "discount": "20.00",
+      "subtotal": "43680.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 189,
+    "fields": {
+      "date": "2026-05-29T14:50:00Z",
+      "total": "194340.00",
+      "client_name": "Humberto Padilla",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 409,
+    "fields": {
+      "sale": 189,
+      "product": 5,
+      "quantity": 2,
+      "unit_price": "64400.00",
+      "discount": "10.00",
+      "subtotal": "128790.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 410,
+    "fields": {
+      "sale": 189,
+      "product": 27,
+      "quantity": 1,
+      "unit_price": "43700.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 411,
+    "fields": {
+      "sale": 189,
+      "product": 13,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 190,
+    "fields": {
+      "date": "2026-05-31T12:55:00Z",
+      "total": "177100.00",
+      "client_name": "Teodoro Ruelas",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 412,
+    "fields": {
+      "sale": 190,
+      "product": 23,
+      "quantity": 2,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 413,
+    "fields": {
+      "sale": 190,
+      "product": 2,
+      "quantity": 1,
+      "unit_price": "133400.00",
+      "discount": "0.00",
+      "subtotal": "133400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 191,
+    "fields": {
+      "date": "2026-06-01T09:54:00Z",
+      "total": "483000.00",
+      "client_name": "Laura Mendoza",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 414,
+    "fields": {
+      "sale": 191,
+      "product": 2,
+      "quantity": 2,
+      "unit_price": "133400.00",
+      "discount": "0.00",
+      "subtotal": "266800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 415,
+    "fields": {
+      "sale": 191,
+      "product": 15,
+      "quantity": 1,
+      "unit_price": "73600.00",
+      "discount": "0.00",
+      "subtotal": "73600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 416,
+    "fields": {
+      "sale": 191,
+      "product": 10,
+      "quantity": 2,
+      "unit_price": "71300.00",
+      "discount": "0.00",
+      "subtotal": "142600.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 192,
+    "fields": {
+      "date": "2026-06-05T09:59:00Z",
+      "total": "89680.00",
+      "client_name": "Tania Aguilar",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 417,
+    "fields": {
+      "sale": 192,
+      "product": 5,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "64400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 418,
+    "fields": {
+      "sale": 192,
+      "product": 21,
+      "quantity": 1,
+      "unit_price": "25300.00",
+      "discount": "20.00",
+      "subtotal": "25280.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 193,
+    "fields": {
+      "date": "2026-06-05T15:51:00Z",
+      "total": "129900.00",
+      "client_name": "Verónica León",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 419,
+    "fields": {
+      "sale": 193,
+      "product": 30,
+      "quantity": 1,
+      "unit_price": "10350.00",
+      "discount": "50.00",
+      "subtotal": "10300.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 420,
+    "fields": {
+      "sale": 193,
+      "product": 21,
+      "quantity": 3,
+      "unit_price": "25300.00",
+      "discount": "0.00",
+      "subtotal": "75900.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 421,
+    "fields": {
+      "sale": 193,
+      "product": 13,
+      "quantity": 2,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 194,
+    "fields": {
+      "date": "2026-06-05T18:36:00Z",
+      "total": "188600.00",
+      "client_name": "Mónica Vargas",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 422,
+    "fields": {
+      "sale": 194,
+      "product": 5,
+      "quantity": 2,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "128800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 423,
+    "fields": {
+      "sale": 194,
+      "product": 12,
+      "quantity": 2,
+      "unit_price": "29900.00",
+      "discount": "0.00",
+      "subtotal": "59800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 195,
+    "fields": {
+      "date": "2026-06-06T14:27:00Z",
+      "total": "161000.00",
+      "client_name": "Miriam Pantoja",
+      "seller": 5,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 424,
+    "fields": {
+      "sale": 195,
+      "product": 27,
+      "quantity": 3,
+      "unit_price": "43700.00",
+      "discount": "0.00",
+      "subtotal": "131100.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 425,
+    "fields": {
+      "sale": 195,
+      "product": 30,
+      "quantity": 1,
+      "unit_price": "10350.00",
+      "discount": "0.00",
+      "subtotal": "10350.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 426,
+    "fields": {
+      "sale": 195,
+      "product": 17,
+      "quantity": 1,
+      "unit_price": "19550.00",
+      "discount": "0.00",
+      "subtotal": "19550.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 196,
+    "fields": {
+      "date": "2026-06-07T09:45:00Z",
+      "total": "362240.00",
+      "client_name": "Jazmín Zepeda",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 427,
+    "fields": {
+      "sale": 196,
+      "product": 28,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "64400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 428,
+    "fields": {
+      "sale": 196,
+      "product": 3,
+      "quantity": 2,
+      "unit_price": "96600.00",
+      "discount": "10.00",
+      "subtotal": "193190.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 429,
+    "fields": {
+      "sale": 196,
+      "product": 23,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 430,
+    "fields": {
+      "sale": 196,
+      "product": 6,
+      "quantity": 2,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "82800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 197,
+    "fields": {
+      "date": "2026-06-07T09:54:00Z",
+      "total": "262180.00",
+      "client_name": "Oscar Ávila",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 431,
+    "fields": {
+      "sale": 197,
+      "product": 29,
+      "quantity": 3,
+      "unit_price": "52900.00",
+      "discount": "0.00",
+      "subtotal": "158700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 432,
+    "fields": {
+      "sale": 197,
+      "product": 11,
+      "quantity": 3,
+      "unit_price": "34500.00",
+      "discount": "20.00",
+      "subtotal": "103480.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 198,
+    "fields": {
+      "date": "2026-06-08T16:22:00Z",
+      "total": "18400.00",
+      "client_name": "Ismael Maya",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 433,
+    "fields": {
+      "sale": 198,
+      "product": 32,
+      "quantity": 1,
+      "unit_price": "18400.00",
+      "discount": "0.00",
+      "subtotal": "18400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 199,
+    "fields": {
+      "date": "2026-06-08T17:25:00Z",
+      "total": "51750.00",
+      "client_name": "Dimas Pelayo",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 434,
+    "fields": {
+      "sale": 199,
+      "product": 6,
+      "quantity": 1,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "41400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 435,
+    "fields": {
+      "sale": 199,
+      "product": 30,
+      "quantity": 1,
+      "unit_price": "10350.00",
+      "discount": "0.00",
+      "subtotal": "10350.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 200,
+    "fields": {
+      "date": "2026-06-09T12:53:00Z",
+      "total": "673900.00",
+      "client_name": "Sofía Ramírez",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 436,
+    "fields": {
+      "sale": 200,
+      "product": 8,
+      "quantity": 1,
+      "unit_price": "204700.00",
+      "discount": "0.00",
+      "subtotal": "204700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 437,
+    "fields": {
+      "sale": 200,
+      "product": 16,
+      "quantity": 3,
+      "unit_price": "156400.00",
+      "discount": "0.00",
+      "subtotal": "469200.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 201,
+    "fields": {
+      "date": "2026-06-09T18:12:00Z",
+      "total": "105800.00",
+      "client_name": "Susana Olivera",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 438,
+    "fields": {
+      "sale": 201,
+      "product": 30,
+      "quantity": 1,
+      "unit_price": "10350.00",
+      "discount": "0.00",
+      "subtotal": "10350.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 439,
+    "fields": {
+      "sale": 201,
+      "product": 12,
+      "quantity": 1,
+      "unit_price": "29900.00",
+      "discount": "0.00",
+      "subtotal": "29900.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 440,
+    "fields": {
+      "sale": 201,
+      "product": 13,
+      "quantity": 3,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "65550.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 202,
+    "fields": {
+      "date": "2026-06-10T17:21:00Z",
+      "total": "98890.00",
+      "client_name": "Minerva Esqueda",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 441,
+    "fields": {
+      "sale": 202,
+      "product": 5,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "10.00",
+      "subtotal": "64390.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 442,
+    "fields": {
+      "sale": 202,
+      "product": 11,
+      "quantity": 1,
+      "unit_price": "34500.00",
+      "discount": "0.00",
+      "subtotal": "34500.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 203,
+    "fields": {
+      "date": "2026-06-11T13:02:00Z",
+      "total": "494500.00",
+      "client_name": "Fidel Zaragoza",
+      "seller": 5,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 443,
+    "fields": {
+      "sale": 203,
+      "product": 8,
+      "quantity": 2,
+      "unit_price": "204700.00",
+      "discount": "0.00",
+      "subtotal": "409400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 444,
+    "fields": {
+      "sale": 203,
+      "product": 27,
+      "quantity": 1,
+      "unit_price": "43700.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 445,
+    "fields": {
+      "sale": 203,
+      "product": 31,
+      "quantity": 1,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "41400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 204,
+    "fields": {
+      "date": "2026-06-13T09:33:00Z",
+      "total": "40240.00",
+      "client_name": "Elías Noriega",
+      "seller": 1,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 446,
+    "fields": {
+      "sale": 204,
+      "product": 30,
+      "quantity": 2,
+      "unit_price": "10350.00",
+      "discount": "0.00",
+      "subtotal": "20700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 447,
+    "fields": {
+      "sale": 204,
+      "product": 17,
+      "quantity": 1,
+      "unit_price": "19550.00",
+      "discount": "10.00",
+      "subtotal": "19540.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 205,
+    "fields": {
+      "date": "2026-06-13T09:48:00Z",
+      "total": "256450.00",
+      "client_name": "Guadalupe Rico",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 448,
+    "fields": {
+      "sale": 205,
+      "product": 21,
+      "quantity": 1,
+      "unit_price": "25300.00",
+      "discount": "0.00",
+      "subtotal": "25300.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 449,
+    "fields": {
+      "sale": 205,
+      "product": 25,
+      "quantity": 1,
+      "unit_price": "80500.00",
+      "discount": "0.00",
+      "subtotal": "80500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 450,
+    "fields": {
+      "sale": 205,
+      "product": 13,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 451,
+    "fields": {
+      "sale": 205,
+      "product": 28,
+      "quantity": 2,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "128800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 206,
+    "fields": {
+      "date": "2026-06-14T12:26:00Z",
+      "total": "154100.00",
+      "client_name": "Regina Solís",
+      "seller": 5,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 452,
+    "fields": {
+      "sale": 206,
+      "product": 15,
+      "quantity": 1,
+      "unit_price": "73600.00",
+      "discount": "0.00",
+      "subtotal": "73600.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 453,
+    "fields": {
+      "sale": 206,
+      "product": 1,
+      "quantity": 1,
+      "unit_price": "80500.00",
+      "discount": "0.00",
+      "subtotal": "80500.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 207,
+    "fields": {
+      "date": "2026-06-15T12:58:00Z",
+      "total": "404800.00",
+      "client_name": "Roberto Díaz",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 454,
+    "fields": {
+      "sale": 207,
+      "product": 1,
+      "quantity": 3,
+      "unit_price": "80500.00",
+      "discount": "0.00",
+      "subtotal": "241500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 455,
+    "fields": {
+      "sale": 207,
+      "product": 27,
+      "quantity": 1,
+      "unit_price": "43700.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 456,
+    "fields": {
+      "sale": 207,
+      "product": 22,
+      "quantity": 1,
+      "unit_price": "119600.00",
+      "discount": "0.00",
+      "subtotal": "119600.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 208,
+    "fields": {
+      "date": "2026-06-15T17:07:00Z",
+      "total": "365700.00",
+      "client_name": "Néstor Haro",
+      "seller": 3,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 457,
+    "fields": {
+      "sale": 208,
+      "product": 9,
+      "quantity": 1,
+      "unit_price": "276000.00",
+      "discount": "0.00",
+      "subtotal": "276000.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 458,
+    "fields": {
+      "sale": 208,
+      "product": 12,
+      "quantity": 3,
+      "unit_price": "29900.00",
+      "discount": "0.00",
+      "subtotal": "89700.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 209,
+    "fields": {
+      "date": "2026-06-16T10:42:00Z",
+      "total": "207000.00",
+      "client_name": "Emilio Rocha",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 459,
+    "fields": {
+      "sale": 209,
+      "product": 28,
+      "quantity": 2,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "128800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 460,
+    "fields": {
+      "sale": 209,
+      "product": 21,
+      "quantity": 1,
+      "unit_price": "25300.00",
+      "discount": "0.00",
+      "subtotal": "25300.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 461,
+    "fields": {
+      "sale": 209,
+      "product": 29,
+      "quantity": 1,
+      "unit_price": "52900.00",
+      "discount": "0.00",
+      "subtotal": "52900.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 210,
+    "fields": {
+      "date": "2026-06-16T10:46:00Z",
+      "total": "73600.00",
+      "client_name": "Silvia Delgado",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 462,
+    "fields": {
+      "sale": 210,
+      "product": 15,
+      "quantity": 1,
+      "unit_price": "73600.00",
+      "discount": "0.00",
+      "subtotal": "73600.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 211,
+    "fields": {
+      "date": "2026-06-17T15:20:00Z",
+      "total": "225390.00",
+      "client_name": "Natalia Ferrer",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 463,
+    "fields": {
+      "sale": 211,
+      "product": 29,
+      "quantity": 1,
+      "unit_price": "52900.00",
+      "discount": "0.00",
+      "subtotal": "52900.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 464,
+    "fields": {
+      "sale": 211,
+      "product": 4,
+      "quantity": 1,
+      "unit_price": "172500.00",
+      "discount": "10.00",
+      "subtotal": "172490.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 212,
+    "fields": {
+      "date": "2026-06-19T13:11:00Z",
+      "total": "733690.00",
+      "client_name": "Fernando Soto",
+      "seller": 1,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 465,
+    "fields": {
+      "sale": 212,
+      "product": 14,
+      "quantity": 3,
+      "unit_price": "103500.00",
+      "discount": "10.00",
+      "subtotal": "310490.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 466,
+    "fields": {
+      "sale": 212,
+      "product": 2,
+      "quantity": 1,
+      "unit_price": "133400.00",
+      "discount": "0.00",
+      "subtotal": "133400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 467,
+    "fields": {
+      "sale": 212,
+      "product": 3,
+      "quantity": 3,
+      "unit_price": "96600.00",
+      "discount": "0.00",
+      "subtotal": "289800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 213,
+    "fields": {
+      "date": "2026-06-20T09:07:00Z",
+      "total": "189730.00",
+      "client_name": "Lourdes Gazca",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 468,
+    "fields": {
+      "sale": 213,
+      "product": 19,
+      "quantity": 1,
+      "unit_price": "57500.00",
+      "discount": "0.00",
+      "subtotal": "57500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 469,
+    "fields": {
+      "sale": 213,
+      "product": 25,
+      "quantity": 1,
+      "unit_price": "80500.00",
+      "discount": "10.00",
+      "subtotal": "80490.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 470,
+    "fields": {
+      "sale": 213,
+      "product": 23,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "10.00",
+      "subtotal": "21840.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 471,
+    "fields": {
+      "sale": 213,
+      "product": 12,
+      "quantity": 1,
+      "unit_price": "29900.00",
+      "discount": "0.00",
+      "subtotal": "29900.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 214,
+    "fields": {
+      "date": "2026-06-21T13:35:00Z",
+      "total": "36800.00",
+      "client_name": "Salomón Maya",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 472,
+    "fields": {
+      "sale": 214,
+      "product": 32,
+      "quantity": 2,
+      "unit_price": "18400.00",
+      "discount": "0.00",
+      "subtotal": "36800.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 215,
+    "fields": {
+      "date": "2026-06-21T15:30:00Z",
+      "total": "456530.00",
+      "client_name": "Laura Mendoza",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 473,
+    "fields": {
+      "sale": 215,
+      "product": 2,
+      "quantity": 2,
+      "unit_price": "133400.00",
+      "discount": "20.00",
+      "subtotal": "266780.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 474,
+    "fields": {
+      "sale": 215,
+      "product": 13,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 475,
+    "fields": {
+      "sale": 215,
+      "product": 28,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "64400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 476,
+    "fields": {
+      "sale": 215,
+      "product": 11,
+      "quantity": 3,
+      "unit_price": "34500.00",
+      "discount": "0.00",
+      "subtotal": "103500.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 216,
+    "fields": {
+      "date": "2026-06-24T10:29:00Z",
+      "total": "104650.00",
+      "client_name": "Ana Torres",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 477,
+    "fields": {
+      "sale": 216,
+      "product": 31,
+      "quantity": 2,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "82800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 478,
+    "fields": {
+      "sale": 216,
+      "product": 13,
+      "quantity": 1,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "21850.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 217,
+    "fields": {
+      "date": "2026-06-25T12:23:00Z",
+      "total": "301300.00",
+      "client_name": "Rigoberto Alcalá",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 479,
+    "fields": {
+      "sale": 217,
+      "product": 23,
+      "quantity": 2,
+      "unit_price": "21850.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 480,
+    "fields": {
+      "sale": 217,
+      "product": 3,
+      "quantity": 2,
+      "unit_price": "96600.00",
+      "discount": "0.00",
+      "subtotal": "193200.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 481,
+    "fields": {
+      "sale": 217,
+      "product": 5,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "0.00",
+      "subtotal": "64400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 218,
+    "fields": {
+      "date": "2026-06-25T12:27:00Z",
+      "total": "310500.00",
+      "client_name": "Elena Nava",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 482,
+    "fields": {
+      "sale": 218,
+      "product": 11,
+      "quantity": 1,
+      "unit_price": "34500.00",
+      "discount": "0.00",
+      "subtotal": "34500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 483,
+    "fields": {
+      "sale": 218,
+      "product": 9,
+      "quantity": 1,
+      "unit_price": "276000.00",
+      "discount": "0.00",
+      "subtotal": "276000.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 219,
+    "fields": {
+      "date": "2026-06-30T17:43:00Z",
+      "total": "115000.00",
+      "client_name": "Abel Tapia",
+      "seller": 3,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 484,
+    "fields": {
+      "sale": 219,
+      "product": 1,
+      "quantity": 1,
+      "unit_price": "80500.00",
+      "discount": "0.00",
+      "subtotal": "80500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 485,
+    "fields": {
+      "sale": 219,
+      "product": 11,
+      "quantity": 1,
+      "unit_price": "34500.00",
+      "discount": "0.00",
+      "subtotal": "34500.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 220,
+    "fields": {
+      "date": "2026-07-02T09:19:00Z",
+      "total": "29880.00",
+      "client_name": "Leticia Ballesteros",
+      "seller": 1,
+      "payment_method": "transfer",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 486,
+    "fields": {
+      "sale": 220,
+      "product": 12,
+      "quantity": 1,
+      "unit_price": "29900.00",
+      "discount": "20.00",
+      "subtotal": "29880.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 221,
+    "fields": {
+      "date": "2026-07-02T13:25:00Z",
+      "total": "147200.00",
+      "client_name": "Elisa Becerra",
+      "seller": 1,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 487,
+    "fields": {
+      "sale": 221,
+      "product": 32,
+      "quantity": 1,
+      "unit_price": "18400.00",
+      "discount": "0.00",
+      "subtotal": "18400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 488,
+    "fields": {
+      "sale": 221,
+      "product": 19,
+      "quantity": 1,
+      "unit_price": "57500.00",
+      "discount": "0.00",
+      "subtotal": "57500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 489,
+    "fields": {
+      "sale": 221,
+      "product": 6,
+      "quantity": 1,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "41400.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 490,
+    "fields": {
+      "sale": 221,
+      "product": 12,
+      "quantity": 1,
+      "unit_price": "29900.00",
+      "discount": "0.00",
+      "subtotal": "29900.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 222,
+    "fields": {
+      "date": "2026-07-02T15:43:00Z",
+      "total": "101200.00",
+      "client_name": "Leonel Anguiano",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 491,
+    "fields": {
+      "sale": 222,
+      "product": 7,
+      "quantity": 2,
+      "unit_price": "50600.00",
+      "discount": "0.00",
+      "subtotal": "101200.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 223,
+    "fields": {
+      "date": "2026-07-03T11:39:00Z",
+      "total": "172480.00",
+      "client_name": "Héctor Ceja",
+      "seller": 5,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 492,
+    "fields": {
+      "sale": 223,
+      "product": 4,
+      "quantity": 1,
+      "unit_price": "172500.00",
+      "discount": "20.00",
+      "subtotal": "172480.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 224,
+    "fields": {
+      "date": "2026-07-03T13:32:00Z",
+      "total": "186290.00",
+      "client_name": "Cynthia Zamarripa",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 493,
+    "fields": {
+      "sale": 224,
+      "product": 20,
+      "quantity": 1,
+      "unit_price": "98900.00",
+      "discount": "0.00",
+      "subtotal": "98900.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 494,
+    "fields": {
+      "sale": 224,
+      "product": 27,
+      "quantity": 2,
+      "unit_price": "43700.00",
+      "discount": "10.00",
+      "subtotal": "87390.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 225,
+    "fields": {
+      "date": "2026-07-03T14:39:00Z",
+      "total": "292080.00",
+      "client_name": "Raúl Ortiz",
+      "seller": 3,
+      "payment_method": "card",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 495,
+    "fields": {
+      "sale": 225,
+      "product": 5,
+      "quantity": 1,
+      "unit_price": "64400.00",
+      "discount": "20.00",
+      "subtotal": "64380.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 496,
+    "fields": {
+      "sale": 225,
+      "product": 11,
+      "quantity": 3,
+      "unit_price": "34500.00",
+      "discount": "0.00",
+      "subtotal": "103500.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 497,
+    "fields": {
+      "sale": 225,
+      "product": 31,
+      "quantity": 2,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "82800.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 498,
+    "fields": {
+      "sale": 225,
+      "product": 6,
+      "quantity": 1,
+      "unit_price": "41400.00",
+      "discount": "0.00",
+      "subtotal": "41400.00"
+    }
+  },
+  {
+    "model": "sales.sale",
+    "pk": 226,
+    "fields": {
+      "date": "2026-07-03T18:38:00Z",
+      "total": "73600.00",
+      "client_name": "Paulina Larios",
+      "seller": 1,
+      "payment_method": "cash",
+      "cancelled": false
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 499,
+    "fields": {
+      "sale": 226,
+      "product": 27,
+      "quantity": 1,
+      "unit_price": "43700.00",
+      "discount": "0.00",
+      "subtotal": "43700.00"
+    }
+  },
+  {
+    "model": "sales.saleitem",
+    "pk": 500,
+    "fields": {
+      "sale": 226,
+      "product": 12,
+      "quantity": 1,
+      "unit_price": "29900.00",
+      "discount": "0.00",
+      "subtotal": "29900.00"
+    }
+  }
+]

@@ -1,0 +1,578 @@
+[
+  {
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+      "name": "Artesanías",
+      "description": "Artesanías tradicionales colombianas"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+      "name": "Textiles",
+      "description": "Textiles y tejidos artesanales"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+      "name": "Cerámica",
+      "description": "Cerámica y barro vidriado"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 4,
+    "fields": {
+      "name": "Joyería",
+      "description": "Joyería artesanal"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "name": "Jarrón de barro",
+      "description": "Jarrón decorativo pintado a mano con esmaltes naturales.",
+      "price": "80500.00",
+      "stock": 14,
+      "image": "",
+      "qr_code": "",
+      "owner": 2,
+      "category": 3,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "name": "Tapete de lana",
+      "description": "Tapete tejido en telar de cintura con lana teñida con tintes naturales.",
+      "price": "133400.00",
+      "stock": 8,
+      "image": "",
+      "qr_code": "",
+      "owner": 2,
+      "category": 2,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+      "name": "Máscara de madera",
+      "description": "Máscara tallada en cedro con decoración tradicional del Cauca.",
+      "price": "96600.00",
+      "stock": 10,
+      "image": "",
+      "qr_code": "",
+      "owner": 2,
+      "category": 1,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+      "name": "Ruana artesanal",
+      "description": "Ruana tejida a mano en telar de pedal con lana de ovejo.",
+      "price": "172500.00",
+      "stock": 6,
+      "image": "",
+      "qr_code": "",
+      "owner": 4,
+      "category": 2,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+      "name": "Collar de chaquira",
+      "description": "Collar con chaquira fina en diseño wayúu.",
+      "price": "64400.00",
+      "stock": 18,
+      "image": "",
+      "qr_code": "",
+      "owner": 4,
+      "category": 4,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+      "name": "Plato de barro",
+      "description": "Plato decorativo de barro vidriado. Apto para uso ligero.",
+      "price": "41400.00",
+      "stock": 25,
+      "image": "",
+      "qr_code": "",
+      "owner": 2,
+      "category": 3,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+      "name": "Mochila wayúu",
+      "description": "Mochila tejida a mano por la comunidad wayúu con fibras naturales.",
+      "price": "50600.00",
+      "stock": 14,
+      "image": "",
+      "qr_code": "",
+      "owner": 4,
+      "category": 2,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+      "name": "Figura tallada",
+      "description": "Figura tallada en tagua. Pieza coleccionable única.",
+      "price": "204700.00",
+      "stock": 4,
+      "image": "",
+      "qr_code": "",
+      "owner": 2,
+      "category": 1,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+      "name": "Pulsera de plata",
+      "description": "Pulsera artesanal de plata 950 con diseño de hojas.",
+      "price": "276000.00",
+      "stock": 7,
+      "image": "",
+      "qr_code": "",
+      "owner": 4,
+      "category": 4,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+      "name": "Cazuela de barro",
+      "description": "Cazuela de barro natural para guisos tradicionales.",
+      "price": "71300.00",
+      "stock": 9,
+      "image": "",
+      "qr_code": "",
+      "owner": 2,
+      "category": 3,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+      "name": "Aretes de chaquira",
+      "description": "Aretes artesanales de chaquira con diseños geométricos.",
+      "price": "34500.00",
+      "stock": 22,
+      "image": "",
+      "qr_code": "",
+      "owner": 4,
+      "category": 4,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 12,
+    "fields": {
+      "name": "Servilleta bordada",
+      "description": "Servilleta de manta bordada a mano con hilos de colores.",
+      "price": "29900.00",
+      "stock": 20,
+      "image": "",
+      "qr_code": "",
+      "owner": 4,
+      "category": 2,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 13,
+    "fields": {
+      "name": "Taza de barro",
+      "description": "Taza de barro vidriado, ideal para café o decoración.",
+      "price": "21850.00",
+      "stock": 30,
+      "image": "",
+      "qr_code": "",
+      "owner": 2,
+      "category": 3,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 14,
+    "fields": {
+      "name": "Alpargatas",
+      "description": "Alpargatas artesanales de fique con suela de caucho reciclado.",
+      "price": "103500.00",
+      "stock": 10,
+      "image": "",
+      "qr_code": "",
+      "owner": 6,
+      "category": 1,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 15,
+    "fields": {
+      "name": "Sombrero vueltiao",
+      "description": "Sombrero vueltiao tejido en fibra de caña flecha.",
+      "price": "73600.00",
+      "stock": 12,
+      "image": "",
+      "qr_code": "",
+      "owner": 6,
+      "category": 1,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 16,
+    "fields": {
+      "name": "Bolso de cuero",
+      "description": "Bolso artesanal de cuero curtido con hebilla de metal.",
+      "price": "156400.00",
+      "stock": 6,
+      "image": "",
+      "qr_code": "",
+      "owner": 6,
+      "category": 1,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 17,
+    "fields": {
+      "name": "Pulsera de semillas",
+      "description": "Pulsera tejida con semillas naturales y mostacilla.",
+      "price": "19550.00",
+      "stock": 35,
+      "image": "",
+      "qr_code": "",
+      "owner": 4,
+      "category": 4,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 18,
+    "fields": {
+      "name": "Adorno navideño",
+      "description": "Adorno artesanal de barro pintado. Temporada navideña.",
+      "price": "27600.00",
+      "stock": 15,
+      "image": "",
+      "qr_code": "",
+      "owner": 2,
+      "category": 3,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 19,
+    "fields": {
+      "name": "Báscula de madera",
+      "description": "Báscula decorativa tallada en madera de pino.",
+      "price": "57500.00",
+      "stock": 12,
+      "image": "",
+      "qr_code": "",
+      "owner": 6,
+      "category": 1,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 20,
+    "fields": {
+      "name": "Cobija de lana",
+      "description": "Cobija gruesa de lana de ovejo tejida en telar rústico.",
+      "price": "98900.00",
+      "stock": 8,
+      "image": "",
+      "qr_code": "",
+      "owner": 4,
+      "category": 2,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 21,
+    "fields": {
+      "name": "Tazón de barro",
+      "description": "Tazón hondo de barro vidriado, ideal para servir.",
+      "price": "25300.00",
+      "stock": 28,
+      "image": "",
+      "qr_code": "",
+      "owner": 2,
+      "category": 3,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 22,
+    "fields": {
+      "name": "Espejo artesanal",
+      "description": "Espejo con marco tallado en madera y pintura decorativa.",
+      "price": "119600.00",
+      "stock": 7,
+      "image": "",
+      "qr_code": "",
+      "owner": 6,
+      "category": 1,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 23,
+    "fields": {
+      "name": "Monedero de cuero",
+      "description": "Monedero artesanal de cuero con cierre metálico.",
+      "price": "21850.00",
+      "stock": 30,
+      "image": "",
+      "qr_code": "",
+      "owner": 6,
+      "category": 1,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 24,
+    "fields": {
+      "name": "Camino de mesa",
+      "description": "Camino de mesa tejido en algodón con flecos.",
+      "price": "59800.00",
+      "stock": 10,
+      "image": "",
+      "qr_code": "",
+      "owner": 4,
+      "category": 2,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 25,
+    "fields": {
+      "name": "Set de 6 tazas",
+      "description": "Set de 6 tazas de barro vidriado con diseño tradicional.",
+      "price": "80500.00",
+      "stock": 8,
+      "image": "",
+      "qr_code": "",
+      "owner": 2,
+      "category": 3,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 26,
+    "fields": {
+      "name": "Collar de plata",
+      "description": "Collar de plata 950 con dije de hoja de orquídea.",
+      "price": "195500.00",
+      "stock": 6,
+      "image": "",
+      "qr_code": "",
+      "owner": 4,
+      "category": 4,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 27,
+    "fields": {
+      "name": "Cesta de palma",
+      "description": "Cesta tejida en palma de iraca con asa de cuero.",
+      "price": "43700.00",
+      "stock": 15,
+      "image": "",
+      "qr_code": "",
+      "owner": 6,
+      "category": 1,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 28,
+    "fields": {
+      "name": "Tapete pequeño",
+      "description": "Tapete decorativo pequeño tejido en telar de cintura.",
+      "price": "64400.00",
+      "stock": 12,
+      "image": "",
+      "qr_code": "",
+      "owner": 2,
+      "category": 2,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 29,
+    "fields": {
+      "name": "Jarra de barro",
+      "description": "Jarra de barro vidriado para agua o decoración.",
+      "price": "52900.00",
+      "stock": 15,
+      "image": "",
+      "qr_code": "",
+      "owner": 2,
+      "category": 3,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 30,
+    "fields": {
+      "name": "Llavero artesanal",
+      "description": "Llavero de chaquira con diseños de animales.",
+      "price": "10350.00",
+      "stock": 50,
+      "image": "",
+      "qr_code": "",
+      "owner": 4,
+      "category": 4,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 31,
+    "fields": {
+      "name": "Cojín bordado",
+      "description": "Cojín de manta con bordado tradicional de flores.",
+      "price": "41400.00",
+      "stock": 18,
+      "image": "",
+      "qr_code": "",
+      "owner": 4,
+      "category": 2,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 32,
+    "fields": {
+      "name": "Cenicero de barro",
+      "description": "Cenicero decorativo de barro vidriado con esmalte verde.",
+      "price": "18400.00",
+      "stock": 25,
+      "image": "",
+      "qr_code": "",
+      "owner": 2,
+      "category": 3,
+      "active": true,
+      "created_at": "2025-12-15T12:00:00Z",
+      "updated_at": "2026-07-03T12:00:00Z"
+    }
+  }
+]

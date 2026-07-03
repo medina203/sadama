@@ -1,0 +1,122 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$1200000$3UFeaca60sg3dszyvvgGqN$H747GNXPI6HvuaaO8dg1tdJmtXJaFfYBckAp/Yrvft4=",
+      "last_login": "2026-07-03T19:00:00",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "Admin",
+      "last_name": "Principal",
+      "email": "admin@sadama.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-12-15T12:00:00Z",
+      "role": "admin",
+      "phone": "555-0000",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$1200000$fufVRjwJFxtNlHaOa2X0WO$ABNG2KkBRhEV9hWNTRh5T6q4Mlykpel3ORp9RNMWf4Q=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "carmen",
+      "first_name": "Carmen",
+      "last_name": "López",
+      "email": "carmen@artesanias.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-12-15T12:00:00Z",
+      "role": "owner",
+      "phone": "555-0101",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$1200000$07pFLin9e61nk5BtzbsBru$Viswua+w96vGEBn3XiGWibUOzTsKtnNNYQoCtXl51M0=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "luis",
+      "first_name": "Luis",
+      "last_name": "Martínez",
+      "email": "luis@artesanias.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-12-15T12:00:00Z",
+      "role": "seller",
+      "phone": "555-0202",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$1200000$3UFeaca60sg3dszyvvgGqN$H747GNXPI6HvuaaO8dg1tdJmtXJaFfYBckAp/Yrvft4=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "maria",
+      "first_name": "María",
+      "last_name": "García",
+      "email": "maria@artesanias.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-12-15T12:00:00Z",
+      "role": "owner",
+      "phone": "555-0303",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$1200000$07pFLin9e61nk5BtzbsBru$Viswua+w96vGEBn3XiGWibUOzTsKtnNNYQoCtXl51M0=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "ana",
+      "first_name": "Ana",
+      "last_name": "Ramírez",
+      "email": "ana@artesanias.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-12-15T12:00:00Z",
+      "role": "seller",
+      "phone": "555-0404",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$1200000$3UFeaca60sg3dszyvvgGqN$H747GNXPI6HvuaaO8dg1tdJmtXJaFfYBckAp/Yrvft4=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "pepe",
+      "first_name": "José",
+      "last_name": "Hernández",
+      "email": "pepe@artesanias.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-12-15T12:00:00Z",
+      "role": "owner",
+      "phone": "555-0505",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

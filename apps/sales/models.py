@@ -40,6 +40,7 @@ class Sale(models.Model):
                     stock=F("stock") + item.quantity
                 )
             Sale.objects.filter(pk=self.pk).update(cancelled=True)
+            self.refresh_from_db(fields=["cancelled"])
 
     def __str__(self):
         status = " [ANULADA]" if self.cancelled else ""
@@ -69,20 +70,21 @@ class SaleItem(models.Model):
             )
 
     def save(self, *args, **kwargs):
-        self.unit_price = self.product.price
-        base = self.product.price * self.quantity
-        self.subtotal = base - (self.discount or 0)
-        if self.subtotal < 0:
-            self.subtotal = 0
-        super().save(*args, **kwargs)
-        updated = Product.objects.filter(pk=self.product.pk, stock__gte=self.quantity).update(
-            stock=F("stock") - self.quantity
-        )
-        if updated == 0:
-            raise ValidationError(
-                f"Stock insuficiente para '{self.product.name}'."
+        with db_transaction.atomic():
+            self.unit_price = self.product.price
+            base = self.product.price * self.quantity
+            self.subtotal = base - (self.discount or 0)
+            if self.subtotal < 0:
+                self.subtotal = 0
+            super().save(*args, **kwargs)
+            updated = Product.objects.filter(pk=self.product.pk, stock__gte=self.quantity).update(
+                stock=F("stock") - self.quantity
             )
-        self.product.refresh_from_db()
+            if updated == 0:
+                raise ValidationError(
+                    f"Stock insuficiente para '{self.product.name}'."
+                )
+            self.product.refresh_from_db()
 
     def __str__(self):
         return f"{self.quantity}x {self.product.name}"
