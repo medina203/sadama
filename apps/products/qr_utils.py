@@ -8,6 +8,6 @@ def generate_qr(product_id):
     qr.add_data(str(product_id))
     qr.make(fit=True)
     img = qr.make_image(fill_color="#1e3a5f", back_color="white")
-    buf = io.BytesIO()
-    img.save(buf, format="PNG")
-    return ContentFile(buf.getvalue(), name=f"product_{product_id}.png")
+    with io.BytesIO() as buf:
+        img.save(buf, format="PNG")
+        return ContentFile(buf.getvalue(), name=f"product_{product_id}.png")

@@ -1,4 +1,5 @@
 from django.db import models
+from django.db import transaction as db_transaction
 from django.db.models import F
 from django.core.exceptions import ValidationError
 
@@ -29,7 +30,6 @@ class Sale(models.Model):
         verbose_name_plural = "Ventas"
 
     def cancel(self):
-        from django.db import transaction as db_transaction
         with db_transaction.atomic():
             sale = Sale.objects.select_for_update().get(pk=self.pk)
             if sale.cancelled:
@@ -74,16 +74,15 @@ class SaleItem(models.Model):
         self.subtotal = base - (self.discount or 0)
         if self.subtotal < 0:
             self.subtotal = 0
+        super().save(*args, **kwargs)
         updated = Product.objects.filter(pk=self.product.pk, stock__gte=self.quantity).update(
             stock=F("stock") - self.quantity
         )
         if updated == 0:
             raise ValidationError(
-                f"Stock insuficiente para '{self.product.name}'. "
-                f"Disponible: {self.product.stock}, solicitado: {self.quantity}"
+                f"Stock insuficiente para '{self.product.name}'."
             )
         self.product.refresh_from_db()
-        super().save(*args, **kwargs)
 
     def __str__(self):
         return f"{self.quantity}x {self.product.name}"

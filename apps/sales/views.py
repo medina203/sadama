@@ -1,9 +1,10 @@
-import csv
+from datetime import timedelta
 
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ValidationError
 from django.db import IntegrityError, transaction
-from django.http import HttpResponse, JsonResponse
+from django.db.models import Sum
+from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
 from django.utils import timezone
@@ -26,7 +27,7 @@ class SaleDetailView(DetailView):
     model = Sale
     template_name = "sales/sale_detail.html"
     context_object_name = "sale"
-    queryset = Sale.objects.prefetch_related("items__product__owner")
+    queryset = Sale.objects.select_related("seller").prefetch_related("items__product__owner")
 
 
 class SaleCreateView(CreateView):
@@ -67,7 +68,10 @@ class SaleCreateView(CreateView):
 
 @login_required
 def sale_ticket(request, pk):
-    sale = get_object_or_404(Sale.objects.prefetch_related("items__product__owner"), pk=pk)
+    sale = get_object_or_404(
+        Sale.objects.select_related("seller").prefetch_related("items__product__owner"),
+        pk=pk,
+    )
     return render(request, "sales/sale_ticket.html", {"sale": sale})
 
 
@@ -84,8 +88,6 @@ def sale_cancel(request, pk):
 def sales_chart_data(request):
     days = int(request.GET.get("days", 7))
     today = timezone.localdate()
-    from django.db.models import Sum
-    from datetime import timedelta
     labels = []
     data = []
     for i in range(days - 1, -1, -1):

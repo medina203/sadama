@@ -18,7 +18,7 @@
         Sadama
     </div>
     <nav class="sidebar-nav">
-        <a href="{% url 'dashboard' %}" class="{% if request.resolver_match and request.resolver_match.url_name == 'dashboard' %}active{% endif %}">
+        <a href="{% url 'tablero' %}" class="{% if request.resolver_match and request.resolver_match.url_name == 'tablero' %}active{% endif %}">
             <span class="nav-icon"><i class="bi bi-grid-1x2"></i></span> Panel
         </a>
         <a href="{% url 'products:product_list' %}" class="{% if request.resolver_match and 'productos' in request.resolver_match.namespaces %}active{% endif %}">
@@ -50,7 +50,7 @@
         <div class="user-info">
             <span>{{ user.get_full_name|default:user.username }}</span>
             <div class="user-avatar">{{ user.get_full_name|default:user.username|first|upper }}</div>
-            <form method="post" action="{% url 'logout' %}" style="display:inline">
+            <form method="post" action="{% url 'cerrar-sesion' %}" style="display:inline">
                 {% csrf_token %}
                 <button type="submit" class="btn-custom btn-outline-custom btn-sm-custom" title="Cerrar sesión">
                     <i class="bi bi-box-arrow-right"></i>

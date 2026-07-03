@@ -10,4 +10,5 @@ urlpatterns = [
     path("<int:pk>/json/", views.product_json, name="product_json"),
     path("<int:pk>/editar/", views.ProductUpdateView.as_view(), name="product_update"),
     path("<int:pk>/toggle/", views.product_toggle_active, name="product_toggle"),
+    path("<int:pk>/eliminar/", views.ProductDeleteView.as_view(), name="product_delete"),
 ]

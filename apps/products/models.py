@@ -1,6 +1,7 @@
 from django.db import models
 
 from apps.users.models import User
+from .qr_utils import generate_qr
 
 
 class Category(models.Model):
@@ -40,7 +41,6 @@ class Product(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.qr_code:
-            from .qr_utils import generate_qr
             if self.pk is None:
                 super().save(*args, **kwargs)
             self.qr_code = generate_qr(self.pk)

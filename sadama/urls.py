@@ -9,9 +9,9 @@ from apps.users.views import dashboard
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', dashboard, name='dashboard'),
-    path('login/', login_not_required(LoginView.as_view()), name='login'),
-    path('logout/', LogoutView.as_view(next_page='login'), name='logout'),
+    path('', dashboard, name='tablero'),
+    path('login/', login_not_required(LoginView.as_view()), name='iniciar-sesion'),
+    path('logout/', LogoutView.as_view(next_page='iniciar-sesion'), name='cerrar-sesion'),
     path('productos/', include('apps.products.urls')),
     path('usuarios/', include('apps.users.urls')),
     path('ventas/', include('apps.sales.urls')),

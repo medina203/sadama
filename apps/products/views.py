@@ -1,11 +1,11 @@
 from django.contrib import messages
-from django.db.models import ProtectedError, Q
+from django.db.models import Q
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse_lazy
-from django.views.generic import ListView, CreateView, UpdateView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 
-from .models import Product
+from .models import Category, Product
 
 
 class ProductListView(ListView):
@@ -29,7 +29,6 @@ class ProductListView(ListView):
 
     def get_context_data(self, **kwargs):
         ctx = super().get_context_data(**kwargs)
-        from .models import Category
         ctx["categories"] = Category.objects.all()
         ctx["q"] = self.request.GET.get("q", "")
         ctx["selected_category"] = self.request.GET.get("category", "")
@@ -48,6 +47,12 @@ class ProductUpdateView(UpdateView):
     model = Product
     template_name = "products/product_form.html"
     fields = ["name", "description", "price", "stock", "image", "owner", "category"]
+    success_url = reverse_lazy("products:product_list")
+
+
+class ProductDeleteView(DeleteView):
+    model = Product
+    template_name = "products/product_confirm_delete.html"
     success_url = reverse_lazy("products:product_list")
 
 
