@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+{% block title %}Nueva venta | Sadama{% endblock %}
+{% block page_title %}Nueva venta{% endblock %}
+{% block page_subtitle %}<p>Registra una venta seleccionando los productos</p>{% endblock %}
+{% block content %}
+
+<form method="post" class="form-custom">
+    {% csrf_token %}
+
+    {% if form.non_field_errors or items.non_form_errors %}
+        <div class="alert-custom alert-danger-custom" style="margin-bottom:1rem">
+            <i class="bi bi-exclamation-triangle"></i>
+            {% for error in form.non_field_errors %}{{ error }}{% endfor %}
+            {% for error in items.non_form_errors %}{{ error }}{% endfor %}
+        </div>
+    {% endif %}
+
+        <div class="row g-3 mb-4">
+            {% for field in form %}
+                <div class="col-md-4">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    {{ field }}
+                    {% if field.errors %}
+                        <div style="color:#ef4444;font-size:.8rem;margin-top:.25rem">{{ field.errors }}</div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+
+    <h6 style="font-size:.8rem;text-transform:uppercase;letter-spacing:.03em;color:#64748b;margin-bottom:1rem">
+        <i class="bi bi-cart-plus"></i> Productos
+    </h6>
+
+    {{ items.management_form }}
+
+    <div id="items-container">
+        {% for item_form in items %}
+            <div class="item-row" style="display:flex;gap:1rem;align-items:end;margin-bottom:.75rem;padding:.75rem;background:var(--bg-surface);border-radius:8px;">
+                {% for hidden in item_form.hidden_fields %}{{ hidden }}{% endfor %}
+                <div style="flex:2">
+                    <label style="font-size:.8rem;color:var(--text-secondary);margin-bottom:.25rem;display:block">Producto</label>
+                    {{ item_form.product }}
+                </div>
+                <div style="flex:1">
+                    <label style="font-size:.8rem;color:var(--text-secondary);margin-bottom:.25rem;display:block">Cantidad</label>
+                    {{ item_form.quantity }}
+                </div>
+                <div style="flex:1">
+                    <label style="font-size:.8rem;color:var(--text-secondary);margin-bottom:.25rem;display:block">Desc.</label>
+                    {{ item_form.discount }}
+                </div>
+                <div style="flex:0 0 40px;display:flex;align-items:end;padding-bottom:2px">
+                    {% if item_form.instance.pk %}
+                        <label style="font-size:.8rem;color:var(--text-secondary);display:block;margin-right:.25rem">X</label>
+                        {{ item_form.DELETE }}
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <button type="button" id="add-item" class="btn-custom btn-outline-custom" style="margin-bottom:1.5rem">
+        <i class="bi bi-plus-circle"></i> Agregar producto
+    </button>
+    <button type="button" id="scan-qr-btn" class="btn-custom btn-outline-custom" style="margin-bottom:1.5rem">
+        <i class="bi bi-qr-code-scan"></i> Escanear QR
+    </button>
+
+    <div class="form-actions">
+        <button type="submit" class="btn-custom btn-success-custom">
+            <i class="bi bi-check-lg"></i> Registrar venta
+        </button>
+        <a href="{% url 'sales:sale_list' %}" class="btn-custom btn-outline-custom">Cancelar</a>
+    </div>
+</form>
+
+<div id="scanner-modal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.85);justify-content:center;align-items:center;flex-direction:column">
+    <div style="background:#fff;border-radius:12px;padding:1.5rem;max-width:500px;width:90%;text-align:center">
+        <h5 style="margin:0 0 1rem;color:#1e3a5f"><i class="bi bi-qr-code-scan"></i> Escanear código QR</h5>
+        <div id="scanner-reader" style="width:100%;aspect-ratio:1;max-width:400px;margin:0 auto"></div>
+        <p style="font-size:.8rem;color:#64748b;margin-top:.75rem">Apunta la cámara al código QR del producto</p>
+        <button type="button" id="scanner-close" class="btn-custom btn-outline-custom" style="margin-top:.5rem">
+            <i class="bi bi-x-lg"></i> Cerrar
+        </button>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://unpkg.com/html5-qrcode"></script>
+<script>
+(function() {
+    var container = document.getElementById('items-container');
+    var addBtn = document.getElementById('add-item');
+    var totalForms = document.getElementById('id_items-TOTAL_FORMS');
+
+    function cloneRow(idx) {
+        var template = container.querySelector('.item-row');
+        if (!template) return null;
+        var clone = template.cloneNode(true);
+        var updateAttrs = function(el) {
+            ['name', 'id', 'for'].forEach(function(attr) {
+                if (el.hasAttribute(attr)) {
+                    el.setAttribute(attr, el.getAttribute(attr).replace(/items-\d+/g, 'items-' + idx));
+                }
+            });
+            Array.from(el.children).forEach(updateAttrs);
+        };
+        updateAttrs(clone);
+        var inputs = clone.querySelectorAll('input:not([type="hidden"])');
+        inputs.forEach(function(inp) {
+            if (inp.type === 'checkbox') inp.checked = false;
+            else inp.value = '';
+        });
+        var selects = clone.querySelectorAll('select');
+        selects.forEach(function(s) { s.selectedIndex = 0; });
+        return clone;
+    }
+
+    addBtn.addEventListener('click', function() {
+        var idx = parseInt(totalForms.value);
+        var row = cloneRow(idx);
+        if (!row) return;
+        container.appendChild(row);
+        totalForms.value = idx + 1;
+    });
+
+    // ---- QR Scanner ----
+    var scannerBtn = document.getElementById('scan-qr-btn');
+    var scannerModal = document.getElementById('scanner-modal');
+    var scannerClose = document.getElementById('scanner-close');
+    var reader = null;
+
+    function getFirstEmptyRow() {
+        var rows = container.querySelectorAll('.item-row');
+        for (var i = 0; i < rows.length; i++) {
+            var select = rows[i].querySelector('select');
+            if (select && select.value === '') return rows[i];
+        }
+        return null;
+    }
+
+    function getOrCreateRow() {
+        var row = getFirstEmptyRow();
+        if (row) return row;
+        addBtn.click();
+        return getFirstEmptyRow();
+    }
+
+    function onScanSuccess(decodedText) {
+        if (!reader) return;
+        reader.stop().then(function() {
+            scannerModal.style.display = 'none';
+            var productId = decodedText.trim();
+            fetch('/productos/' + productId + '/json/')
+                .then(function(resp) {
+                    if (!resp.ok) throw new Error('Producto no encontrado o inactivo');
+                    return resp.json();
+                })
+                .then(function(data) {
+                    var row = getOrCreateRow();
+                    if (!row) { alert('No hay filas disponibles'); return; }
+                    var select = row.querySelector('select');
+                    if (select) {
+                        select.value = data.id;
+                        select.dispatchEvent(new Event('change'));
+                    }
+                    var qtyInput = row.querySelector('input[type="number"]');
+                    if (qtyInput && !qtyInput.value) qtyInput.value = 1;
+                })
+                .catch(function(err) {
+                    alert(err.message);
+                });
+        });
+    }
+
+    function stopScanner() {
+        if (reader) {
+            reader.stop().catch(function(){});
+        }
+        scannerModal.style.display = 'none';
+    }
+
+    scannerBtn.addEventListener('click', function() {
+        scannerModal.style.display = 'flex';
+        if (reader) { reader.clear(); }
+        reader = new Html5Qrcode("scanner-reader");
+        reader.start(
+            { facingMode: "environment" },
+            { fps: 10, qrbox: { width: 250, height: 250 } },
+            onScanSuccess
+        ).catch(function(err) {
+            alert('Error al acceder a la cámara: ' + err + '\n\nAsegúrate de ejecutar el sitio con HTTPS (ej: ngrok).');
+            scannerModal.style.display = 'none';
+        });
+    });
+
+    scannerClose.addEventListener('click', stopScanner);
+    scannerModal.addEventListener('click', function(e) {
+        if (e.target === scannerModal) stopScanner();
+    });
+})();
+</script>
+{% endblock %}

@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% block title %}Panel principal | Sadama{% endblock %}
+{% block page_title %}Panel principal{% endblock %}
+{% block page_subtitle %}<p>Resumen del día {{ "now"|date:"d/m/Y" }}</p>{% endblock %}
+{% block content %}
+
+<div class="stat-row">
+    <div class="stat-card stat-primary">
+        <div class="stat-icon"><i class="bi bi-box-seam"></i></div>
+        <div class="stat-value">{{ total_products }}</div>
+        <div class="stat-label">Productos</div>
+    </div>
+    <div class="stat-card stat-success">
+        <div class="stat-icon"><i class="bi bi-receipt"></i></div>
+        <div class="stat-value">{{ sales_today }}</div>
+        <div class="stat-label">Ventas hoy</div>
+    </div>
+    <div class="stat-card stat-warning">
+        <div class="stat-icon"><i class="bi bi-cash-stack"></i></div>
+        <div class="stat-value">${{ revenue_today|floatformat:0 }}</div>
+        <div class="stat-label">Ingreso hoy</div>
+    </div>
+    <div class="stat-card stat-info">
+        <div class="stat-icon"><i class="bi bi-exclamation-triangle"></i></div>
+        <div class="stat-value">{{ low_stock|length }}</div>
+        <div class="stat-label">Stock bajo</div>
+    </div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem">
+    <div class="card-custom p-3">
+        <h6 style="font-size:.78rem;text-transform:uppercase;letter-spacing:.03em;color:var(--gold);margin-bottom:1rem">
+            <i class="bi bi-lightning-charge"></i> Acceso rápido
+        </h6>
+        <div style="display:grid;gap:.45rem">
+            <a href="{% url 'sales:sale_create' %}" class="btn-custom btn-primary-custom" style="justify-content:center">
+                <i class="bi bi-plus-circle"></i> Nueva venta
+            </a>
+            <a href="{% url 'products:product_create' %}" class="btn-custom btn-success-custom" style="justify-content:center">
+                <i class="bi bi-plus-circle"></i> Nuevo producto
+            </a>
+            <a href="{% url 'reports:daily_report' %}" class="btn-custom btn-outline-custom" style="justify-content:center">
+                <i class="bi bi-bar-chart"></i> Reportes
+            </a>
+        </div>
+    </div>
+
+    <div class="card-custom p-3">
+        <h6 style="font-size:.78rem;text-transform:uppercase;letter-spacing:.03em;color:var(--gold);margin-bottom:1rem">
+            <i class="bi bi-graph-up"></i> Ventas últimos 7 días
+        </h6>
+        <canvas id="salesChart" height="180" data-labels='{{ chart_labels|safe }}' data-values='{{ chart_data|safe }}'></canvas>
+    </div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+    <div>
+        <div class="card-custom p-3" style="margin-bottom:1rem">
+            <h6 style="font-size:.78rem;text-transform:uppercase;letter-spacing:.03em;color:var(--gold);margin-bottom:.75rem">
+                <i class="bi bi-person-badge"></i> Ingreso por propietario hoy
+            </h6>
+            {% if revenue_by_owner_today %}
+                {% for r in revenue_by_owner_today %}
+                    <div style="display:flex;justify-content:space-between;padding:.35rem 0;border-bottom:1px solid var(--border)">
+                        <span style="font-size:.85rem">{{ r.product__owner__first_name|default:r.product__owner__username }}</span>
+                        <span style="font-weight:600;color:var(--gold)">${{ r.total|floatformat:2 }}</span>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="empty-state" style="padding:.5rem 0"><p style="font-size:.8rem">Sin ventas hoy</p></div>
+            {% endif %}
+        </div>
+
+        <div class="card-custom" style="overflow:hidden">
+            <div style="padding:1rem 1rem 0">
+                <h6 style="font-size:.78rem;text-transform:uppercase;letter-spacing:.03em;color:var(--gold);margin-bottom:.75rem">
+                    <i class="bi bi-trophy"></i> Más vendidos hoy
+                </h6>
+            </div>
+            <table class="table-custom">
+                <thead>
+                    <tr><th>Producto</th><th>Propietario</th><th>Vend.</th></tr>
+                </thead>
+                <tbody>
+                    {% if top_products %}
+                        {% for p in top_products %}
+                            <tr>
+                                <td style="font-weight:500">{{ p.product__name }}</td>
+                                <td>{{ p.product__owner__username }}</td>
+                                <td><span class="badge-custom badge-blue">{{ p.total }}</span></td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr><td colspan="3"><div class="empty-state" style="padding:.5rem"><p>Sin ventas hoy</p></div></td></tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div>
+        <div class="card-custom p-3">
+            <h6 style="font-size:.78rem;text-transform:uppercase;letter-spacing:.03em;color:var(--gold);margin-bottom:.75rem">
+                <i class="bi bi-exclamation-diamond"></i> Productos con stock bajo
+            </h6>
+            {% if low_stock %}
+                {% for p in low_stock %}
+                    <div style="display:flex;justify-content:space-between;align-items:center;padding:.4rem 0;border-bottom:1px solid var(--border)">
+                        <div>
+                            <span style="font-size:.85rem;font-weight:500">{{ p.name }}</span>
+                            <span style="font-size:.75rem;color:var(--text-secondary);margin-left:.5rem">{{ p.owner.get_full_name|default:p.owner.username }}</span>
+                        </div>
+                        <span class="badge-custom badge-red">{{ p.stock }} uds</span>
+                    </div>
+                {% endfor %}
+                <div style="margin-top:.75rem">
+                    <a href="{% url 'products:product_list' %}" class="btn-custom btn-outline-custom btn-sm-custom">
+                        Ver todos
+                    </a>
+                </div>
+            {% else %}
+                <div class="empty-state" style="padding:.5rem 0"><p style="font-size:.8rem">Todo en stock suficiente</p></div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script>
+var canvas = document.getElementById('salesChart');
+new Chart(canvas, {
+    type: 'bar',
+    data: {
+        labels: JSON.parse(canvas.dataset.labels),
+        datasets: [{
+            label: 'Ventas ($)',
+            data: JSON.parse(canvas.dataset.values),
+            backgroundColor: 'rgba(212,168,67,.4)',
+            borderColor: '#d4a843',
+            borderWidth: 2,
+            borderRadius: 4
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+            y: { beginAtZero: true, ticks: { callback: function(v) { return '$' + v } } }
+        }
+    }
+});
+</script>
+{% endblock %}

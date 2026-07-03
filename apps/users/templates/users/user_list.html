@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}Usuarios | Sadama{% endblock %}
+{% block page_title %}Usuarios{% endblock %}
+{% block page_subtitle %}<p>{{ users|length }} usuarios registrados</p>{% endblock %}
+{% block content %}
+
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:.5rem">
+    <a href="{% url 'users:user_create' %}" class="btn-custom btn-primary-custom">
+        <i class="bi bi-plus-circle"></i> Nuevo usuario
+    </a>
+</div>
+
+{% if users %}
+<table class="table-custom">
+    <thead>
+        <tr>
+            <th>Usuario</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Teléfono</th>
+            <th>Rol</th>
+            <th>Activo</th>
+            <th style="text-align:right">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for u in users %}
+        <tr>
+            <td style="font-weight:600;color:var(--gold)">{{ u.username }}</td>
+            <td>{{ u.get_full_name|default:"—" }}</td>
+            <td>{{ u.email|default:"—" }}</td>
+            <td>{{ u.phone|default:"—" }}</td>
+            <td><span class="badge-custom {% if u.role == 'admin' %}badge-red{% elif u.role == 'owner' %}badge-blue{% else %}badge-gray{% endif %}">{{ u.get_role_display }}</span></td>
+            <td>{% if u.is_active %}<span style="color:var(--success)"><i class="bi bi-check-circle"></i>{% else %}<span style="color:var(--danger)"><i class="bi bi-x-circle"></i>{% endif %}</span></td>
+            <td style="text-align:right">
+                <a href="{% url 'users:user_edit' u.pk %}" class="btn-custom btn-warning-custom btn-sm-custom">
+                    <i class="bi bi-pencil"></i>
+                </a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="7">
+            <div class="empty-state">
+                <div class="empty-icon"><i class="bi bi-people"></i></div>
+                <p>No hay usuarios registrados</p>
+            </div>
+        </td></tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<div class="card-custom">
+    <div class="empty-state">
+        <div class="empty-icon"><i class="bi bi-people"></i></div>
+        <p>No hay usuarios registrados</p>
+        <a href="{% url 'users:user_create' %}" class="btn-custom btn-primary-custom" style="margin-top:.5rem">
+            <i class="bi bi-plus-circle"></i> Crear primer usuario
+        </a>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}

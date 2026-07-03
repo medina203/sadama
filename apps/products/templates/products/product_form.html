@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}{% if object %}Editar{% else %}Nuevo{% endif %} producto | Sadama{% endblock %}
+{% block page_title %}{% if object %}Editar{% else %}Nuevo{% endif %} producto{% endblock %}
+{% block content %}
+
+<form method="post" enctype="multipart/form-data" class="form-custom">
+    {% csrf_token %}
+    <div class="row g-3">
+        {% for field in form %}
+            <div class="col-md-{% if field.name == 'description' %}12{% else %}6{% endif %}">
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                {{ field }}
+                {% if field.errors %}
+                    <div style="color:#ef4444;font-size:.8rem;margin-top:.25rem">{{ field.errors }}</div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+    <div class="form-actions">
+        <button type="submit" class="btn-custom btn-success-custom">
+            <i class="bi bi-check-lg"></i> {% if object %}Guardar cambios{% else %}Crear producto{% endif %}
+        </button>
+        <a href="{% url 'products:product_list' %}" class="btn-custom btn-outline-custom">Cancelar</a>
+    </div>
+</form>
+
+{% endblock %}

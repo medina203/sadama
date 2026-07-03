@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}Ventas | Sadama{% endblock %}
+{% block page_title %}Ventas{% endblock %}
+{% block page_subtitle %}<p>Historial de ventas registradas</p>{% endblock %}
+{% block content %}
+
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem">
+    <a href="{% url 'sales:sale_create' %}" class="btn-custom btn-primary-custom">
+        <i class="bi bi-plus-circle"></i> Nueva venta
+    </a>
+</div>
+
+<div class="card-custom" style="overflow:hidden">
+    <table class="table-custom">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Fecha</th>
+                <th>Cliente</th>
+                <th>Vendedor</th>
+                <th>Método</th>
+                <th>Estado</th>
+                <th style="text-align:right">Total</th>
+                <th style="text-align:right">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for sale in sales %}
+                <tr>
+                    <td style="font-weight:600;color:var(--gold)">#{{ sale.id }}</td>
+                    <td>{{ sale.date|date:"d/m/Y H:i" }}</td>
+                    <td>{{ sale.client_name|default:"<span style='color:#9ca3af'>—</span>" }}</td>
+                    <td>{{ sale.seller.get_full_name|default:sale.seller.username }}</td>
+                    <td><span class="badge-custom badge-blue">{{ sale.get_payment_method_display }}</span></td>
+                    <td>{% if sale.cancelled %}<span class="badge-custom badge-red">ANULADA{% else %}<span class="badge-custom badge-green">ACTIVA{% endif %}</span></td>
+                    <td style="text-align:right;font-weight:600">${{ sale.total|floatformat:0 }}</td>
+                    <td style="text-align:right">
+                        <a href="{% url 'sales:sale_detail' sale.pk %}" class="btn-custom btn-primary-custom btn-sm-custom">
+                            <i class="bi bi-eye"></i> Ver
+                        </a>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr><td colspan="8">
+                    <div class="empty-state">
+                        <div class="empty-icon"><i class="bi bi-receipt"></i></div>
+                        <p>No hay ventas registradas</p>
+                        <a href="{% url 'sales:sale_create' %}" class="btn-custom btn-primary-custom">Registrar primera venta</a>
+                    </div>
+                </td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

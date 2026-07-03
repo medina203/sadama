@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% block title %}Reporte diario | Sadama{% endblock %}
+{% block page_title %}Reporte de ventas{% endblock %}
+{% block page_subtitle %}<p>Resumen de ventas por período y propietario</p>{% endblock %}
+{% block content %}
+
+<div style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:.5rem;margin-bottom:1.25rem">
+<form method="get" class="filter-bar" style="margin-bottom:0">
+    <div class="filter-group">
+        <label>Desde</label>
+        <input type="date" name="from" value="{{ date_from }}">
+    </div>
+    <div class="filter-group">
+        <label>Hasta</label>
+        <input type="date" name="to" value="{{ date_to }}">
+    </div>
+    <div class="filter-group">
+        <label>Propietario</label>
+        <select name="owner">
+            <option value="">Todos</option>
+            {% for owner in owners %}
+                <option value="{{ owner.id }}" {% if owner_filter == owner.id|stringformat:"s" %}selected{% endif %}>
+                    {{ owner.get_full_name|default:owner.username }}
+                </option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="filter-group">
+        <label>&nbsp;</label>
+        <button type="submit" class="btn-custom btn-primary-custom">
+            <i class="bi bi-search"></i> Filtrar
+        </button>
+    </div>
+</form>
+    <a href="{% url 'reports:export_csv' %}?from={{ date_from }}&to={{ date_to }}&owner={{ owner_filter }}" class="btn-custom btn-success-custom">
+        <i class="bi bi-download"></i> Exportar CSV
+    </a>
+</div>
+
+<div class="row g-3 mb-4">
+    <div class="col-md-3">
+        <div class="stat-card stat-primary">
+            <div class="stat-icon"><i class="bi bi-cash-stack"></i></div>
+            <div class="stat-value">${{ total_revenue|floatformat:2 }}</div>
+            <div class="stat-label">Ingreso total</div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="stat-card stat-info">
+            <div class="stat-icon"><i class="bi bi-receipt"></i></div>
+            <div class="stat-value">{{ total_sales }}</div>
+            <div class="stat-label">Ventas realizadas</div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="stat-card stat-success">
+            <div class="stat-icon"><i class="bi bi-coin"></i></div>
+                    <div class="stat-value">${{ revenue_by_owner.0.total|default:0|floatformat:2 }}</div>
+                    <div class="stat-label">Mayor vendedor (prop.)</div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="stat-card stat-warning">
+            <div class="stat-icon"><i class="bi bi-people"></i></div>
+            <div class="stat-value">{{ revenue_by_owner|length }}</div>
+            <div class="stat-label">Propietarios activos</div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="col-md-6">
+        <div class="card-custom" style="overflow:hidden">
+            <div style="padding:1rem 1rem 0">
+                <h6 style="font-size:.8rem;text-transform:uppercase;letter-spacing:.03em;color:var(--gold)">
+                    <i class="bi bi-person-badge"></i> Ingresos por propietario
+                </h6>
+            </div>
+            <table class="table-custom">
+                <thead>
+                    <tr>
+                        <th>Propietario</th>
+                        <th>Productos vend.</th>
+                        <th style="text-align:right">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for r in revenue_by_owner %}
+                        <tr>
+                            <td style="font-weight:500">{{ r.product__owner__first_name|default:r.product__owner__username }} {{ r.product__owner__last_name }}</td>
+                            <td>{{ r.quantity }}</td>
+                            <td style="text-align:right;font-weight:600">${{ r.total|floatformat:2 }}</td>
+                        </tr>
+                    {% empty %}
+                        <tr><td colspan="3">
+                            <div class="empty-state">
+                                <div class="empty-icon"><i class="bi bi-inbox"></i></div>
+                                <p>Sin ventas en este período</p>
+                            </div>
+                        </td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card-custom" style="overflow:hidden">
+            <div style="padding:1rem 1rem 0">
+                <h6 style="font-size:.8rem;text-transform:uppercase;letter-spacing:.03em;color:var(--gold)">
+                    <i class="bi bi-credit-card"></i> Desglose por método de pago
+                </h6>
+            </div>
+            <table class="table-custom">
+                <thead>
+                    <tr>
+                        <th>Método</th>
+                        <th>Ventas</th>
+                        <th style="text-align:right">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for p in payment_breakdown %}
+                        <tr>
+                            <td><span class="badge-custom badge-blue">{{ p.label }}</span></td>
+                            <td>{{ p.count }}</td>
+                            <td style="text-align:right;font-weight:600">${{ p.total|floatformat:2 }}</td>
+                        </tr>
+                    {% empty %}
+                        <tr><td colspan="3">
+                            <div class="empty-state">
+                                <div class="empty-icon"><i class="bi bi-inbox"></i></div>
+                                <p>Sin datos</p>
+                            </div>
+                        </td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

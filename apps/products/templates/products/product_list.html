@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block title %}Productos | Sadama{% endblock %}
+{% block page_title %}Productos{% endblock %}
+{% block page_subtitle %}<p>{{ page_obj.paginator.count|default:products|length }} artesanías en catálogo</p>{% endblock %}
+{% block content %}
+
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:.5rem">
+    <form method="get" style="display:flex;gap:.5rem;flex:1;max-width:500px">
+        <div style="flex:1">
+            <input type="text" name="q" value="{{ q }}" placeholder="Buscar producto..." style="width:100%;padding:.45rem .7rem;border:1px solid var(--border-light);border-radius:6px;font-size:.85rem;background:var(--bg-surface);color:var(--text-primary)">
+        </div>
+        <select name="category" style="padding:.45rem .7rem;border:1px solid var(--border-light);border-radius:6px;font-size:.85rem;background:var(--bg-surface);color:var(--text-primary)">
+            <option value="">Todas</option>
+            {% for cat in categories %}
+                <option value="{{ cat.id }}" {% if selected_category == cat.id|stringformat:"s" %}selected{% endif %}>{{ cat.name }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit" class="btn-custom btn-primary-custom"><i class="bi bi-search"></i></button>
+        {% if q or selected_category or show_inactive %}
+            <a href="{% url 'products:product_list' %}" class="btn-custom btn-outline-custom"><i class="bi bi-x-lg"></i></a>
+        {% endif %}
+        <label style="display:flex;align-items:center;gap:.35rem;font-size:.8rem;color:var(--text-secondary);white-space:nowrap">
+            <input type="checkbox" name="show_inactive" value="1" {% if show_inactive %}checked{% endif %} onchange="this.form.submit()">
+            Inactivos
+        </label>
+    </form>
+    <a href="{% url 'products:product_create' %}" class="btn-custom btn-primary-custom">
+        <i class="bi bi-plus-circle"></i> Nuevo producto
+    </a>
+</div>
+
+{% if products %}
+<div class="card-grid">
+    {% for product in products %}
+    <div class="item-card" style="{% if not product.active %}opacity:.5;filter:grayscale(.7){% endif %}">
+        <div style="height:140px;background:var(--bg-surface);display:flex;align-items:center;justify-content:center;overflow:hidden">
+            {% if product.image %}
+                <img src="{{ product.image.url }}" alt="{{ product.name }}" style="width:100%;height:100%;object-fit:cover">
+            {% else %}
+                <i class="bi bi-image" style="font-size:2.5rem;color:var(--border-light)"></i>
+            {% endif %}
+        </div>
+        <div class="item-card-body">
+            <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:.4rem">
+                <h5>{{ product.name }}</h5>
+                {% if product.stock < 5 %}
+                    <span class="badge-custom badge-red">{{ product.stock }} uds</span>
+                {% else %}
+                    <span class="badge-custom badge-green">{{ product.stock }} uds</span>
+                {% endif %}
+            </div>
+            <div class="meta"><i class="bi bi-person"></i> {{ product.owner.get_full_name|default:product.owner.username }}</div>
+            {% if product.category %}
+                <div class="meta"><i class="bi bi-tag"></i> {{ product.category.name }}</div>
+            {% endif %}
+            {% if product.description %}
+                <div class="meta" style="margin-top:.3rem;font-size:.78rem">{{ product.description|truncatewords:12 }}</div>
+            {% endif %}
+            <div class="price" style="margin-top:.5rem">${{ product.price|floatformat:0 }}</div>
+        </div>
+        <div class="item-card-footer">
+            <a href="{% url 'products:product_update' product.pk %}" class="btn-custom btn-warning-custom btn-sm-custom">
+                <i class="bi bi-pencil"></i>
+            </a>
+            <a href="{% url 'products:product_toggle' product.pk %}" class="btn-custom {% if product.active %}btn-danger-custom{% else %}btn-success-custom{% endif %} btn-sm-custom" title="{% if product.active %}Desactivar{% else %}Activar{% endif %}">
+                <i class="bi {% if product.active %}bi-trash{% else %}bi-arrow-counterclockwise{% endif %}"></i>
+            </a>
+            {% if product.qr_code %}
+                <a href="{{ product.qr_code.url }}" target="_blank" class="btn-custom btn-outline-custom btn-sm-custom" title="QR">
+                    <i class="bi bi-qr-code"></i>
+                </a>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% if page_obj.paginator.num_pages > 1 %}
+<div style="display:flex;justify-content:center;gap:.35rem;margin-top:1.5rem">
+    {% for p in page_obj.paginator.page_range %}
+        <a href="?page={{ p }}&q={{ q|urlencode }}&category={{ selected_category|urlencode }}"
+           style="padding:.35rem .7rem;border-radius:6px;text-decoration:none;font-size:.85rem;
+                  {% if p == page_obj.number %}background:var(--gold);color:#0b0b14{% else %}background:var(--bg-surface);color:var(--text-primary);border:1px solid var(--border-light){% endif %}">
+            {{ p }}
+        </a>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% else %}
+<div class="card-custom">
+    <div class="empty-state">
+        <div class="empty-icon"><i class="bi bi-box-seam"></i></div>
+        <p>{% if q or selected_category %}Sin resultados para tu búsqueda{% else %}No hay productos registrados{% endif %}</p>
+        <a href="{% url 'products:product_create' %}" class="btn-custom btn-primary-custom" style="margin-top:.5rem">
+            <i class="bi bi-plus-circle"></i> Crear primer producto
+        </a>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}

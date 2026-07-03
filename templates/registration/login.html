@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión | Sadama</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="login-page">
+    <div class="login-card">
+        <div class="brand">
+            <div class="brand-icon">S</div>
+            <h1>Sadama</h1>
+            <p>Sistema de Administración de Inventario</p>
+        </div>
+
+        {% if form.errors %}
+            <div class="alert-custom alert-danger-custom">Usuario o contraseña incorrectos.</div>
+        {% endif %}
+
+        <form method="post">
+            {% csrf_token %}
+            <div style="margin-bottom:1rem">
+                <label for="id_username" style="display:block;font-size:.875rem;font-weight:500;color:var(--text-primary);margin-bottom:.35rem">Usuario</label>
+                <input type="text" name="username" id="id_username" class="form-control" required autofocus>
+            </div>
+            <div style="margin-bottom:1.5rem">
+                <label for="id_password" style="display:block;font-size:.875rem;font-weight:500;color:var(--text-primary);margin-bottom:.35rem">Contraseña</label>
+                <input type="password" name="password" id="id_password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn-login">Entrar</button>
+            <input type="hidden" name="next" value="{{ next }}">
+        </form>
+    </div>
+</body>
+</html>

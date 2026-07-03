@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Eliminar producto | Sadama{% endblock %}
+{% block page_title %}Confirmar eliminación{% endblock %}
+{% block content %}
+
+<div class="card-custom confirm-card p-4">
+    <div class="confirm-icon"><i class="bi bi-exclamation-triangle"></i></div>
+    <h4 style="margin-bottom:.5rem">¿Eliminar "{{ object.name }}"?</h4>
+    <p style="color:var(--text-secondary);font-size:.875rem;margin-bottom:1.5rem">Esta acción no se puede deshacer.</p>
+    <form method="post">
+        {% csrf_token %}
+        <div style="display:flex;gap:.75rem;justify-content:center">
+            <button type="submit" class="btn-custom btn-danger-custom">
+                <i class="bi bi-trash"></i> Sí, eliminar
+            </button>
+            <a href="{% url 'products:product_list' %}" class="btn-custom btn-outline-custom">Cancelar</a>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
