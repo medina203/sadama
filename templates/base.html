@@ -12,7 +12,9 @@
 </head>
 <body>
 
-<div class="sidebar">
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div class="sidebar" id="sidebar">
     <div class="sidebar-brand">
         <div class="sidebar-brand-icon">S</div>
         Sadama
@@ -43,9 +45,14 @@
 
 <div class="main-content">
     <div class="top-bar">
-        <div>
-            <h2>{% block page_title %}Sadama{% endblock %}</h2>
-            {% block page_subtitle %}<p>Sistema de Administración de Inventario</p>{% endblock %}
+        <div style="display:flex;align-items:center;gap:.75rem">
+            <button id="sidebarToggle" class="btn-custom btn-outline-custom btn-sm-custom" style="font-size:1.1rem;padding:.25rem .5rem" title="Menú">
+                <i class="bi bi-list"></i>
+            </button>
+            <div>
+                <h2>{% block page_title %}Sadama{% endblock %}</h2>
+                {% block page_subtitle %}<p>Sistema de Administración de Inventario</p>{% endblock %}
+            </div>
         </div>
         <div class="user-info">
             <span>{{ user.get_full_name|default:user.username }}</span>
@@ -68,6 +75,50 @@
         {% block content %}{% endblock %}
     </div>
 </div>
+
+<script>
+(function() {
+    var toggle = document.getElementById('sidebarToggle');
+    var sidebar = document.getElementById('sidebar');
+    var overlay = document.getElementById('sidebarOverlay');
+
+    function openSidebar() {
+        sidebar.classList.add('open');
+        overlay.classList.add('active');
+    }
+
+    function closeSidebar() {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('active');
+    }
+
+    toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (sidebar.classList.contains('open')) {
+            closeSidebar();
+        } else {
+            openSidebar();
+        }
+    });
+
+    overlay.addEventListener('click', closeSidebar);
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && sidebar.classList.contains('open')) {
+            closeSidebar();
+        }
+    });
+
+    // Close sidebar after clicking a link on mobile
+    sidebar.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                closeSidebar();
+            }
+        });
+    });
+})();
+</script>
 
 {% block extra_js %}{% endblock %}
 </body>

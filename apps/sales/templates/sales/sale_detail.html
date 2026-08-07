@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load sale_filters %}
 {% block title %}Venta #{{ sale.id }} | Sadama{% endblock %}
 {% block page_title %}Venta #{{ sale.id }}{% endblock %}
 {% block page_subtitle %}
@@ -42,7 +43,7 @@
                 <tr><td style="padding:.3rem 0;color:var(--text-secondary)">Estado</td>
                     <td>{% if sale.cancelled %}<span class="badge-custom badge-red">ANULADA{% else %}<span class="badge-custom badge-green">ACTIVA{% endif %}</span></td>
                 </tr>
-                <tr><td style="padding:.3rem 0;color:var(--text-secondary)">Total</td><td style="font-weight:700;font-size:1.1rem;color:var(--gold)">${{ sale.total|floatformat:0 }}</td></tr>
+                <tr><td style="padding:.3rem 0;color:var(--text-secondary)">Total</td><td style="font-weight:700;font-size:1.1rem;color:var(--gold)">{{ sale.total|cop }}</td></tr>
             </table>
         </div>
     </div>
@@ -71,16 +72,16 @@
                             <td style="font-weight:500">{{ item.product.name }}</td>
                             <td>{{ item.product.owner.get_full_name|default:item.product.owner.username }}</td>
                             <td>{{ item.quantity }}</td>
-                            <td>${{ item.unit_price|floatformat:0 }}</td>
-                            <td>{% if item.discount %}${{ item.discount|floatformat:0 }}{% else %}—{% endif %}</td>
-                            <td style="text-align:right;font-weight:600">${{ item.subtotal|floatformat:0 }}</td>
+                            <td>{{ item.unit_price|cop }}</td>
+                            <td>{% if item.discount %}{{ item.discount|cop }}{% else %}—{% endif %}</td>
+                            <td style="text-align:right;font-weight:600">{{ item.subtotal|cop }}</td>
                         </tr>
                     {% endfor %}
                 </tbody>
                 <tfoot>
                     <tr style="background:var(--bg-surface)">
                         <td colspan="5" style="text-align:right;font-weight:600;padding:.75rem 1rem;color:var(--text-primary)">Total</td>
-                        <td style="text-align:right;font-weight:700;color:var(--gold);padding:.75rem 1rem">${{ sale.total|floatformat:0 }}</td>
+                        <td style="text-align:right;font-weight:700;color:var(--gold);padding:.75rem 1rem">{{ sale.total|cop }}</td>
                     </tr>
                 </tfoot>
             </table>
