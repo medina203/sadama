@@ -82,8 +82,11 @@ def daily_report(request):
 def export_csv(request):
     today = timezone.localdate()
     u = request.user
-    date_from = request.GET.get("from", today.strftime("%Y-%m-%d"))
-    date_to = request.GET.get("to", today.strftime("%Y-%m-%d"))
+    try:
+        date_from = _parse_date(request.GET.get("from"), today)
+        date_to = _parse_date(request.GET.get("to"), today)
+    except ValidationError as e:
+        return HttpResponse(str(e), status=400, content_type="text/plain; charset=utf-8")
     owner_filter = request.GET.get("owner", "")
 
     sales = Sale.objects.filter(date__date__gte=date_from, date__date__lte=date_to, cancelled=False).select_related("seller")

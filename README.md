@@ -61,7 +61,7 @@ Sistema web desarrollado con Django 6.0.6 para la gestión de inventario, regist
    python manage.py migrate
    ```
 
-5. (Opcional) Carga datos de ejemplo (~6 meses de operaciones):
+5. (Opcional - solo desarrollo) Carga datos de ejemplo (~6 meses de operaciones, 6 usuarios/32 productos/226 ventas):
    ```
    python manage.py loaddata datos_usuarios
    python manage.py loaddata datos_productos
@@ -71,6 +71,7 @@ Sistema web desarrollado con Django 6.0.6 para la gestión de inventario, regist
    ```
    ./cargar_datos.sh
    ```
+   > En despliegue actual la BD está limpia — no ejecutes este paso en producción.
 
 6. Inicia el servidor de desarrollo:
    ```
@@ -79,7 +80,29 @@ Sistema web desarrollado con Django 6.0.6 para la gestión de inventario, regist
 
 7. Accede en http://localhost:8000
 
-## Credenciales por defecto
+## Credenciales de despliegue (DB limpia - 2026-09-11)
+
+> ⚠️ **Base de datos reseteada a estado limpio para producción.** Todos los datos de prueba (6 usuarios, 32 productos, 226 ventas, 500 items) fueron eliminados. Solo permanece el usuario administrador. No subir este archivo con contraseña en texto plano a un repositorio público — considera usar variable de entorno o gestor de contraseñas y rotar la clave tras el despliegue.
+
+| Usuario | Contraseña | Email | Rol | Superusuario |
+|---|---|---|---|---|
+| `admin` | `admin123` | `admin@sadama.com` | Administrador | Sí (`is_superuser=True`, `is_staff=True`) |
+
+- **Login:** http://localhost:8000/iniciar-sesion/ (`LOGIN_URL = 'iniciar-sesion'` en `sadama/settings.py:110`)
+- **Admin Django:** http://localhost:8000/admin/
+- **Recuperar/cambiar contraseña:**
+  ```bash
+  .venv/bin/python manage.py changepassword admin
+  # o via shell:
+  .venv/bin/python manage.py shell -c "from django.contrib.auth import get_user_model; u=get_user_model().objects.get(username='admin'); u.set_password('NUEVA_PASS'); u.save()"
+  ```
+- **Crear propietarios/vendedores adicionales (producción):** Entra como `admin` → `/admin/` → Usuarios → Añadir, o via shell:
+  ```bash
+  .venv/bin/python manage.py shell -c "from django.contrib.auth import get_user_model; User=get_user_model(); User.objects.create_user('carmen','carmen@real.com','pass_segura', role='owner')"
+  ```
+
+<details>
+<summary>Credenciales de prueba anteriores (fixtures, ya eliminadas de la BD)</summary>
 
 | Usuario | Contraseña | Rol |
 |---|---|---|
@@ -90,7 +113,8 @@ Sistema web desarrollado con Django 6.0.6 para la gestión de inventario, regist
 | `ana` | `seller123` | Vendedor |
 | `pepe` | `admin123` | Propietario |
 
-> Nota: Las contraseñas son las establecidas en los fixtures de ejemplo. En producción, cambia las contraseñas de todos los usuarios.
+Cargables opcionalmente con `python manage.py loaddata datos_usuarios datos_productos datos_ventas` — solo para desarrollo.
+</details>
 
 ## Estructura del proyecto
 
@@ -115,13 +139,54 @@ negocio/
 └── requirements.txt         # Dependencias
 ```
 
+## Configuración actual (producción limpia - PostgreSQL español)
+
+- **Base de datos:** PostgreSQL 17 (`DATABASE_URL=postgres://sadama_admin:Sadama2026@localhost:5433/sadama`, `sadama/settings.py:87` con fallback SQLite `db.sqlite3`) — migrada 2026-09-11 a esquema español con regla `4 letras + _ + campo`
+- **Tablas españolas (5 negocio + 10 Django):** `usuario` (`usua_id`, `usua_usuario`, `usua_rol`...), `categoria` (`cate_id`, `cate_nombre`...), `producto` (`prod_id`, `prod_nombre`, `prod_precio`, `prod_stock`, `prod_propietario_id`...), `venta` (`vent_id`, `vent_fecha`, `vent_total`, `vent_vendedor_id`...), `detalle_venta` (`deta_id`, `deta_venta_id`, `deta_producto_id`, `deta_cantidad`...) — ver `estructura_postgres.sql:1` y `apps/*/models.py:1`
+- **SQLite fallback (actual):** `db.sqlite3` 168K con mismo esquema español (`usuario:1`, `categoria:0`, `producto:0`, `venta:0`, `detalle_venta:0`) — backup `db.sqlite3.bak.2026-09-11_000512`
+- **Media limpia:** `media/products/` y `media/qrcodes/` vaciados (QR se regenera en `apps/products/models.py:39` vía `qr_utils.generate_qr`)
+- **Idioma/Zona:** `es-mx`, `America/Mexico_City` (`sadama/settings.py:116`)
+- **Docker PostgreSQL:**
+  ```bash
+  docker compose up -d          # levanta sadama-postgres:5432
+  # o: sudo docker run --name sadama-postgres -e POSTGRES_USER=sadama_admin -e POSTGRES_PASSWORD=Sadama2026 -e POSTGRES_DB=sadama -p 5432:5432 -d postgres:17
+  .venv/bin/python manage.py migrate --no-input
+  .venv/bin/python manage.py shell -c "from django.contrib.auth import get_user_model; User=get_user_model(); User.objects.create_superuser('admin','admin@sadama.com','admin123', role='admin')"
+  ```
+- **Comando de reseteo SQLite (si usas fallback):**
+  ```bash
+  cp db.sqlite3 db.sqlite3.bak.$(date +%F_%H%M%S)
+  rm db.sqlite3 && rm -rf media/products/* media/qrcodes/*
+  .venv/bin/python manage.py migrate --no-input
+  .venv/bin/python manage.py shell -c "from django.contrib.auth import get_user_model; User=get_user_model(); User.objects.create_superuser('admin','admin@sadama.com','admin123', role='admin')"
+  ```
+
 ## Variables de entorno (producción)
 
-| Variable | Descripción | Valor por defecto |
-|---|---|---|
-| `DJANGO_SECRET_KEY` | Clave secreta de Django | (generada para desarrollo) |
-| `DJANGO_DEBUG` | Modo depuración | `True` |
-| `DJANGO_ALLOWED_HOSTS` | Hosts permitidos | `127.0.0.1,localhost` |
+| Variable | Descripción | Valor por defecto | Recomendado producción |
+|---|---|---|---|
+| `DJANGO_SECRET_KEY` | Clave secreta de Django (`sadama/settings.py:24`) | `django-insecure-!%r8^o!(...)` | Generar una nueva: `python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"` |
+| `DJANGO_DEBUG` | Modo depuración (`sadama/settings.py:30`) | `True` | `False` |
+| `DJANGO_ALLOWED_HOSTS` | Hosts permitidos (`sadama/settings.py:32`) | `127.0.0.1,localhost` | `tudominio.com,www.tudominio.com` |
+| `DATABASE_URL` | URL PostgreSQL (`sadama/settings.py:87`) | (vacío → usa SQLite `db.sqlite3`) | `postgres://sadama_admin:Sadama2026@localhost:5433/sadama` |
+
+### Conexión DBeaver (PostgreSQL)
+
+```
+Host: localhost
+Puerto: 5432
+Base de datos: sadama
+Usuario: sadama_admin
+Contraseña: Sadama2026
+URL JDBC: jdbc:postgresql://localhost:5433/sadama
+Driver: PostgreSQL (org.postgresql.Driver)
+```
+
+1. DBeaver → Nueva Conexión → PostgreSQL
+2. Pegar Host/Puerto/DB/Usuario/Contraseña → Test Connection → Finish
+3. Verás tablas en español: `usuario`, `categoria`, `producto`, `venta`, `detalle_venta` (con columnas `prod_id`, `prod_nombre`, `vent_total`, etc.) + tablas Django `auth_*`, `django_*`
+4. Script completo: `estructura_postgres.sql:1`
+5. Levantar DB si no está: `docker compose up -d` (ver `docker-compose.yml:1`)
 
 ## Correcciones aplicadas
 
@@ -170,8 +235,10 @@ python scripts/generar_fixture.py
 
 ## Tecnologías
 
-- **Backend**: Django 6.0.6, SQLite
+- **Backend**: Django 6.0.6, PostgreSQL 17 (psycopg 3.2) con fallback SQLite
 - **Frontend**: CSS personalizado, Bootstrap Icons, Chart.js
 - **QR**: qrcode + Pillow
 - **Escáner**: html5-qrcode
 - **Moneda**: Pesos colombianos (COP) — formato $ 1.234 (filtro `cop`)
+
+

@@ -13,19 +13,21 @@ class Sale(models.Model):
         CARD = "card", "Tarjeta"
         TRANSFER = "transfer", "Transferencia"
 
-    date = models.DateTimeField(auto_now_add=True, verbose_name="Fecha")
-    total = models.DecimalField(max_digits=12, decimal_places=2, default=0, verbose_name="Total")
-    client_name = models.CharField(max_length=200, blank=True, verbose_name="Cliente")
+    id = models.BigAutoField(primary_key=True, db_column="vent_id", verbose_name="ID")
+    date = models.DateTimeField(auto_now_add=True, db_column="vent_fecha", verbose_name="Fecha")
+    total = models.DecimalField(max_digits=12, decimal_places=2, default=0, db_column="vent_total", verbose_name="Total")
+    client_name = models.CharField(max_length=200, blank=True, db_column="vent_cliente", verbose_name="Cliente")
     seller = models.ForeignKey(
         User, on_delete=models.PROTECT, related_name="sales",
         limit_choices_to={"role__in": [User.Role.SELLER, User.Role.ADMIN]},
-        verbose_name="Vendedor"
+        db_column="vent_vendedor_id", verbose_name="Vendedor"
     )
     payment_method = models.CharField(max_length=10, choices=PaymentMethod.choices, default=PaymentMethod.CASH,
-                                       verbose_name="Método de pago")
-    cancelled = models.BooleanField(default=False, verbose_name="Anulada")
+                                       db_column="vent_metodo_pago", verbose_name="Método de pago")
+    cancelled = models.BooleanField(default=False, db_column="vent_anulada", verbose_name="Anulada")
 
     class Meta:
+        db_table = "venta"
         verbose_name = "Venta"
         verbose_name_plural = "Ventas"
 
@@ -48,15 +50,17 @@ class Sale(models.Model):
 
 
 class SaleItem(models.Model):
-    sale = models.ForeignKey(Sale, on_delete=models.CASCADE, related_name="items", verbose_name="Venta")
+    id = models.BigAutoField(primary_key=True, db_column="deta_id", verbose_name="ID")
+    sale = models.ForeignKey(Sale, on_delete=models.CASCADE, related_name="items", db_column="deta_venta_id", verbose_name="Venta")
     product = models.ForeignKey(Product, on_delete=models.PROTECT, related_name="sale_items",
-                                 verbose_name="Producto")
-    quantity = models.PositiveIntegerField(verbose_name="Cantidad")
-    unit_price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Precio unitario")
-    discount = models.DecimalField(max_digits=10, decimal_places=2, default=0, verbose_name="Descuento")
-    subtotal = models.DecimalField(max_digits=12, decimal_places=2, verbose_name="Subtotal")
+                                 db_column="deta_producto_id", verbose_name="Producto")
+    quantity = models.PositiveIntegerField(db_column="deta_cantidad", verbose_name="Cantidad")
+    unit_price = models.DecimalField(max_digits=10, decimal_places=2, db_column="deta_precio_unitario", verbose_name="Precio unitario")
+    discount = models.DecimalField(max_digits=10, decimal_places=2, default=0, db_column="deta_descuento", verbose_name="Descuento")
+    subtotal = models.DecimalField(max_digits=12, decimal_places=2, db_column="deta_subtotal", verbose_name="Subtotal")
 
     class Meta:
+        db_table = "detalle_venta"
         verbose_name = "Detalle de venta"
         verbose_name_plural = "Detalles de venta"
 

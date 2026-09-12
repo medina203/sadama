@@ -12,8 +12,12 @@ from django.utils import timezone
 from django.views.decorators.http import require_POST
 from django.views.generic import ListView, DetailView, CreateView
 
+from django.contrib.auth import get_user_model
+
 from .forms import SaleForm, SaleItemFormSet
 from .models import Sale, SaleItem
+
+User = get_user_model()
 
 
 class SaleListView(LoginRequiredMixin, ListView):

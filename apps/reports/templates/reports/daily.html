@@ -9,11 +9,11 @@
     <form method="get" style="display:flex;gap:.75rem;align-items:end;flex-wrap:wrap">
         <div class="filter-group">
             <label>Desde</label>
-            <input type="date" name="from" value="{{ date_from }}">
+            <input type="date" name="from" value="{{ date_from|date:'Y-m-d' }}">
         </div>
         <div class="filter-group">
             <label>Hasta</label>
-            <input type="date" name="to" value="{{ date_to }}">
+            <input type="date" name="to" value="{{ date_to|date:'Y-m-d' }}">
         </div>
         <div class="filter-group">
             <label>Propietario</label>
@@ -34,7 +34,7 @@
         </div>
         <div class="filter-group">
             <label>&nbsp;</label>
-            <a href="{% url 'reports:export_csv' %}?from={{ date_from }}&to={{ date_to }}&owner={{ owner_filter }}" class="btn-custom btn-success-custom">
+            <a href="{% url 'reports:export_csv' %}?from={{ date_from|date:'Y-m-d' }}&to={{ date_to|date:'Y-m-d' }}&owner={{ owner_filter }}" class="btn-custom btn-success-custom">
                 <i class="bi bi-download"></i> Exportar CSV
             </a>
         </div>

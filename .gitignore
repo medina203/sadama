@@ -7,4 +7,11 @@ __pycache__/
 db.sqlite3
 media/
 .DS_Store
-db.sqlite3.bak
+db.sqlite3.bak*
+
+
+# PostgreSQL / Postgres
+.env
+!.env.example
+staticfiles/
+*.bak.*

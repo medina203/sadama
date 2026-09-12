@@ -1,0 +1,22 @@
+services:
+  db:
+    image: postgres:17-alpine
+    container_name: sadama-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: sadama
+      POSTGRES_USER: sadama_admin
+      POSTGRES_PASSWORD: Sadama2026
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sadama_admin -d sadama"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pgdata:
+
